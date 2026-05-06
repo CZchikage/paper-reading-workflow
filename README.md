@@ -22,7 +22,7 @@ The current default profile is optimized for blockchain and DeFi papers, but the
 ├── LICENSE
 ├── README.md
 ├── examples/
-│   └── defiranger-note.md
+│   └── 【TDSC‘2024】defiranger.md
 └── skills/
     └── paper-deep-reading/
         ├── SKILL.md
@@ -103,7 +103,9 @@ The main sections are:
 - Related Papers
 - Open Questions
 
-See [examples/defiranger-note.md](examples/defiranger-note.md) for a complete example.
+Use note names like `【TDSC‘2024】defiranger.md` or `【CCS‘2026】paper-short-title.md`.
+
+See [examples/【TDSC‘2024】defiranger.md](examples/【TDSC‘2024】defiranger.md) for a complete example.
 
 ## Git Sync Policy
 

@@ -3,13 +3,14 @@
 Use this schema when creating or revising a paper note. Keep headings stable so notes remain comparable across papers.
 
 ```markdown
-# Paper Title
+# 【VENUE‘YEAR】Paper Title
 
 ## Metadata
 
 - Title:
 - Authors:
 - Venue / Year:
+- Note Name: 【VENUE‘YEAR】short-title
 - Paper:
 - Code:
 - Dataset / Artifact:

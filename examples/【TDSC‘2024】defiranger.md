@@ -1,10 +1,11 @@
-# DeFiRanger: Detecting DeFi Price Manipulation Attacks
+# 【TDSC‘2024】DeFiRanger: Detecting DeFi Price Manipulation Attacks
 
 ## Metadata
 
 - Title: DeFiRanger: Detecting DeFi Price Manipulation Attacks
 - Authors: Siwei Wu, Zhou Yu, Dabao Wang, Yajin Zhou, Lei Wu, Haoyu Wang, Xingliang Yuan
 - Venue / Year: IEEE Transactions on Dependable and Secure Computing, 21(4), 2024
+- Note Name: 【TDSC‘2024】defiranger
 - Paper: https://doi.org/10.1109/TDSC.2023.3346888
 - Local PDF: `/Users/wenkuanxiao/Zotero/storage/JHHRMJGG/Wu 等 - 2024 - DeFiRanger Detecting DeFi Price Manipulation Attacks.pdf`
 - Code: Unknown. 论文只说明实现了约 6,140 行 Rust 原型，没有在 PDF 中给出公开仓库。

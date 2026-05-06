@@ -83,8 +83,9 @@ For the full note schema, read `references/note-schema.md` when creating or revi
 When the user wants notes saved in the current repo:
 
 - Place DeFi notes under `notes/defi/`.
-- Use filenames like `YYYY-venue-short-title.md`, lowercase words joined by hyphens.
-- If the venue is unknown, use `YYYY-tbd-short-title.md` or `tbd-short-title.md`.
+- Use filenames like `【VENUE‘YEAR】short-title.md`, such as `【TDSC‘2024】defiranger.md` or `【CCS‘2026】paper-short-title.md`.
+- Use the same prefix in the note title: `# 【VENUE‘YEAR】Paper Title`.
+- If the venue or year is unknown, use `【TBD】short-title.md`.
 - Prefer editing an existing note over creating duplicates for the same paper.
 
 ## Quality Bar
