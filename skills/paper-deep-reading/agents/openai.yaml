@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Deep Reading"
+  short_description: "Deep-read papers and write Chinese notes with critical analysis."
+  default_prompt: "精读这篇论文，做批判性分析，整理中文笔记，并按项目索引规范回填。"

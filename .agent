@@ -1,0 +1,35 @@
+# Paper Reading Agent Workflow
+
+## Paper Reading
+
+When using the `paper-deep-reading` skill in a Git-backed paper-reading repository:
+
+1. Resolve the paper source and create or update one note under `notes/defi/`.
+2. Update `README.md` conference index for the paper.
+3. Verify the generated note uses the current template and includes:
+   - `Motivation and Basic Idea`
+   - `毒舌评论`
+   - concise `Background`: background -> problem -> gap
+   - focused `Evaluation`: experiment idea, metrics, results
+4. Run `git status --short`.
+5. Stage only files touched by this paper-reading task, usually:
+   - `README.md`
+   - `notes/defi/<paper-note>.md`
+   - any paper-specific assets if they were intentionally created
+6. Commit with:
+
+```bash
+git commit -m "Add paper note: <short paper title>"
+```
+
+Use `Update paper note: <short paper title>` when revising an existing note.
+
+7. Push immediately:
+
+```bash
+git push
+```
+
+8. If there are no changes, do not create an empty commit. If push fails, report the error clearly and leave the local commit intact.
+
+Do not stage or commit unrelated user changes.
