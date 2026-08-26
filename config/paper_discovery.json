@@ -1,0 +1,143 @@
+{
+  "lookback_days": 14,
+  "top_n": 20,
+  "must_read_n": 5,
+  "min_score": 4,
+  "sources": {
+    "arxiv": {
+      "enabled": true,
+      "max_results": 80
+    },
+    "semantic_scholar": {
+      "enabled": true,
+      "max_results": 40
+    },
+    "openreview": {
+      "enabled": true,
+      "venues": [
+        "NeurIPS",
+        "ICLR",
+        "AISTATS",
+        "ICML",
+        "UAI",
+        "FAccT",
+        "SaTML"
+      ]
+    }
+  },
+  "arxiv_categories": [
+    "cs.LG",
+    "stat.ML",
+    "cs.CR",
+    "stat.ME",
+    "cs.AI",
+    "cs.CY"
+  ],
+  "topics": [
+    {
+      "name": "Differential Privacy",
+      "weight": 6,
+      "project": "privacy",
+      "keywords": [
+        "differential privacy",
+        "renyi differential privacy",
+        "privacy amplification",
+        "private learning",
+        "privacy-preserving",
+        "membership inference",
+        "privacy leakage"
+      ]
+    },
+    {
+      "name": "Posterior Sampling",
+      "weight": 6,
+      "project": "posterior-sampling",
+      "keywords": [
+        "posterior sampling",
+        "posterior sample",
+        "bayesian posterior",
+        "one posterior sample",
+        "posterior predictive",
+        "bayesian inference"
+      ]
+    },
+    {
+      "name": "Synthetic Data",
+      "weight": 5,
+      "project": "synthetic-data",
+      "keywords": [
+        "synthetic data",
+        "data synthesis",
+        "synthetic dataset",
+        "generative data",
+        "tabular synthesis",
+        "private synthetic data"
+      ]
+    },
+    {
+      "name": "Trustworthy ML",
+      "weight": 3,
+      "project": "trustworthy-ml",
+      "keywords": [
+        "trustworthy machine learning",
+        "fairness",
+        "robustness",
+        "uncertainty quantification",
+        "calibration",
+        "responsible ai"
+      ]
+    },
+    {
+      "name": "Missing Data",
+      "weight": 4,
+      "project": "missing-data",
+      "keywords": [
+        "missing data",
+        "missingness",
+        "imputation",
+        "missing not at random",
+        "mnar",
+        "incomplete data"
+      ]
+    }
+  ],
+  "bonus_keywords": {
+    "theory": 2,
+    "theoretical": 2,
+    "minimax": 2,
+    "generalization": 1,
+    "sub-gaussian": 3,
+    "subgaussian": 3,
+    "bayesian": 1,
+    "tabular": 1,
+    "posterior": 1,
+    "privacy": 1
+  },
+  "venue_bonus": {
+    "NeurIPS": 3,
+    "ICML": 3,
+    "ICLR": 3,
+    "AISTATS": 2,
+    "UAI": 2,
+    "FAccT": 2,
+    "SaTML": 2,
+    "JMLR": 2,
+    "TMLR": 2,
+    "Annals of Statistics": 3,
+    "JRSSB": 3,
+    "Biometrika": 3
+  },
+  "exclude_keywords": [
+    "survey of surveys"
+  ],
+  "priority_thresholds": {
+    "must_read": 16,
+    "high": 10,
+    "maybe": 6
+  },
+  "bibtex": {
+    "enabled": true,
+    "output_file": "bib/discovered.bib",
+    "key_style": "firstauthorYYYYfirstword"
+  }
+}
