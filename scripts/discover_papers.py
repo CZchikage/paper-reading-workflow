@@ -122,23 +122,95 @@ def orval(c,k):
     return v.get("value","") if isinstance(v,dict) else v
 
 def iclr_venue(venue_id,venue,year,cfg):
-    params={"content.venueid":venue_id,"limit":1000}
-    data=http_json(OR_NOTES+"?"+urllib.parse.urlencode(params))
+    """
+    Crawl the public ICLR Conference group page instead of calling the OpenReview API.
+    This avoids 403 errors from anonymous GitHub Actions requests.
+    """
+    group_url="https://openreview.net/group?id="+urllib.parse.quote(venue_id, safe="")
+    txt=http_text(group_url)
+
+    # OpenReview public pages embed forum links in rendered/serialized HTML.
+    ids=[]
+    for pat in [
+        r'href=["\']https://openreview\.net/forum\?id=([^"\'&]+)',
+        r'href=["\']/forum\?id=([^"\'&]+)',
+        r'forum\?id=([A-Za-z0-9_-]+)'
+    ]:
+        ids.extend(re.findall(pat,txt))
+    ids=list(dict.fromkeys(ids))
+
+    # If the group page is client-rendered and forum ids are sparse, also inspect
+    # visible links collected by the generic parser.
+    lp=LinkParser(); lp.feed(txt)
+    for href,label in lp.links:
+        m=re.search(r'(?:https://openreview\.net)?/forum\?id=([^&]+)',href or "")
+        if m: ids.append(m.group(1))
+    ids=list(dict.fromkeys(ids))
+
+    print(f"{venue} {year}: public group forum-links={len(ids)}")
+
+    def parse_forum(fid):
+        url="https://openreview.net/forum?id="+fid
+        try:
+            page=http_text(url)
+        except Exception:
+            return None
+
+        # Public forum HTML generally contains metadata / JSON strings for title,
+        # authors and abstract. Parse defensively.
+        title=""
+        abstract=""
+        authors=[]
+
+        # HTML meta first.
+        mp=MetaParser(); mp.feed(page)
+        m=mp.meta
+        for k in ("citation_title","og:title"):
+            if m.get(k):
+                title=clean(m[k][0]); break
+        authors=m.get("citation_author",[]) or authors
+        for k in ("description","citation_abstract","og:description"):
+            if m.get(k):
+                abstract=clean(m[k][0]); break
+
+        # Fallback to embedded JSON-like content.
+        if not title:
+            mm=re.search(r'"title"\s*:\s*(?:\{"value":)?\s*"((?:\\.|[^"])*)"',page)
+            if mm:
+                try: title=clean(json.loads('"'+mm.group(1)+'"'))
+                except: title=clean(mm.group(1))
+        if not abstract:
+            mm=re.search(r'"abstract"\s*:\s*(?:\{"value":)?\s*"((?:\\.|[^"])*)"',page)
+            if mm:
+                try: abstract=clean(json.loads('"'+mm.group(1)+'"'))
+                except: abstract=clean(mm.group(1))
+
+        if not title or not title_maybe_relevant(title,cfg):
+            return None
+
+        return {
+          "title":title,
+          "authors":authors,
+          "abstract":abstract,
+          "pdf":"https://openreview.net/pdf?id="+fid,
+          "url":url,
+          "doi":"",
+          "venue":venue,
+          "year":int(year),
+          "kind":"conference",
+          "source":"OpenReview public HTML"
+        }
+
     out=[]
-    for n in data.get("notes",[]):
-        c=n.get("content") or {}
-        title=clean(orval(c,"title"))
-        if not title or not title_maybe_relevant(title,cfg): continue
-        authors=orval(c,"authors") or []
-        if isinstance(authors,str): authors=[authors]
-        forum=n.get("forum") or n.get("id")
-        out.append({
-          "title":title,"authors":authors,"abstract":clean(orval(c,"abstract")),
-          "pdf":"https://openreview.net/pdf?id="+str(forum),
-          "url":"https://openreview.net/forum?id="+str(forum),
-          "doi":"","venue":venue,"year":int(year),"kind":"conference","source":"OpenReview"
-        })
-    print(f"{venue} {year}: API papers={len(data.get('notes',[]))}, title-prefilter={len(out)}")
+    with ThreadPoolExecutor(max_workers=min(12,cfg.get("max_workers",16))) as ex:
+        futs={ex.submit(parse_forum,fid):fid for fid in ids}
+        for fut in as_completed(futs):
+            try:
+                p=fut.result()
+                if p: out.append(p)
+            except Exception:
+                pass
+    print(f"{venue} {year}: title-prefilter={len(out)}")
     return out
 
 class SaTMLParser(HTMLParser):
