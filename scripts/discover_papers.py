@@ -306,7 +306,7 @@ def bibtex(p):
 def row(p):
     status=p.get("status",STATUS_TO_READ)
     notes=p.get("notes","")
-    return (f"| {p['priority']} | {status} | {p['relevance']} | {p.get('citations',0)} | "
+    return (f"| {status} | {p['relevance']} | {p.get('citations',0)} | "
             f"[{p['title'].replace('|','/')}]({p['url']}) | {p['venue']} | {p['year']} | "
             f"{', '.join(p.get('projects',[])) or '—'} | `{p['bibkey']}` | {'; '.join(p.get('why',[]))} | {notes} |")
 
@@ -359,24 +359,24 @@ def render_queue(reg,c,notes):
       "**Status:** 🔴 To read · 🟡 Review ready · 🟢 Done","",
       "Workflow: discovery → 🔴 To read → deep-reading note generated → 🟡 Review ready → you review it → 🟢 Done","",
       "## Conference papers","",
-      "| Priority | Status | Relevance | Citations | Paper | Venue | Year | Project | BibTeX | Why | Notes |",
-      "|---|---|---:|---:|---|---|---:|---|---|---|---|"
+      "| Status | Relevance | Citations | Paper | Venue | Year | Project | BibTeX | Why | Notes |",
+      "|---|---:|---:|---|---|---:|---|---|---|---|"
     ]
     for conf in c["conferences"]:
         arr=[p for p in confpapers if p.get("venue")==conf["name"]]
         if arr:
-            lines.append(f"| **{conf['name']}** | | | | | | | | | | |")
+            lines.append(f"| **{conf['name']}** | | | | | | | | | |")
             lines.extend(row(p) for p in arr)
 
     lines += [
       "","## Top journal papers — citation ≥ 10","",
-      "| Priority | Status | Relevance | Citations | Paper | Venue | Year | Project | BibTeX | Why | Notes |",
-      "|---|---|---:|---:|---|---|---:|---|---|---|---|"
+      "| Status | Relevance | Citations | Paper | Venue | Year | Project | BibTeX | Why | Notes |",
+      "|---|---:|---:|---|---|---:|---|---|---|---|"
     ]
     for j in c["journals"]:
         arr=[p for p in journals if p.get("venue")==j["name"]]
         if arr:
-            lines.append(f"| **{j['name']}** | | | | | | | | | | |")
+            lines.append(f"| **{j['name']}** | | | | | | | | | |")
             lines.extend(row(p) for p in arr)
 
     if notes:
