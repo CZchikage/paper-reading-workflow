@@ -1,14 +1,43 @@
 {
   "top_per_venue": 10,
-  "journal_per_venue": 8,
+  "journal_per_venue": 10,
   "min_relevance": 5,
+  "fast_prefilter_keywords": [
+    "privacy",
+    "private",
+    "differential",
+    "posterior",
+    "bayesian",
+    "synthetic",
+    "synthesis",
+    "missing",
+    "missingness",
+    "imputation",
+    "mnar",
+    "fairness",
+    "fair",
+    "trustworthy",
+    "calibration",
+    "uncertainty",
+    "sub-gaussian",
+    "subgaussian",
+    "minimax"
+  ],
   "conferences": [
     {
       "name": "NeurIPS",
-      "type": "neurips",
+      "type": "book",
       "years": {
-        "2025": "https://proceedings.neurips.cc/paper/2025",
+        "2025": "https://proceedings.neurips.cc/paper_files/paper/2025/vol38-main-conference",
         "2024": "https://proceedings.neurips.cc/paper/2024"
+      }
+    },
+    {
+      "name": "ICLR",
+      "type": "book",
+      "years": {
+        "2026": "https://proceedings.iclr.cc/paper_files/paper/2026",
+        "2025": "https://proceedings.iclr.cc/paper_files/paper/2025"
       }
     },
     {
@@ -44,14 +73,6 @@
       }
     },
     {
-      "name": "ICLR",
-      "type": "openreview",
-      "years": {
-        "2026": "ICLR.cc/2026/Conference",
-        "2025": "ICLR.cc/2025/Conference"
-      }
-    },
-    {
       "name": "SaTML",
       "type": "satml",
       "years": {
@@ -60,17 +81,56 @@
       }
     }
   ],
-  "top_journals": [
-    "Journal of Machine Learning Research",
-    "Transactions on Machine Learning Research",
-    "The Annals of Statistics",
-    "Biometrika",
-    "Journal of the Royal Statistical Society Series B",
-    "Journal of the American Statistical Association",
-    "Statistical Science"
+  "journals": [
+    {
+      "name": "JMLR",
+      "issn": [
+        "1533-7928"
+      ]
+    },
+    {
+      "name": "TMLR",
+      "issn": [
+        "2835-8856"
+      ]
+    },
+    {
+      "name": "Annals of Statistics",
+      "issn": [
+        "0090-5364"
+      ]
+    },
+    {
+      "name": "Biometrika",
+      "issn": [
+        "0006-3444",
+        "1464-3510"
+      ]
+    },
+    {
+      "name": "JRSSB",
+      "issn": [
+        "1369-7412",
+        "1467-9868"
+      ]
+    },
+    {
+      "name": "JASA",
+      "issn": [
+        "0162-1459",
+        "1537-274X"
+      ]
+    },
+    {
+      "name": "Statistical Science",
+      "issn": [
+        "0883-4237",
+        "2168-8745"
+      ]
+    }
   ],
   "journal_min_citations": 10,
-  "journal_year_range": "2020-2026",
+  "journal_from_year": 2020,
   "topics": [
     {
       "name": "Differential Privacy",
@@ -183,27 +243,5 @@
     "orange": 14,
     "yellow": 9
   },
-  "fast_prefilter_keywords": [
-    "privacy",
-    "private",
-    "differential",
-    "posterior",
-    "bayesian",
-    "synthetic",
-    "synthesis",
-    "missing",
-    "missingness",
-    "imputation",
-    "mnar",
-    "fairness",
-    "fair",
-    "trustworthy",
-    "calibration",
-    "robust",
-    "uncertainty",
-    "sub-gaussian",
-    "subgaussian",
-    "minimax"
-  ],
-  "max_workers": 16
+  "openalex_mailto": ""
 }
