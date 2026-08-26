@@ -1,146 +1,89 @@
 {
-  "conference_years": [
-    2025,
-    2026
-  ],
-  "conference_per_venue": 8,
+  "top_per_venue": 10,
   "journal_per_venue": 8,
-  "top_n": 40,
-  "conference_venues": [
+  "min_relevance": 5,
+  "conferences": [
     {
       "name": "NeurIPS",
-      "priority": 10,
-      "aliases": [
-        "NeurIPS",
-        "Advances in Neural Information Processing Systems",
-        "Neural Information Processing Systems"
-      ]
+      "type": "neurips",
+      "years": {
+        "2025": "https://proceedings.neurips.cc/paper/2025",
+        "2024": "https://proceedings.neurips.cc/paper/2024"
+      }
     },
     {
       "name": "ICML",
-      "priority": 10,
-      "aliases": [
-        "ICML",
-        "International Conference on Machine Learning"
-      ]
-    },
-    {
-      "name": "ICLR",
-      "priority": 10,
-      "aliases": [
-        "ICLR",
-        "International Conference on Learning Representations"
-      ]
+      "type": "pmlr",
+      "years": {
+        "2025": "https://proceedings.mlr.press/v267/",
+        "2024": "https://proceedings.mlr.press/v235/"
+      }
     },
     {
       "name": "AISTATS",
-      "priority": 9,
-      "aliases": [
-        "AISTATS",
-        "International Conference on Artificial Intelligence and Statistics",
-        "Artificial Intelligence and Statistics"
-      ]
+      "type": "pmlr",
+      "years": {
+        "2025": "https://proceedings.mlr.press/v258/",
+        "2024": "https://proceedings.mlr.press/v238/"
+      }
     },
     {
       "name": "UAI",
-      "priority": 9,
-      "aliases": [
-        "UAI",
-        "Conference on Uncertainty in Artificial Intelligence",
-        "Uncertainty in Artificial Intelligence"
-      ]
+      "type": "pmlr",
+      "years": {
+        "2026": "https://proceedings.mlr.press/v337/",
+        "2025": "https://proceedings.mlr.press/v286/"
+      }
     },
     {
       "name": "COLT",
-      "priority": 9,
-      "aliases": [
-        "COLT",
-        "Conference on Learning Theory"
-      ]
+      "type": "pmlr",
+      "years": {
+        "2026": "https://proceedings.mlr.press/v336/",
+        "2025": "https://proceedings.mlr.press/v291/"
+      }
+    },
+    {
+      "name": "ICLR",
+      "type": "openreview",
+      "years": {
+        "2026": "ICLR.cc/2026/Conference",
+        "2025": "ICLR.cc/2025/Conference"
+      }
     },
     {
       "name": "SaTML",
-      "priority": 9,
-      "aliases": [
-        "SaTML",
-        "Secure and Trustworthy Machine Learning",
-        "IEEE Conference on Secure and Trustworthy Machine Learning"
-      ]
-    },
-    {
-      "name": "FAccT",
-      "priority": 7,
-      "aliases": [
-        "FAccT",
-        "Fairness, Accountability, and Transparency"
-      ]
+      "type": "satml",
+      "years": {
+        "2026": "https://satml.org/2026/accepted-papers/",
+        "2025": "https://satml.org/2025/accepted-papers/"
+      }
     }
   ],
   "top_journals": [
-    {
-      "name": "JMLR",
-      "aliases": [
-        "Journal of Machine Learning Research"
-      ]
-    },
-    {
-      "name": "TMLR",
-      "aliases": [
-        "Transactions on Machine Learning Research"
-      ]
-    },
-    {
-      "name": "Annals of Statistics",
-      "aliases": [
-        "The Annals of Statistics",
-        "Annals of Statistics"
-      ]
-    },
-    {
-      "name": "Biometrika",
-      "aliases": [
-        "Biometrika"
-      ]
-    },
-    {
-      "name": "JRSSB",
-      "aliases": [
-        "Journal of the Royal Statistical Society Series B",
-        "Journal of the Royal Statistical Society: Series B"
-      ]
-    },
-    {
-      "name": "JASA",
-      "aliases": [
-        "Journal of the American Statistical Association"
-      ]
-    },
-    {
-      "name": "Statistical Science",
-      "aliases": [
-        "Statistical Science"
-      ]
-    }
+    "Journal of Machine Learning Research",
+    "Transactions on Machine Learning Research",
+    "The Annals of Statistics",
+    "Biometrika",
+    "Journal of the Royal Statistical Society Series B",
+    "Journal of the American Statistical Association",
+    "Statistical Science"
   ],
   "journal_min_citations": 10,
-  "journal_from_year": 2020,
+  "journal_year_range": "2020-2026",
   "topics": [
     {
       "name": "Differential Privacy",
       "project": "privacy",
       "weight": 10,
-      "queries": [
-        "differential privacy",
-        "privacy preserving machine learning"
-      ],
-      "core_keywords": [
+      "core": [
         "differential privacy",
         "renyi differential privacy",
         "private learning",
         "privacy amplification",
         "privacy-preserving"
       ],
-      "support_keywords": [
+      "support": [
         "membership inference",
         "privacy leakage",
         "synthetic data",
@@ -152,22 +95,19 @@
       "name": "Posterior Sampling",
       "project": "posterior-sampling",
       "weight": 10,
-      "queries": [
-        "posterior sampling",
-        "bayesian posterior sampling"
-      ],
-      "core_keywords": [
+      "core": [
         "posterior sampling",
         "posterior sample",
         "posterior predictive",
         "bayesian posterior",
         "posterior inference"
       ],
-      "support_keywords": [
+      "support": [
         "bayesian inference",
         "privacy",
         "differential privacy",
         "sub-gaussian",
+        "subgaussian",
         "synthetic data"
       ]
     },
@@ -175,18 +115,14 @@
       "name": "Synthetic Data",
       "project": "synthetic-data",
       "weight": 9,
-      "queries": [
-        "synthetic data",
-        "private synthetic data"
-      ],
-      "core_keywords": [
+      "core": [
         "synthetic data",
         "data synthesis",
         "synthetic dataset",
         "private synthetic data",
         "tabular synthesis"
       ],
-      "support_keywords": [
+      "support": [
         "differential privacy",
         "privacy",
         "posterior",
@@ -199,18 +135,14 @@
       "name": "Missing Data",
       "project": "missing-data",
       "weight": 8,
-      "queries": [
-        "missing data imputation",
-        "missing not at random"
-      ],
-      "core_keywords": [
+      "core": [
         "missing data",
         "missingness",
         "imputation",
         "missing not at random",
         "mnar"
       ],
-      "support_keywords": [
+      "support": [
         "tabular",
         "transformer",
         "uncertainty",
@@ -222,17 +154,13 @@
       "name": "Trustworthy ML",
       "project": "trustworthy-ml",
       "weight": 5,
-      "queries": [
-        "algorithmic fairness",
-        "trustworthy machine learning"
-      ],
-      "core_keywords": [
+      "core": [
         "algorithmic fairness",
         "fairness",
         "trustworthy machine learning",
         "responsible ai"
       ],
-      "support_keywords": [
+      "support": [
         "theory",
         "statistical",
         "generalization",
@@ -250,14 +178,9 @@
     "subgaussian": 4,
     "renyi": 3
   },
-  "min_relevance": 6,
   "priority_thresholds": {
     "red": 20,
     "orange": 14,
     "yellow": 9
-  },
-  "openalex": {
-    "mailto": "",
-    "per_page": 100
   }
 }
