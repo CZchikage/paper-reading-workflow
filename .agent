@@ -1,35 +1,39 @@
 # Paper Reading Agent Workflow
 
-## Paper Reading
+## Discovery
+The repository uses `reading_queue.md` as the human-facing tracker and
+`data/paper_registry.json` as the permanent deduplication/state database.
 
-When using the `paper-deep-reading` skill in a Git-backed paper-reading repository:
+Valid statuses are exactly:
+- 🔴 To read
+- 🟡 Review ready
+- 🟢 Done
 
-1. Resolve the paper source and create or update one note under `notes/defi/`.
-2. Update `README.md` conference index for the paper.
-3. Verify the generated note uses the current template and includes:
-   - `Motivation and Basic Idea`
-   - `毒舌评论`
-   - concise `Background`: background -> problem -> gap
-   - focused `Evaluation`: experiment idea, metrics, results
-4. Run `git status --short`.
-5. Stage only files touched by this paper-reading task, usually:
-   - `README.md`
-   - `notes/defi/<paper-note>.md`
-   - any paper-specific assets if they were intentionally created
-6. Commit with:
+Never create another status label.
 
-```bash
-git commit -m "Add paper note: <short paper title>"
-```
+## Deep reading lifecycle
+When the user asks to deep-read a paper that exists in `reading_queue.md`:
 
-Use `Update paper note: <short paper title>` when revising an existing note.
+1. Identify the exact paper row and its stable registry record.
+2. Leave/set its status to `🔴 To read` while preparing the reading task.
+3. Use the existing `paper-deep-reading` skill to create/update the structured note under `notes/`.
+4. Add the generated note link to the paper's `Notes` cell.
+5. Change the paper status in BOTH:
+   - `reading_queue.md`
+   - `data/paper_registry.json`
+   to `🟡 Review ready`.
+6. Commit and push only the files touched by this reading task.
 
-7. Push immediately:
+When the user says they have reviewed/finished/approved that paper:
+1. Change status in BOTH tracker and registry to `🟢 Done`.
+2. Preserve the note link.
+3. Commit and push.
 
-```bash
-git push
-```
+A `🟢 Done` paper remains in the tracker/history and must never be rediscovered as a new item.
 
-8. If there are no changes, do not create an empty commit. If push fails, report the error clearly and leave the local commit intact.
-
-Do not stage or commit unrelated user changes.
+## Weekly discovery
+When the automated discovery script runs:
+- previously registered papers are never duplicated;
+- status and notes are preserved;
+- only genuinely unseen papers start as `🔴 To read`;
+- metadata/ranking may refresh without resetting workflow state.
