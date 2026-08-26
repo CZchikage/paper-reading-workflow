@@ -1,271 +1,308 @@
 #!/usr/bin/env python3
+"""
+Quality-first paper tracker:
+1) Past two years of papers from selected top conferences.
+2) Selected top-journal papers with cited_by_count >= threshold.
+3) Rank only after venue/citation quality gates.
+
+Primary metadata source: OpenAlex.
+No arXiv feed is queried.
+"""
 from __future__ import annotations
-import argparse, datetime as dt, hashlib, html, json, re, time
-import urllib.parse, urllib.request, xml.etree.ElementTree as ET
+
+import datetime as dt
+import html
+import json
+import re
+import time
+import urllib.parse
+import urllib.request
 from pathlib import Path
 
-ARXIV_API = "https://export.arxiv.org/api/query"
-S2_API = "https://api.semanticscholar.org/graph/v1/paper/search"
-OR_API = "https://api2.openreview.net/notes"
-ATOM = {"a": "http://www.w3.org/2005/Atom"}
+API = "https://api.openalex.org"
 
-def jload(path):
+def load(path):
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
-def norm(s):
-    return re.sub(r"\s+", " ", html.unescape(s or "")).strip()
-
-def slug(s):
-    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
-
-def first_content_word(title):
-    stop={"a","an","the","of","on","for","to","in","with","and","via","from","by","using"}
-    for w in re.findall(r"[A-Za-z0-9]+", title):
-        if w.lower() not in stop:
-            return re.sub(r"[^A-Za-z0-9]", "", w).lower()
-    return "paper"
-
-def parse_date(s):
-    if not s: return None
-    s=s[:10]
-    try: return dt.datetime.strptime(s, "%Y-%m-%d").replace(tzinfo=dt.timezone.utc)
-    except: return None
-
-def stable_id(p):
-    if p.get("doi"): return "doi:"+p["doi"].lower()
-    if p.get("arxiv_id"): return "arxiv:"+re.sub(r"v\d+$","",p["arxiv_id"])
-    base=(p.get("title","")+"|"+";".join(p.get("authors",[])[:2])).lower()
-    return "hash:"+hashlib.sha1(base.encode()).hexdigest()[:16]
-
-def fetch_json(url, headers=None, timeout=30):
-    req=urllib.request.Request(url, headers=headers or {"User-Agent":"paper-reading-workflow/2.0"})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
+def get_json(url, mailto=""):
+    headers={"User-Agent":"paper-reading-workflow/4.0"}
+    if mailto:
+        headers["User-Agent"] += f" (mailto:{mailto})"
+    req=urllib.request.Request(url,headers=headers)
+    with urllib.request.urlopen(req,timeout=40) as r:
         return json.loads(r.read())
 
-def fetch_arxiv(query,max_results):
-    params={"search_query":query,"start":0,"max_results":max_results,"sortBy":"submittedDate","sortOrder":"descending"}
-    req=urllib.request.Request(ARXIV_API+"?"+urllib.parse.urlencode(params),headers={"User-Agent":"paper-reading-workflow/2.0"})
-    with urllib.request.urlopen(req,timeout=30) as r: data=r.read()
-    root=ET.fromstring(data); out=[]
-    for e in root.findall("a:entry",ATOM):
-        abs_url=norm(e.findtext("a:id",default="",namespaces=ATOM))
-        aid=abs_url.rstrip("/").split("/")[-1]
-        authors=[norm(a.findtext("a:name",default="",namespaces=ATOM)) for a in e.findall("a:author",ATOM)]
-        pdf=""
-        for link in e.findall("a:link",ATOM):
-            if link.attrib.get("title")=="pdf": pdf=link.attrib.get("href","")
-        out.append({
-            "source":"arXiv","arxiv_id":aid,"title":norm(e.findtext("a:title",default="",namespaces=ATOM)),
-            "abstract":norm(e.findtext("a:summary",default="",namespaces=ATOM)),"authors":authors,
-            "date":norm(e.findtext("a:published",default="",namespaces=ATOM))[:10],
-            "updated":norm(e.findtext("a:updated",default="",namespaces=ATOM))[:10],
-            "url":abs_url,"pdf":pdf,"venue":"","doi":""
-        })
-    return out
+def norm(s):
+    return re.sub(r"\s+"," ",html.unescape(s or "")).strip()
 
-def fetch_semantic_scholar(keyword,limit):
-    params={"query":keyword,"limit":min(limit,100),"fields":"title,abstract,authors,year,publicationDate,url,externalIds,venue"}
-    data=fetch_json(S2_API+"?"+urllib.parse.urlencode(params))
-    out=[]
-    for x in data.get("data",[]):
-        ids=x.get("externalIds") or {}
-        aid=ids.get("ArXiv","")
-        doi=ids.get("DOI","")
-        out.append({
-            "source":"Semantic Scholar","title":norm(x.get("title","")),"abstract":norm(x.get("abstract","")),
-            "authors":[a.get("name","") for a in x.get("authors",[])],"date":x.get("publicationDate") or (str(x.get("year"))+"-01-01" if x.get("year") else ""),
-            "url":x.get("url",""),"pdf":("https://arxiv.org/pdf/"+aid if aid else ""),"venue":norm(x.get("venue","")),
-            "arxiv_id":aid,"doi":doi
-        })
-    return out
+def reconstruct_abstract(inv):
+    if not inv: return ""
+    pairs=[]
+    for word, poss in inv.items():
+        for pos in poss:
+            pairs.append((pos,word))
+    return " ".join(w for _,w in sorted(pairs))
 
-def fetch_openreview(venues,lookback_days):
-    # Broad recent note fetch; filter client-side by venue text. OpenReview API schemas vary,
-    # so this is intentionally defensive.
-    cutoff=(dt.datetime.now(dt.timezone.utc)-dt.timedelta(days=lookback_days)).timestamp()*1000
-    params={"limit":1000,"sort":"tcdate:desc"}
-    data=fetch_json(OR_API+"?"+urllib.parse.urlencode(params))
-    out=[]
-    for n in data.get("notes",[]):
-        c=n.get("content") or {}
-        def val(k):
-            v=c.get(k,"")
-            if isinstance(v,dict): v=v.get("value","")
-            return v
-        venue=" ".join(map(str,[val("venue"),val("venueid"),val("conference")]))
-        if venues and not any(v.lower() in venue.lower() for v in venues): continue
-        tc=n.get("tcdate") or n.get("cdate") or 0
-        if tc and tc < cutoff: continue
-        title=norm(val("title"))
-        abstract=norm(val("abstract"))
-        authors=val("authors") or []
-        if isinstance(authors,str): authors=[authors]
-        forum=n.get("forum") or n.get("id")
-        out.append({
-            "source":"OpenReview","title":title,"abstract":abstract,"authors":authors,
-            "date":dt.datetime.fromtimestamp(tc/1000,dt.timezone.utc).strftime("%Y-%m-%d") if tc else "",
-            "url":"https://openreview.net/forum?id="+str(forum),"pdf":"","venue":norm(venue),
-            "arxiv_id":"","doi":""
-        })
-    return out
+def source_search(alias, mailto=""):
+    params={"search":alias,"per-page":10}
+    if mailto: params["mailto"]=mailto
+    data=get_json(API+"/sources?"+urllib.parse.urlencode(params),mailto)
+    return data.get("results",[])
 
-def score(p,cfg):
-    text=(p.get("title","")+" "+p.get("abstract","")).lower()
-    title=p.get("title","").lower()
-    if any(k.lower() in text for k in cfg.get("exclude_keywords",[])): return -999,[],[]
-    s=0; reasons=[]; projects=[]
-    for t in cfg.get("topics",[]):
-        hits=[]
-        for kw in t.get("keywords",[]):
-            k=kw.lower()
-            if k in text:
-                s += t.get("weight",1) * (2 if k in title else 1)
-                hits.append(kw)
-        if hits:
-            reasons.append(f"{t['name']}: "+", ".join(hits[:3]))
-            if t.get("project"): projects.append(t["project"])
-    for kw,b in cfg.get("bonus_keywords",{}).items():
-        if kw.lower() in text: s+=b
-    venue=p.get("venue","")
-    for v,b in cfg.get("venue_bonus",{}).items():
-        if v.lower() in venue.lower(): s+=b; reasons.append("venue: "+v); break
-    d=parse_date(p.get("date",""))
-    if d:
-        age=(dt.datetime.now(dt.timezone.utc)-d).days
-        if age<=2: s+=2
-        elif age<=7: s+=1
-    return s,reasons,sorted(set(projects))
+def resolve_source(venue, mailto=""):
+    candidates=[]
+    for alias in venue["aliases"]:
+        try:
+            results=source_search(alias,mailto)
+        except Exception:
+            continue
+        for s in results:
+            name=(s.get("display_name") or "").lower()
+            score=0
+            if name==alias.lower(): score+=100
+            if alias.lower() in name or name in alias.lower(): score+=30
+            score += min(20, int((s.get("works_count") or 0)>100))
+            candidates.append((score,s))
+        time.sleep(0.15)
+    if not candidates: return None
+    candidates.sort(key=lambda x:x[0],reverse=True)
+    return candidates[0][1]
 
-def priority(score,cfg):
-    th=cfg.get("priority_thresholds",{})
-    if score>=th.get("must_read",16): return "🔴"
-    if score>=th.get("high",10): return "🟠"
-    if score>=th.get("maybe",6): return "🟡"
+def iter_works(source_id, filters, cfg):
+    per=cfg["openalex"]["per_page"]
+    max_pages=cfg["openalex"]["max_pages_per_venue"]
+    mailto=cfg["openalex"].get("mailto","")
+    cursor="*"
+    pages=0
+    while cursor and pages<max_pages:
+        f=["primary_location.source.id:"+source_id]+filters
+        params={"filter":",".join(f),"per-page":per,"cursor":cursor}
+        if mailto: params["mailto"]=mailto
+        data=get_json(API+"/works?"+urllib.parse.urlencode(params),mailto)
+        for w in data.get("results",[]): yield w
+        cursor=data.get("meta",{}).get("next_cursor")
+        pages+=1
+        time.sleep(0.15)
+
+def doi_url(w):
+    doi=w.get("doi") or ""
+    return doi if doi.startswith("http") else (f"https://doi.org/{doi}" if doi else (w.get("id") or ""))
+
+def authors(w):
+    return [a.get("author",{}).get("display_name","") for a in w.get("authorships",[]) if a.get("author")]
+
+def convert(w, venue_name, kind):
+    loc=w.get("primary_location") or {}
+    src=loc.get("source") or {}
+    return {
+      "openalex_id":w.get("id",""),
+      "title":norm(w.get("title","")),
+      "abstract":reconstruct_abstract(w.get("abstract_inverted_index")),
+      "authors":authors(w),
+      "year":w.get("publication_year"),
+      "date":w.get("publication_date") or "",
+      "venue":venue_name,
+      "venue_raw":src.get("display_name") or "",
+      "kind":kind,
+      "citations":w.get("cited_by_count") or 0,
+      "doi":w.get("doi") or "",
+      "url":doi_url(w),
+      "type":w.get("type") or "",
+      "is_oa":((w.get("open_access") or {}).get("is_oa") or False)
+    }
+
+def relevance(p,cfg):
+    text=(p["title"]+" "+p["abstract"]).lower()
+    title=p["title"].lower()
+    score=0; reasons=[]; projects=[]
+    for t in cfg["topics"]:
+        core=[k for k in t["core_keywords"] if k.lower() in text]
+        supp=[k for k in t.get("support_keywords",[]) if k.lower() in text]
+        if core:
+            best=max(t["weight"]*(2 if k.lower() in title else 1) for k in core)
+            score += best + min(4,len(supp))
+            reasons.append(t["name"]+": "+", ".join(core[:2]))
+            projects.append(t["project"])
+    for kw,b in cfg.get("theory_bonus",{}).items():
+        if kw.lower() in text: score+=b
+    return score,reasons,sorted(set(projects))
+
+def quality_score(p):
+    # Venue is already a hard gate. Citations are additional ranking signal.
+    q=0
+    if p["kind"]=="conference":
+        q=12
+        if p["citations"]>=50: q+=6
+        elif p["citations"]>=20: q+=4
+        elif p["citations"]>=10: q+=3
+        elif p["citations"]>=5: q+=1
+    else:
+        q=10
+        if p["citations"]>=100: q+=8
+        elif p["citations"]>=50: q+=6
+        elif p["citations"]>=25: q+=4
+        elif p["citations"]>=10: q+=2
+    return q
+
+def priority(total,cfg):
+    th=cfg["priority"]
+    if total>=th["red"]: return "🔴"
+    if total>=th["orange"]: return "🟠"
+    if total>=th["yellow"]: return "🟡"
     return "👀"
 
 def bibkey(p):
-    author=(p.get("authors") or ["anon"])[0]
-    last=re.sub(r"[^A-Za-z0-9]","",author.split()[-1]).lower() or "anon"
-    year=(p.get("date") or "0000")[:4]
-    return f"{last}{year}{first_content_word(p.get('title','paper'))}"
+    last="anon"
+    if p["authors"]:
+        last=re.sub(r"[^A-Za-z0-9]","",p["authors"][0].split()[-1]).lower() or "anon"
+    stop={"a","an","the","of","on","for","to","in","with","and","via","from","by","using"}
+    words=[w.lower() for w in re.findall(r"[A-Za-z0-9]+",p["title"]) if w.lower() not in stop]
+    return f"{last}{p['year'] or '0000'}{words[0] if words else 'paper'}"
 
-def bibentry(p,key):
-    title=p.get("title","").replace("{","").replace("}","")
-    authors=" and ".join(p.get("authors") or [])
-    year=(p.get("date") or "0000")[:4]
-    fields=[f"  title = {{{title}}}", f"  author = {{{authors}}}", f"  year = {{{year}}}"]
-    if p.get("doi"): fields.append(f"  doi = {{{p['doi']}}}")
-    if p.get("url"): fields.append(f"  url = {{{p['url']}}}")
-    if p.get("venue"): fields.append(f"  journal = {{{p['venue']}}}")
-    return "@article{"+key+",\n"+",\n".join(fields)+"\n}\n"
+def bibtex(p):
+    typ="inproceedings" if p["kind"]=="conference" else "article"
+    fields=[
+      f"  title = {{{p['title'].replace('{','').replace('}','')}}}",
+      f"  author = {{{' and '.join(p['authors'])}}}",
+      f"  year = {{{p['year']}}}",
+    ]
+    if p["kind"]=="conference":
+        fields.append(f"  booktitle = {{{p['venue']}}}")
+    else:
+        fields.append(f"  journal = {{{p['venue']}}}")
+    if p["doi"]:
+        fields.append(f"  doi = {{{p['doi'].replace('https://doi.org/','')}}}")
+    fields.append(f"  url = {{{p['url']}}}")
+    return "@"+typ+"{"+p["bibkey"]+",\n"+",\n".join(fields)+"\n}\n"
 
-def read_existing_queue(path):
-    # Preserve user-managed fields for papers already in the queue.
+def load_state(path):
     state={}
     if not Path(path).exists(): return state
     for line in Path(path).read_text(encoding="utf-8").splitlines():
         if not line.startswith("|"): continue
-        cells=[c.strip() for c in line.strip("|").split("|")]
-        if len(cells)<9 or cells[0] in {"Priority","---"}: continue
-        m=re.search(r"\((https?://[^)]+)\)",cells[3])
-        if not m: continue
-        state[m.group(1)]={"status":cells[1],"project":cells[6],"notes":cells[8]}
+        cells=[x.strip() for x in line.strip("|").split("|")]
+        if len(cells)<11: continue
+        m=re.search(r"\((https?://[^)]+)\)",cells[4])
+        if m:
+            state[m.group(1)]={"status":cells[1],"notes":cells[-1]}
     return state
 
-def render_queue(path,papers,cfg):
-    old=read_existing_queue(path)
+def row(p,state):
+    old=state.get(p["url"],{})
+    why="; ".join(p["reasons"])
+    return (
+      f"| {p['priority']} | {old.get('status','TODO')} | {p['relevance']} | {p['citations']} | "
+      f"[{p['title'].replace('|','/')}]({p['url']}) | {p['venue']} | {p['year']} | "
+      f"{', '.join(p['projects']) or '—'} | `{p['bibkey']}` | {why} | {old.get('notes','')} |"
+    )
+
+def render(queue,papers,cfg,resolution_notes):
+    state=load_state(queue)
+    conf=[p for p in papers if p["kind"]=="conference"]
+    journals=[p for p in papers if p["kind"]=="journal"]
+    red=[p for p in papers if p["priority"]=="🔴"][:cfg["must_read_max"]]
     lines=[
       "# Paper Reading Queue","",
-      f"_Auto-refreshed {dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%d %H:%M UTC')} · latest {cfg.get('lookback_days',14)} days_","",
-      "## This Week — Must Read","",
-      f"Top {cfg.get('must_read_n',5)} highest-priority papers are surfaced here; the full ranked queue follows.","",
-      "| Priority | Status | Score | Paper | Date | Source | Project | BibTeX | Notes |",
-      "|---|---|---:|---|---|---|---|---|---|"
+      "_Venue-first screening. No arXiv feed is used._","",
+      "## Must Read",""
     ]
-    for p in papers[:cfg.get("must_read_n",5)]:
-        lines.append(row(p,old))
-    lines += ["","## Full Ranked Queue","",
-      "| Priority | Status | Score | Paper | Date | Source | Project | BibTeX | Notes |",
-      "|---|---|---:|---|---|---|---|---|---|"]
-    for p in papers: lines.append(row(p,old))
-    lines += ["","## Workflow","",
-      "- `TODO` → not started","- `READING` → currently reading","- `DONE` → note finished","- `SKIP` → intentionally ignored","",
-      "The refresh script preserves `Status`, `Project`, and `Notes` for papers already present in the queue.",""]
-    Path(path).write_text("\n".join(lines),encoding="utf-8")
-
-def row(p,old):
-    st=old.get(p.get("url",""),{})
-    status=st.get("status","TODO")
-    project=st.get("project") or ", ".join(p.get("projects",[])[:2]) or "—"
-    notes=st.get("notes","")
-    paper=f"[{p['title'].replace('|','/').strip()}]({p.get('url','')})"
-    return f"| {p['priority']} | {status} | {p['score']} | {paper} | {p.get('date','')} | {p.get('source','')} | {project} | `{p['bibkey']}` | {notes} |"
+    if not red:
+        lines += ["> No paper cleared the current Must Read threshold.",""]
+    else:
+        lines += [
+          "| Priority | Status | Relevance | Citations | Paper | Venue | Year | Project | BibTeX | Why | Notes |",
+          "|---|---|---:|---:|---|---|---:|---|---|---|---|"
+        ]+[row(p,state) for p in red]+[""]
+    lines += [
+      "## Top Conference Papers — past two years","",
+      "| Priority | Status | Relevance | Citations | Paper | Venue | Year | Project | BibTeX | Why | Notes |",
+      "|---|---|---:|---:|---|---|---:|---|---|---|---|"
+    ]+[row(p,state) for p in conf]+[
+      "","## Top Journal Papers — citation ≥ "+str(cfg["journal_min_citations"]),"",
+      "| Priority | Status | Relevance | Citations | Paper | Venue | Year | Project | BibTeX | Why | Notes |",
+      "|---|---|---:|---:|---|---|---:|---|---|---|---|"
+    ]+[row(p,state) for p in journals]
+    if resolution_notes:
+        lines += ["","## Source resolution notes",""]+[f"- {x}" for x in resolution_notes]
+    Path(queue).write_text("\n".join(lines)+"\n",encoding="utf-8")
 
 def main():
-    ap=argparse.ArgumentParser()
-    ap.add_argument("--config",default="config/paper_discovery.json")
-    ap.add_argument("--queue",default="reading_queue.md")
-    ap.add_argument("--seen",default="data/seen_papers.json")
-    ap.add_argument("--include-seen",action="store_true")
-    args=ap.parse_args()
-    cfg=jload(args.config)
-    cutoff=dt.datetime.now(dt.timezone.utc)-dt.timedelta(days=cfg.get("lookback_days",14))
-    papers=[]
-    # arXiv
-    if cfg["sources"]["arxiv"].get("enabled",True):
-        cats=" OR ".join("cat:"+c for c in cfg.get("arxiv_categories",[]))
-        papers+=fetch_arxiv(cats,cfg["sources"]["arxiv"].get("max_results",80))
-    # Semantic Scholar: one query per topic name + strongest keyword to control traffic
-    if cfg["sources"]["semantic_scholar"].get("enabled",True):
-        limit=cfg["sources"]["semantic_scholar"].get("max_results",40)
-        for t in cfg.get("topics",[]):
-            q=t.get("keywords",[t["name"]])[0]
-            try: papers+=fetch_semantic_scholar(q,limit)
-            except Exception as e: print("WARNING Semantic Scholar",q,e)
-            time.sleep(0.7)
-    # OpenReview
-    if cfg["sources"]["openreview"].get("enabled",True):
-        try: papers+=fetch_openreview(cfg["sources"]["openreview"].get("venues",[]),cfg.get("lookback_days",14))
-        except Exception as e: print("WARNING OpenReview",e)
+    cfg=load("config/paper_discovery.json")
+    years=cfg["conference_years"]
+    candidates=[]
+    notes=[]
 
-    # dedupe
+    # 1. Conferences: venue itself is the quality gate.
+    for venue in cfg["conference_venues"]:
+        src=resolve_source(venue,cfg["openalex"].get("mailto",""))
+        if not src:
+            notes.append(f"Could not resolve conference source: {venue['name']}")
+            continue
+        sid=src["id"].split("/")[-1]
+        for year in years:
+            filters=[f"publication_year:{year}"]
+            count=0
+            try:
+                for w in iter_works(sid,filters,cfg):
+                    p=convert(w,venue["name"],"conference")
+                    rel,reasons,projects=relevance(p,cfg)
+                    if rel<cfg["min_relevance"]: continue
+                    p["relevance"]=rel;p["reasons"]=reasons;p["projects"]=projects
+                    p["quality"]=quality_score(p);p["total"]=rel+p["quality"]
+                    p["priority"]=priority(p["total"],cfg);p["bibkey"]=bibkey(p)
+                    candidates.append(p); count+=1
+            except Exception as e:
+                notes.append(f"{venue['name']} {year}: {type(e).__name__}")
+        time.sleep(0.2)
+
+    # 2. Journals: top-journal membership + citation threshold are hard gates.
+    for venue in cfg["top_journals"]:
+        src=resolve_source(venue,cfg["openalex"].get("mailto",""))
+        if not src:
+            notes.append(f"Could not resolve journal source: {venue['name']}")
+            continue
+        sid=src["id"].split("/")[-1]
+        filters=[
+          f"from_publication_date:{cfg['journal_from_year']}-01-01",
+          f"cited_by_count:>{cfg['journal_min_citations']-1}"
+        ]
+        try:
+            for w in iter_works(sid,filters,cfg):
+                p=convert(w,venue["name"],"journal")
+                if p["citations"]<cfg["journal_min_citations"]: continue
+                rel,reasons,projects=relevance(p,cfg)
+                if rel<cfg["min_relevance"]: continue
+                p["relevance"]=rel;p["reasons"]=reasons;p["projects"]=projects
+                p["quality"]=quality_score(p);p["total"]=rel+p["quality"]
+                p["priority"]=priority(p["total"],cfg);p["bibkey"]=bibkey(p)
+                candidates.append(p)
+        except Exception as e:
+            notes.append(f"{venue['name']}: {type(e).__name__}")
+        time.sleep(0.2)
+
+    # dedupe DOI/OpenAlex id
     uniq={}
-    for p in papers:
-        if not p.get("title"): continue
-        d=parse_date(p.get("date",""))
-        if d and d<cutoff: continue
-        k=stable_id(p)
-        if k not in uniq or len(p.get("abstract",""))>len(uniq[k].get("abstract","")): uniq[k]=p
+    for p in candidates:
+        key=(p["doi"] or p["openalex_id"] or p["title"]).lower()
+        if key not in uniq or p["total"]>uniq[key]["total"]:
+            uniq[key]=p
 
-    seen_path=Path(args.seen)
-    seen=set()
-    if seen_path.exists():
-        try: seen=set(jload(seen_path).get("seen_ids",[]))
-        except: pass
+    papers=list(uniq.values())
+    # Conferences first, then journals; within each, relevance/quality/citations.
+    conf=sorted([p for p in papers if p["kind"]=="conference"],
+                key=lambda p:(p["total"],p["relevance"],p["citations"]),reverse=True)
+    jour=sorted([p for p in papers if p["kind"]=="journal"],
+                key=lambda p:(p["total"],p["citations"],p["relevance"]),reverse=True)
+    selected=(conf+jour)[:cfg["top_n"]]
 
-    ranked=[]
-    for k,p in uniq.items():
-        s,reasons,projects=score(p,cfg)
-        if s<cfg.get("min_score",4): continue
-        if (not args.include_seen) and k in seen: continue
-        p["score"]=s; p["reasons"]=reasons; p["projects"]=projects
-        p["priority"]=priority(s,cfg); p["bibkey"]=bibkey(p); p["_sid"]=k
-        ranked.append(p)
-    ranked.sort(key=lambda p:(p["score"],p.get("date","")),reverse=True)
-    selected=ranked[:cfg.get("top_n",20)]
+    render("reading_queue.md",selected,cfg,notes)
 
-    render_queue(args.queue,selected,cfg)
+    Path("bib").mkdir(exist_ok=True)
+    Path("bib/discovered.bib").write_text("\n".join(bibtex(p) for p in selected),encoding="utf-8")
 
-    if cfg.get("bibtex",{}).get("enabled",True):
-        out=Path(cfg["bibtex"].get("output_file","bib/discovered.bib"))
-        out.parent.mkdir(parents=True,exist_ok=True)
-        out.write_text("\n".join(bibentry(p,p["bibkey"]) for p in selected),encoding="utf-8")
-
-    seen.update(p["_sid"] for p in selected)
-    seen_path.parent.mkdir(parents=True,exist_ok=True)
-    seen_path.write_text(json.dumps({"seen_ids":sorted(seen)},indent=2),encoding="utf-8")
-    print(f"Fetched {len(papers)} records, deduped to {len(uniq)}, selected {len(selected)}.")
-    for p in selected: print(p["priority"],p["score"],p["date"],p["title"],"=>",p["bibkey"])
+    print(f"Conference matches: {len(conf)}; journal matches: {len(jour)}; selected: {len(selected)}")
+    for p in selected:
+        print(p["priority"],p["venue"],p["year"],"R",p["relevance"],"C",p["citations"],p["title"])
 
 if __name__=="__main__":
     main()
