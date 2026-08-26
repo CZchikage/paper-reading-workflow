@@ -10,6 +10,77 @@ CFG="config/paper_discovery.json"
 OA="https://api.openalex.org"
 
 def cfg(): return json.loads(Path(CFG).read_text(encoding="utf-8"))
+
+REGISTRY="data/paper_registry.json"
+
+STATUS_TO_READ="🔴 To read"
+STATUS_REVIEW_READY="🟡 Review ready"
+STATUS_DONE="🟢 Done"
+
+def stable_id(p):
+    doi=(p.get("doi") or "").lower().replace("https://doi.org/","").strip()
+    if doi:
+        return "doi:"+doi
+    url=(p.get("url") or "").strip().lower()
+    if url:
+        return "url:"+url
+    title=re.sub(r"\W+"," ",(p.get("title") or "").lower()).strip()
+    first=(p.get("authors") or [""])[0].lower().strip()
+    year=str(p.get("year") or "")
+    import hashlib
+    return "hash:"+hashlib.sha1(f"{title}|{first}|{year}".encode()).hexdigest()[:20]
+
+def load_registry():
+    p=Path(REGISTRY)
+    if not p.exists():
+        return {}
+    try:
+        data=json.loads(p.read_text(encoding="utf-8"))
+        if isinstance(data,dict) and "papers" in data:
+            return data["papers"]
+        return data if isinstance(data,dict) else {}
+    except Exception:
+        return {}
+
+def save_registry(reg):
+    Path(REGISTRY).parent.mkdir(parents=True,exist_ok=True)
+    payload={"version":1,"papers":reg}
+    Path(REGISTRY).write_text(json.dumps(payload,indent=2,ensure_ascii=False),encoding="utf-8")
+
+def parse_existing_queue(path="reading_queue.md"):
+    """
+    Preserve human-edited Status and Notes from the Markdown queue.
+    Key by the paper URL, because it is directly recoverable from the table.
+    """
+    state={}
+    p=Path(path)
+    if not p.exists():
+        return state
+    for line in p.read_text(encoding="utf-8").splitlines():
+        if not line.startswith("|"): continue
+        cells=[x.strip() for x in line.strip("|").split("|")]
+        if len(cells)<11: continue
+        m=re.search(r"\((https?://[^)]+)\)",cells[4])
+        if not m: continue
+        status=cells[1]
+        if status not in {STATUS_TO_READ,STATUS_REVIEW_READY,STATUS_DONE}:
+            continue
+        state[m.group(1).lower()]={"status":status,"notes":cells[-1]}
+    return state
+
+def sync_registry_from_queue(reg, queue_state):
+    """Human edits in reading_queue.md win over the registry."""
+    for pid,rec in reg.items():
+        url=(rec.get("url") or "").lower()
+        if url and url in queue_state:
+            rec["status"]=queue_state[url]["status"]
+            rec["notes"]=queue_state[url].get("notes","")
+    return reg
+
+def paper_from_registry(pid,rec):
+    p=dict(rec)
+    p["_pid"]=pid
+    return p
 def clean(s): return re.sub(r"\s+"," ",html.unescape(s or "")).strip()
 
 def text(url):
@@ -233,12 +304,105 @@ def bibtex(p):
     return "@"+typ+"{"+p["bibkey"]+",\n"+",\n".join(fs)+"\n}\n"
 
 def row(p):
-    return (f"| {p['priority']} | TODO | {p['relevance']} | {p.get('citations',0)} | "
+    status=p.get("status",STATUS_TO_READ)
+    notes=p.get("notes","")
+    return (f"| {p['priority']} | {status} | {p['relevance']} | {p.get('citations',0)} | "
             f"[{p['title'].replace('|','/')}]({p['url']}) | {p['venue']} | {p['year']} | "
-            f"{', '.join(p.get('projects',[])) or '—'} | `{p['bibkey']}` | {'; '.join(p.get('why',[]))} | |")
+            f"{', '.join(p.get('projects',[])) or '—'} | `{p['bibkey']}` | {'; '.join(p.get('why',[]))} | {notes} |")
+
+def merge_into_registry(reg, papers):
+    """
+    Never duplicate a previously seen paper.
+    Existing status/notes are preserved; newly discovered papers start as To read.
+    """
+    for p in papers:
+        pid=stable_id(p)
+        p["_pid"]=pid
+        if pid in reg:
+            # Refresh bibliographic/ranking metadata but preserve workflow state.
+            status=reg[pid].get("status",STATUS_TO_READ)
+            notes=reg[pid].get("notes","")
+            reg[pid].update({k:v for k,v in p.items() if k != "_pid"})
+            reg[pid]["status"]=status
+            reg[pid]["notes"]=notes
+        else:
+            rec={k:v for k,v in p.items() if k != "_pid"}
+            rec["status"]=STATUS_TO_READ
+            rec["notes"]=""
+            reg[pid]=rec
+    return reg
+
+def active_sorted(reg,c):
+    """
+    The queue is a persistent tracker, not a weekly report.
+    Show all tracked papers, with workflow status first and venue grouping later.
+    """
+    rank={STATUS_TO_READ:0,STATUS_REVIEW_READY:1,STATUS_DONE:2}
+    arr=[paper_from_registry(pid,rec) for pid,rec in reg.items()]
+    arr.sort(key=lambda p:(
+        rank.get(p.get("status",STATUS_TO_READ),9),
+        -int(p.get("relevance",0)),
+        -int(p.get("citations",0)),
+        str(p.get("venue","")),
+        -int(p.get("year") or 0)
+    ))
+    return arr
+
+def render_queue(reg,c,notes):
+    papers=active_sorted(reg,c)
+    confpapers=[p for p in papers if p.get("kind")=="conference"]
+    journals=[p for p in papers if p.get("kind")=="journal"]
+
+    lines=[
+      "# Paper Reading Queue","",
+      "_Stateful tracker. Previously seen papers are never re-added as duplicates._","",
+      "**Status:** 🔴 To read · 🟡 Review ready · 🟢 Done","",
+      "Workflow: discovery → 🔴 To read → deep-reading note generated → 🟡 Review ready → you review it → 🟢 Done","",
+      "## Conference papers","",
+      "| Priority | Status | Relevance | Citations | Paper | Venue | Year | Project | BibTeX | Why | Notes |",
+      "|---|---|---:|---:|---|---|---:|---|---|---|---|"
+    ]
+    for conf in c["conferences"]:
+        arr=[p for p in confpapers if p.get("venue")==conf["name"]]
+        if arr:
+            lines.append(f"| **{conf['name']}** | | | | | | | | | | |")
+            lines.extend(row(p) for p in arr)
+
+    lines += [
+      "","## Top journal papers — citation ≥ 10","",
+      "| Priority | Status | Relevance | Citations | Paper | Venue | Year | Project | BibTeX | Why | Notes |",
+      "|---|---|---:|---:|---|---|---:|---|---|---|---|"
+    ]
+    for j in c["journals"]:
+        arr=[p for p in journals if p.get("venue")==j["name"]]
+        if arr:
+            lines.append(f"| **{j['name']}** | | | | | | | | | | |")
+            lines.extend(row(p) for p in arr)
+
+    if notes:
+        lines += ["","## Fetch notes",""]+[f"- {x}" for x in notes]
+
+    Path("reading_queue.md").write_text("\n".join(lines)+"\n",encoding="utf-8")
+
+def render_bib(reg):
+    papers=[paper_from_registry(pid,rec) for pid,rec in reg.items()]
+    Path("bib").mkdir(exist_ok=True)
+    Path("bib/discovered.bib").write_text(
+        "\n".join(bibtex(p) for p in papers),
+        encoding="utf-8"
+    )
 
 def main():
-    c=cfg(); confpapers=[]; notes=[]
+    c=cfg()
+    reg=load_registry()
+
+    # If the user manually changed statuses/notes in reading_queue.md, keep those edits.
+    reg=sync_registry_from_queue(reg,parse_existing_queue())
+
+    discovered=[]
+    notes=[]
+
+    # --- Verified conference sources ---
     for conf in c["conferences"]:
         bucket=[]
         for year,url in conf["years"].items():
@@ -249,57 +413,52 @@ def main():
                     raw=fetch_details(pmlr_index(url,c),conf["name"],year,c)
                 else:
                     raw=satml_page(url,conf["name"],year,c)
-                    for p in raw: p.update(venue=conf["name"],year=int(year),kind="conference",citations=0)
+                    for p in raw:
+                        p.update(venue=conf["name"],year=int(year),kind="conference",citations=0)
+
                 rels=[]
                 for p in raw:
                     rel,why,projects=relevance(p,c)
                     if rel<c["min_relevance"]: continue
                     p.update(relevance=rel,why=why,projects=projects)
                     p["total"]=rel+10
-                    p["priority"]=priority(p["total"],c); p["bibkey"]=bibkey(p)
+                    p["priority"]=priority(p["total"],c)
+                    p["bibkey"]=bibkey(p)
                     rels.append(p)
+
                 print(f"{conf['name']} {year}: full-relevance={len(rels)}")
                 bucket.extend(rels)
             except Exception as e:
                 notes.append(f"{conf['name']} {year}: {type(e).__name__}: {e}")
+
+        # Per-venue shortlist applies to NEW discovery candidates, not to the persistent registry.
         seen={}
         for p in bucket:
-            k=(p.get("doi") or p["url"] or p["title"]).lower()
-            if k not in seen or p["total"]>seen[k]["total"]:seen[k]=p
+            k=stable_id(p)
+            if k not in seen or p["total"]>seen[k]["total"]:
+                seen[k]=p
         arr=sorted(seen.values(),key=lambda p:p["relevance"],reverse=True)[:c["top_per_venue"]]
-        confpapers.extend(arr)
-        print(f"{conf['name']}: selected={len(arr)}")
+        discovered.extend(arr)
+        print(f"{conf['name']}: discovered shortlist={len(arr)}")
 
-    journals=[]
+    # --- Verified journal ISSN filters + citation hard gate ---
     for j in c["journals"]:
         try:
-            arr=journal_papers(j,c); journals.extend(arr)
-            print(f"{j['name']}: selected={len(arr)}")
+            arr=journal_papers(j,c)
+            discovered.extend(arr)
+            print(f"{j['name']}: discovered shortlist={len(arr)}")
         except Exception as e:
             notes.append(f"{j['name']}: {type(e).__name__}: {e}")
 
-    lines=["# Paper Reading Queue","",
-      "_Conference membership comes from verified official proceedings/accepted-paper pages. Journals use exact ISSN filters and citation ≥ 10._","",
-      "## Conference papers","",
-      "| Priority | Status | Relevance | Citations | Paper | Venue | Year | Project | BibTeX | Why | Notes |",
-      "|---|---|---:|---:|---|---|---:|---|---|---|---|"]
-    for conf in c["conferences"]:
-        arr=[p for p in confpapers if p["venue"]==conf["name"]]
-        if arr:
-            lines.append(f"| **{conf['name']}** | | | | | | | | | | |")
-            lines.extend(row(p) for p in arr)
-    lines+=["","## Top journal papers — citation ≥ 10","",
-      "| Priority | Status | Relevance | Citations | Paper | Venue | Year | Project | BibTeX | Why | Notes |",
-      "|---|---|---:|---:|---|---|---:|---|---|---|---|"]
-    for j in c["journals"]:
-        arr=[p for p in journals if p["venue"]==j["name"]]
-        if arr:
-            lines.append(f"| **{j['name']}** | | | | | | | | | | |")
-            lines.extend(row(p) for p in arr)
-    if notes:
-        lines+=["","## Fetch notes",""]+[f"- {x}" for x in notes]
-    Path("reading_queue.md").write_text("\n".join(lines)+"\n",encoding="utf-8")
-    Path("bib").mkdir(exist_ok=True)
-    Path("bib/discovered.bib").write_text("\n".join(bibtex(p) for p in confpapers+journals),encoding="utf-8")
+    # Add only truly new papers; refresh metadata for old ones without resetting status.
+    before=len(reg)
+    reg=merge_into_registry(reg,discovered)
+    after=len(reg)
+    print(f"Registry: {before} existing + {after-before} new = {after} total")
 
-if __name__=="__main__": main()
+    save_registry(reg)
+    render_queue(reg,c,notes)
+    render_bib(reg)
+
+if __name__=="__main__":
+    main()
