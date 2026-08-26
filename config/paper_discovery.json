@@ -182,5 +182,28 @@
     "red": 20,
     "orange": 14,
     "yellow": 9
-  }
+  },
+  "fast_prefilter_keywords": [
+    "privacy",
+    "private",
+    "differential",
+    "posterior",
+    "bayesian",
+    "synthetic",
+    "synthesis",
+    "missing",
+    "missingness",
+    "imputation",
+    "mnar",
+    "fairness",
+    "fair",
+    "trustworthy",
+    "calibration",
+    "robust",
+    "uncertainty",
+    "sub-gaussian",
+    "subgaussian",
+    "minimax"
+  ],
+  "max_workers": 16
 }
