@@ -1,4 +1,2739 @@
 {
   "version": 1,
-  "papers": {}
+  "papers": {
+    "doi:10.52202/085713-1690": {
+      "title": "The Gaussian Mixing Mechanism: Renyi Differential Privacy via Gaussian Sketches",
+      "authors": [
+        "Lev, Omri",
+        "Srinivasan, Vishwak",
+        "Shenfeld, Moshe",
+        "Ligett, Katrina",
+        "Sekhari, Ayush",
+        "Wilson, Ashia"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/48bee7eb60cb3cc9949e36d545465cdf-Paper-Conference.pdf",
+      "doi": "10.52202/085713-1690",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/48bee7eb60cb3cc9949e36d545465cdf-Abstract-Conference.html",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 23,
+      "why": [
+        "Differential Privacy: differential privacy, renyi differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 33,
+      "priority": "🔴",
+      "bibkey": "omri2025gaussian",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.52202/079017-2869": {
+      "title": "Prior-itizing Privacy: A Bayesian Approach to Setting the Privacy Budget in Differential Privacy",
+      "authors": [
+        "Kazan, Zeki",
+        "Reiter, Jerome P."
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2024/file/a47f5cdff1469751597d78e803fc590f-Paper-Conference.pdf",
+      "doi": "10.52202/079017-2869",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/a47f5cdff1469751597d78e803fc590f-Abstract-Conference.html",
+      "venue": "NeurIPS",
+      "year": 2024,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 21,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 31,
+      "priority": "🔴",
+      "bibkey": "zeki2024prior",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.52202/085713-0053": {
+      "title": "FracFace: Breaking the Visual Clues—Fractal-Based Privacy-Preserving Face Recognition",
+      "authors": [
+        "Dai, Wanying",
+        "Li, Beibei",
+        "Dong, Naipeng",
+        "Bai, Guangdong",
+        "Dong, Jin Song"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/02272b67360899b10238109072571ca5-Paper-Conference.pdf",
+      "doi": "10.52202/085713-0053",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/02272b67360899b10238109072571ca5-Abstract-Conference.html",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: privacy-preserving"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "wanying2025fracface",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.52202/085713-0340": {
+      "title": "Do You Really Need Public Data? Surrogate Public Data for Differential Privacy on Tabular Data",
+      "authors": [
+        "Hod, Shlomi",
+        "Rosenblatt, Lucas",
+        "Stoyanovich, Julia"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/0e9354232996c1b2c54d38a41393d791-Paper-Datasets_and_Benchmarks_Track.pdf",
+      "doi": "10.52202/085713-0340",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/0e9354232996c1b2c54d38a41393d791-Abstract-Datasets_and_Benchmarks_Track.html",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "shlomi2025do",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.52202/085713-0360": {
+      "title": "Sum Estimation under Personalized Local Differential Privacy",
+      "authors": [
+        "Sun, Dajun",
+        "Dong, Wei",
+        "Qiu, Yuan",
+        "Yi, Ke",
+        "Cormode, Graham"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/0fd4ce94d29be88a5a262a2c77a18f47-Paper-Conference.pdf",
+      "doi": "10.52202/085713-0360",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/0fd4ce94d29be88a5a262a2c77a18f47-Abstract-Conference.html",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "dajun2025sum",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.52202/085713-1183": {
+      "title": "PUO-Bench: A Panel Understanding and Operation Benchmark with A Privacy-Preserving Framework",
+      "authors": [
+        "LIN, Wei",
+        "Zhou, Yiwei",
+        "Zhang, Junkai",
+        "Shao, Rui",
+        "Zhao, Zhiyuan",
+        "Gao, Junyu",
+        "Chan, Antoni",
+        "Li, Xuelong"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/32683193e1d0e7a5795b073acecb3549-Paper-Datasets_and_Benchmarks_Track.pdf",
+      "doi": "10.52202/085713-1183",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/32683193e1d0e7a5795b073acecb3549-Abstract-Datasets_and_Benchmarks_Track.html",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: privacy-preserving"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "wei2025puo",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.52202/085713-1319": {
+      "title": "Synthesize Privacy-Preserving High-Resolution Images via Private Textual Intermediaries",
+      "authors": [
+        "Wang, Haoxiang",
+        "Lin, Zinan",
+        "Yu, Da",
+        "Zhang, Huishuai"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/38380a17248c4dfc4f48fc4d836d9b62-Paper-Conference.pdf",
+      "doi": "10.52202/085713-1319",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/38380a17248c4dfc4f48fc4d836d9b62-Abstract-Conference.html",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: privacy-preserving"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "haoxiang2025synthesize",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.52202/085713-1505": {
+      "title": "Differential Privacy for Euclidean Jordan Algebra with Applications to Private Symmetric Cone Programming",
+      "authors": [
+        "Song, Zhao",
+        "Xue, Jianfei",
+        "Zhang, Lichen"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/4027fc4573ec9114182d1fef37a6321a-Paper-Conference.pdf",
+      "doi": "10.52202/085713-1505",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/4027fc4573ec9114182d1fef37a6321a-Abstract-Conference.html",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "zhao2025differential",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.52202/085713-1632": {
+      "title": "How Well Can Differential Privacy Be Audited in One Run?",
+      "authors": [
+        "Keinan, Amit",
+        "Shenfeld, Moshe",
+        "Ligett, Katrina"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/45b8d5be3d04c7b459352e9e919c6a78-Paper-Conference.pdf",
+      "doi": "10.52202/085713-1632",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/45b8d5be3d04c7b459352e9e919c6a78-Abstract-Conference.html",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "amit2025how",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.52202/085713-1842": {
+      "title": "Controlling The Spread of Epidemics on Networks with Differential Privacy",
+      "authors": [
+        "Nguyen, Dũng",
+        "Srinivasan, Aravind",
+        "Valieva, Renata",
+        "Vullikanti, Anil",
+        "Wu, Jiayi"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/4f347493f34e4a88fecf6783dbaabfb9-Paper-Conference.pdf",
+      "doi": "10.52202/085713-1842",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/4f347493f34e4a88fecf6783dbaabfb9-Abstract-Conference.html",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "dng2025controlling",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.iclr.cc/paper_files/paper/2026/hash/1e7d8a1ea09f04de1c338cf08698f467-abstract-conference.html": {
+      "title": "Exponential-Wrapped Mechanisms: Differential Privacy on Hadamard Manifolds Made Practical",
+      "authors": [
+        "Jiang, Yangdi",
+        "Chang, Xiaotian",
+        "Ding, Lei",
+        "Kong, Linglong",
+        "Jiang, Bei"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/1e7d8a1ea09f04de1c338cf08698f467-Paper-Conference.pdf",
+      "doi": "",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/1e7d8a1ea09f04de1c338cf08698f467-Abstract-Conference.html",
+      "venue": "ICLR",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "yangdi2026exponential",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.iclr.cc/paper_files/paper/2026/hash/220e6dbed88faa83bd9f9e8fa359e43d-abstract-conference.html": {
+      "title": "A Bayesian Nonparametric Framework for Private, Fair, and Balanced Tabular Data Synthesis",
+      "authors": [
+        "Fazeliasl, Forough",
+        "Zhang, Michael Minyi",
+        "Kong, Linglong",
+        "Jiang, Bei"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/220e6dbed88faa83bd9f9e8fa359e43d-Paper-Conference.pdf",
+      "doi": "",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/220e6dbed88faa83bd9f9e8fa359e43d-Abstract-Conference.html",
+      "venue": "ICLR",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Synthetic Data: data synthesis"
+      ],
+      "projects": [
+        "synthetic-data"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "forough2026bayesian",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.iclr.cc/paper_files/paper/2026/hash/34b13425b5ba8ad05d97b0043df52ed3-abstract-conference.html": {
+      "title": "Rethinking LoRA for Privacy-Preserving Federated Learning in Large Models",
+      "authors": [
+        "LIU, JIN",
+        "Miao, Yinbin",
+        "Xi, Ning",
+        "Liu, Junkang"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/34b13425b5ba8ad05d97b0043df52ed3-Paper-Conference.pdf",
+      "doi": "",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/34b13425b5ba8ad05d97b0043df52ed3-Abstract-Conference.html",
+      "venue": "ICLR",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: privacy-preserving"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "jin2026rethinking",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.iclr.cc/paper_files/paper/2026/hash/43f3700429a93070a29b84f94963a7e1-abstract-conference.html": {
+      "title": "Efficient Approximate Posterior Sampling with Annealed Langevin Monte Carlo",
+      "authors": [
+        "Parulekar, Advait",
+        "Rout, Litu",
+        "Shanmugam, Karthikeyan",
+        "Shakkottai, Sanjay"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/43f3700429a93070a29b84f94963a7e1-Paper-Conference.pdf",
+      "doi": "",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/43f3700429a93070a29b84f94963a7e1-Abstract-Conference.html",
+      "venue": "ICLR",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Posterior Sampling: posterior sampling"
+      ],
+      "projects": [
+        "posterior-sampling"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "advait2026efficient",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.iclr.cc/paper_files/paper/2026/hash/51480fa7058146264ac6fc145eeb13b4-abstract-conference.html": {
+      "title": "LearnIR: Learnable Posterior Sampling for Real-World Image Restoration",
+      "authors": [
+        "Bao, Yihang",
+        "Huang, Zhen",
+        "Guan, Shanyan",
+        "Yang, Songlin",
+        "Ge, Yanhao",
+        "Li, Wei",
+        "Huang, Bukun",
+        "Xu, Zengmin"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/51480fa7058146264ac6fc145eeb13b4-Paper-Conference.pdf",
+      "doi": "",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/51480fa7058146264ac6fc145eeb13b4-Abstract-Conference.html",
+      "venue": "ICLR",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Posterior Sampling: posterior sampling"
+      ],
+      "projects": [
+        "posterior-sampling"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "yihang2026learnir",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.iclr.cc/paper_files/paper/2026/hash/5d77373490c2afe9cb1529bc455d6efc-abstract-conference.html": {
+      "title": "Operationalizing Data Minimization for Privacy-Preserving LLM Prompting",
+      "authors": [
+        "Zhou, Jijie",
+        "Mireshghallah, Niloofar",
+        "Li, Tianshi"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/5d77373490c2afe9cb1529bc455d6efc-Paper-Conference.pdf",
+      "doi": "",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/5d77373490c2afe9cb1529bc455d6efc-Abstract-Conference.html",
+      "venue": "ICLR",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: privacy-preserving"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "jijie2026operationalizing",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.iclr.cc/paper_files/paper/2026/hash/5edb57c05c81d04beb716ef1d542fe9e-abstract-conference.html": {
+      "title": "CL-DPS: A Contrastive Learning Approach to Blind Nonlinear Inverse Problem Solving via Diffusion Posterior Sampling",
+      "authors": [
+        "Ye, Linfeng",
+        "Mohajer Hamidi, Shayan",
+        "Pilanci, Mert",
+        "Plataniotis, Konstantinos"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/5edb57c05c81d04beb716ef1d542fe9e-Paper-Conference.pdf",
+      "doi": "",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/5edb57c05c81d04beb716ef1d542fe9e-Abstract-Conference.html",
+      "venue": "ICLR",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Posterior Sampling: posterior sampling"
+      ],
+      "projects": [
+        "posterior-sampling"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "linfeng2026cl",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.iclr.cc/paper_files/paper/2026/hash/748ba247386936692f0f9a05565c926b-abstract-conference.html": {
+      "title": "Learning Posterior Predictive Distributions for Node Classification from Synthetic Graph Priors",
+      "authors": [
+        "Choi, Jeongwhan",
+        "Kim, Jongwoo",
+        "Kang, Woosung",
+        "Park, Noseong"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/748ba247386936692f0f9a05565c926b-Paper-Conference.pdf",
+      "doi": "",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/748ba247386936692f0f9a05565c926b-Abstract-Conference.html",
+      "venue": "ICLR",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Posterior Sampling: posterior predictive"
+      ],
+      "projects": [
+        "posterior-sampling"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "jeongwhan2026learning",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.iclr.cc/paper_files/paper/2026/hash/7585e5facf58c1804f0ca34c0b22b95d-abstract-conference.html": {
+      "title": "Beyond Membership: Limitations of Add/Remove Adjacency in Differential Privacy",
+      "authors": [
+        "Pradhan, Gauri",
+        "Jälkö, Joonas",
+        "Zanella-Beguelin, Santiago",
+        "Honkela, Antti"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/7585e5facf58c1804f0ca34c0b22b95d-Paper-Conference.pdf",
+      "doi": "",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/7585e5facf58c1804f0ca34c0b22b95d-Abstract-Conference.html",
+      "venue": "ICLR",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "gauri2026beyond",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.iclr.cc/paper_files/paper/2026/hash/7f2e5d16c2c5ac161ce7aa44af35c0fe-abstract-conference.html": {
+      "title": "SecP-Tuning: Efficient Privacy-Preserving Prompt Tuning for Large Language Models via MPC",
+      "authors": [
+        "Luo, Jinglong",
+        "Zhang, Zhuo",
+        "Zhang, Yehong",
+        "Liu, Shiyu",
+        "Dong, Ye",
+        "WANG, HUI",
+        "Yu, Yue",
+        "Zhou, Xun",
+        "Xu, Zenglin"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/7f2e5d16c2c5ac161ce7aa44af35c0fe-Paper-Conference.pdf",
+      "doi": "",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/7f2e5d16c2c5ac161ce7aa44af35c0fe-Abstract-Conference.html",
+      "venue": "ICLR",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: privacy-preserving"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "jinglong2026secp",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v267/pierquin25a.html": {
+      "title": "Privacy Amplification Through Synthetic Data: Insights from Linear Regression",
+      "authors": [
+        "Clément Pierquin",
+        "Aurélien Bellet",
+        "Marc Tommasi",
+        "Matthieu Boussard"
+      ],
+      "abstract": "Privacy Amplification Through Synthetic Data: Insights from Linear RegressionClément Pierquin, Aurélien Bellet, Marc Tommasi, Matthieu Boussar...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/pierquin25a/pierquin25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v267/pierquin25a.html",
+      "venue": "ICML",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 40,
+      "why": [
+        "Differential Privacy: privacy amplification",
+        "Synthetic Data: synthetic data"
+      ],
+      "projects": [
+        "privacy",
+        "synthetic-data"
+      ],
+      "total": 50,
+      "priority": "🔴",
+      "bibkey": "pierquin2025privacy",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v267/agrawal25a.html": {
+      "title": "Understanding the difficulties of posterior predictive estimation",
+      "authors": [
+        "Abhinav Agrawal",
+        "Justin Domke"
+      ],
+      "abstract": "Understanding the difficulties of posterior predictive estimationAbhinav Agrawal, Justin DomkePredictive posterior densities (PPDs) are essential in app...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/agrawal25a/agrawal25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v267/agrawal25a.html",
+      "venue": "ICML",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Posterior Sampling: posterior predictive"
+      ],
+      "projects": [
+        "posterior-sampling"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "agrawal2025understanding",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v267/bertazzi25a.html": {
+      "title": "Differential Privacy Guarantees of Markov Chain Monte Carlo Algorithms",
+      "authors": [
+        "Andrea Bertazzi",
+        "Tim Johnston",
+        "Gareth O. Roberts",
+        "Alain Oliviero Durmus"
+      ],
+      "abstract": "Differential Privacy Guarantees of Markov Chain Monte Carlo AlgorithmsAndrea Bertazzi, Tim Johnston, Gareth O. Roberts, Alain Oliviero DurmusT...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/bertazzi25a/bertazzi25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v267/bertazzi25a.html",
+      "venue": "ICML",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "bertazzi2025differential",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v267/de-castro25a.html": {
+      "title": "EncryptedLLM: Privacy-Preserving Large Language Model Inference via GPU-Accelerated Fully Homomorphic Encryption",
+      "authors": [
+        "Leo De Castro",
+        "Daniel Escudero",
+        "Adya Agrawal",
+        "Antigoni Polychroniadou",
+        "Manuela Veloso"
+      ],
+      "abstract": "EncryptedLLM: Privacy-Preserving Large Language Model Inference via GPU-Accelerated Fully Homomorphic EncryptionLeo De Castro, Daniel Escudero, Ady...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/de-castro25a/de-castro25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v267/de-castro25a.html",
+      "venue": "ICML",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: privacy-preserving"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "castro2025encryptedllm",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v267/dong25a.html": {
+      "title": "Leveraging Randomness in Model and Data Partitioning for Privacy Amplification",
+      "authors": [
+        "Andy Dong",
+        "Wei-Ning Chen",
+        "Ayfer Ozgur"
+      ],
+      "abstract": "Leveraging Randomness in Model and Data Partitioning for Privacy AmplificationAndy Dong, Wei-Ning Chen, Ayfer OzgurWe study how inherent randomness...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/dong25a/dong25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v267/dong25a.html",
+      "venue": "ICML",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: privacy amplification"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "dong2025leveraging",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v267/feng25c.html": {
+      "title": "On Differential Privacy for Adaptively Solving Search Problems via Sketching",
+      "authors": [
+        "Shiyuan Feng",
+        "Ying Feng",
+        "George Zhaoqi Li",
+        "Zhao Song",
+        "David Woodruff",
+        "Lichen Zhang"
+      ],
+      "abstract": "On Differential Privacy for Adaptively Solving Search Problems via SketchingShiyuan Feng, Ying Feng, George Zhaoqi Li, Zhao Song, David W...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/feng25c/feng25c.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v267/feng25c.html",
+      "venue": "ICML",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "feng2025differential",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v267/gilani25a.html": {
+      "title": "Optimizing Noise Distributions for Differential Privacy",
+      "authors": [
+        "Atefeh Gilani",
+        "Juan Felipe Gomez",
+        "Shahab Asoodeh",
+        "Flavio Calmon",
+        "Oliver Kosut",
+        "Lalitha Sankar"
+      ],
+      "abstract": "Optimizing Noise Distributions for Differential PrivacyAtefeh Gilani, Juan Felipe Gomez, Shahab Asoodeh, Flavio Calmon, Oliver Kosut,&nbs...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/gilani25a/gilani25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v267/gilani25a.html",
+      "venue": "ICML",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "gilani2025optimizing",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v267/joseph25a.html": {
+      "title": "Approximate Differential Privacy of the $\\ell_2$ Mechanism",
+      "authors": [
+        "Matthew Joseph",
+        "Alex Kulesza",
+        "Alexander Yu"
+      ],
+      "abstract": "Approximate Differential Privacy of the $\\ell_2$ MechanismMatthew Joseph, Alex Kulesza, Alexander YuWe study the $\\ell_2$ mechanism for computing a...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/joseph25a/joseph25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v267/joseph25a.html",
+      "venue": "ICML",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "joseph2025approximate",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v267/mahloujifar25a.html": {
+      "title": "Auditing $f$-differential privacy in one run",
+      "authors": [
+        "Saeed Mahloujifar",
+        "Luca Melis",
+        "Kamalika Chaudhuri"
+      ],
+      "abstract": "Auditing $f$-differential privacy in one runSaeed Mahloujifar, Luca Melis, Kamalika ChaudhuriEmpirical auditing has emerged as a means of catching ...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/mahloujifar25a/mahloujifar25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v267/mahloujifar25a.html",
+      "venue": "ICML",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "mahloujifar2025auditing",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v267/reshef25a.html": {
+      "title": "Privacy-Preserving Federated Convex Optimization: Balancing Partial-Participation and Efficiency via Noise Cancellation",
+      "authors": [
+        "Roie Reshef",
+        "Kfir Yehuda Levy"
+      ],
+      "abstract": "Privacy-Preserving Federated Convex Optimization: Balancing Partial-Participation and Efficiency via Noise CancellationRoie Reshef, Kfir Yehuda LevyThis...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/reshef25a/reshef25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v267/reshef25a.html",
+      "venue": "ICML",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: privacy-preserving"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "reshef2025privacy",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v238/abroshan24a.html": {
+      "title": "Imposing Fairness Constraints in Synthetic Data Generation",
+      "authors": [
+        "Mahed Abroshan",
+        "Andrew Elliott",
+        "Mohammad Mahdi Khalili"
+      ],
+      "abstract": "Imposing Fairness Constraints in Synthetic Data GenerationMahed Abroshan, Andrew Elliott, Mohammad Mahdi KhaliliIn several real-world applications ...",
+      "pdf": "https://proceedings.mlr.press/v238/abroshan24a/abroshan24a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v238/abroshan24a.html",
+      "venue": "AISTATS",
+      "year": 2024,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 28,
+      "why": [
+        "Synthetic Data: synthetic data",
+        "Trustworthy ML: fairness"
+      ],
+      "projects": [
+        "synthetic-data",
+        "trustworthy-ml"
+      ],
+      "total": 38,
+      "priority": "🔴",
+      "bibkey": "abroshan2024imposing",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v258/aliakbarpour25a.html": {
+      "title": "Enhancing Feature-Specific Data Protection via Bayesian Coordinate Differential Privacy",
+      "authors": [
+        "Maryam Aliakbarpour",
+        "Syomantak Chaudhuri",
+        "Thomas Courtade",
+        "Alireza Fallah",
+        "Michael Jordan"
+      ],
+      "abstract": "Enhancing Feature-Specific Data Protection via Bayesian Coordinate Differential PrivacyMaryam Aliakbarpour, Syomantak Chaudhuri, Thomas Courtade,&n...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v258/main/assets/aliakbarpour25a/aliakbarpour25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v258/aliakbarpour25a.html",
+      "venue": "AISTATS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 21,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 31,
+      "priority": "🔴",
+      "bibkey": "aliakbarpour2025enhancing",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v258/nikita25a.html": {
+      "title": "Efficient Estimation of a Gaussian Mean with Local Differential Privacy",
+      "authors": [
+        "Kalinin Nikita",
+        "Lukas Steinberger"
+      ],
+      "abstract": "Efficient Estimation of a Gaussian Mean with Local Differential PrivacyKalinin Nikita, Lukas SteinbergerIn this paper, we study the problem of estimati...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v258/main/assets/nikita25a/nikita25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v258/nikita25a.html",
+      "venue": "AISTATS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "nikita2025efficient",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v258/kone25a.html": {
+      "title": "Pareto Set Identification With Posterior Sampling",
+      "authors": [
+        "Cyrille Kone",
+        "Marc Jourdan",
+        "Emilie Kaufmann"
+      ],
+      "abstract": "Pareto Set Identification With Posterior SamplingCyrille Kone, Marc Jourdan, Emilie KaufmannThe problem of identifying the best answer among a coll...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v258/main/assets/kone25a/kone25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v258/kone25a.html",
+      "venue": "AISTATS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Posterior Sampling: posterior sampling"
+      ],
+      "projects": [
+        "posterior-sampling"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "kone2025pareto",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v258/pla25a.html": {
+      "title": "Distribution-Aware Mean Estimation under User-level Local Differential Privacy",
+      "authors": [
+        "Corentin Pla",
+        "Maxime Vono",
+        "Hugo Richard"
+      ],
+      "abstract": "Distribution-Aware Mean Estimation under User-level Local Differential PrivacyCorentin Pla, Maxime Vono, Hugo RichardWe consider the problem of mea...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v258/main/assets/pla25a/pla25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v258/pla25a.html",
+      "venue": "AISTATS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "pla2025distribution",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v258/roy25b.html": {
+      "title": "FLIPHAT: Joint Differential Privacy for High Dimensional Linear Bandits",
+      "authors": [
+        "Saptarshi Roy",
+        "Sunrit Chakraborty",
+        "Debabrota Basu"
+      ],
+      "abstract": "FLIPHAT: Joint Differential Privacy for High Dimensional Linear BanditsSaptarshi Roy, Sunrit Chakraborty, Debabrota BasuHigh dimensional sparse lin...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v258/main/assets/roy25b/roy25b.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v258/roy25b.html",
+      "venue": "AISTATS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "roy2025fliphat",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v258/huang25b.html": {
+      "title": "Differential Privacy in Distributed Learning: Beyond Uniformly Bounded Stochastic Gradients",
+      "authors": [
+        "Yue Huang",
+        "Jiaojiao Zhang",
+        "Qing Ling"
+      ],
+      "abstract": "Differential Privacy in Distributed Learning: Beyond Uniformly Bounded Stochastic GradientsYue Huang, Jiaojiao Zhang, Qing LingThis paper explores ...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v258/main/assets/huang25b/huang25b.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v258/huang25b.html",
+      "venue": "AISTATS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "huang2025differential",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v258/vishwanath25a.html": {
+      "title": "Signal Recovery from Random Dot-Product Graphs under Local Differential Privacy",
+      "authors": [
+        "Siddharth Vishwanath",
+        "Jonathan Hehir"
+      ],
+      "abstract": "Signal Recovery from Random Dot-Product Graphs under Local Differential PrivacySiddharth Vishwanath, Jonathan HehirWe consider the problem of recovering...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v258/main/assets/vishwanath25a/vishwanath25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v258/vishwanath25a.html",
+      "venue": "AISTATS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "vishwanath2025signal",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v258/kulesza25a.html": {
+      "title": "General Staircase Mechanisms for Optimal Differential Privacy",
+      "authors": [
+        "Alex Kulesza",
+        "Ananda Theertha Suresh",
+        "Yuyan Wang"
+      ],
+      "abstract": "General Staircase Mechanisms for Optimal Differential PrivacyAlex Kulesza, Ananda Theertha Suresh, Yuyan Wang We derive the optimal diff...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v258/main/assets/kulesza25a/kulesza25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v258/kulesza25a.html",
+      "venue": "AISTATS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "kulesza2025general",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v258/suppakitpaisarn25a.html": {
+      "title": "Counting Graphlets of Size k under Local Differential Privacy",
+      "authors": [
+        "Vorapong Suppakitpaisarn",
+        "Donlapark Ponnoprat",
+        "Nicha Hirankarn",
+        "Quentin Hillebrand"
+      ],
+      "abstract": "Counting Graphlets of Size k under Local Differential PrivacyVorapong Suppakitpaisarn, Donlapark Ponnoprat, Nicha Hirankarn, Quentin Hillebran...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v258/main/assets/suppakitpaisarn25a/suppakitpaisarn25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v258/suppakitpaisarn25a.html",
+      "venue": "AISTATS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "suppakitpaisarn2025counting",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v337/masserova26a.html": {
+      "title": "AudiFair: Privacy-Preserving Framework for Auditing Fairness",
+      "authors": [
+        "Elisaweta Masserova",
+        "Kshitij Kulkarni",
+        "Antigoni Polychroniadou",
+        "Ron D. Rothblum",
+        "Akira Takahashi"
+      ],
+      "abstract": "AudiFair: Privacy-Preserving Framework for Auditing FairnessElisaweta Masserova, Kshitij Kulkarni, Antigoni Polychroniadou, Ron D. Rothblum,&n...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v337/main/assets/masserova26a/masserova26a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v337/masserova26a.html",
+      "venue": "UAI",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 31,
+      "why": [
+        "Differential Privacy: privacy-preserving",
+        "Trustworthy ML: fairness"
+      ],
+      "projects": [
+        "privacy",
+        "trustworthy-ml"
+      ],
+      "total": 41,
+      "priority": "🔴",
+      "bibkey": "masserova2026audifair",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v337/song26b.html": {
+      "title": "Privacy-Preserving Robustness Verification for Neural Networks",
+      "authors": [
+        "Nianyun Song",
+        "Xiaokun Luan",
+        "Yu Guo",
+        "Rongfang Bie",
+        "Meng Sun",
+        "Xiyue Zhang"
+      ],
+      "abstract": "Privacy-Preserving Robustness Verification for Neural NetworksNianyun Song, Xiaokun Luan, Yu Guo, Rongfang Bie, Meng Sun, Xiyue Zhan...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v337/main/assets/song26b/song26b.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v337/song26b.html",
+      "venue": "UAI",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: privacy-preserving"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "song2026privacy",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v286/sonee25a.html": {
+      "title": "Privacy-Preserving Neural Processes for Probabilistic User Modeling",
+      "authors": [
+        "Amir Sonee",
+        "Haripriya Harikumar",
+        "Alex Hämäläinen",
+        "Lukas Prediger",
+        "Samuel Kaski"
+      ],
+      "abstract": "Privacy-Preserving Neural Processes for Probabilistic User ModelingAmir Sonee, Haripriya Harikumar, Alex Hämäläinen, Lukas Prediger, Samu...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v286/main/assets/sonee25a/sonee25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v286/sonee25a.html",
+      "venue": "UAI",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: privacy-preserving"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "sonee2025privacy",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v337/asiaee26a.html": {
+      "title": "Workload-Preserving Differentially Private Synthetic Data for Causal Inference via Maximum-Entropy Calibration",
+      "authors": [
+        "Amir Asiaee",
+        "Kaveh Aryan"
+      ],
+      "abstract": "Workload-Preserving Differentially Private Synthetic Data for Causal Inference via Maximum-Entropy CalibrationAmir Asiaee, Kaveh AryanWorkload-based dif...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v337/main/assets/asiaee26a/asiaee26a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v337/asiaee26a.html",
+      "venue": "UAI",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 18,
+      "why": [
+        "Synthetic Data: synthetic data, private synthetic data"
+      ],
+      "projects": [
+        "synthetic-data"
+      ],
+      "total": 28,
+      "priority": "🔴",
+      "bibkey": "asiaee2026workload",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v337/tugnoli26a.html": {
+      "title": "Improving TabPFN’s Synthetic Data Generation by Integrating Causal Structure",
+      "authors": [
+        "Davide Tugnoli",
+        "Andrea De Lorenzo",
+        "Marco Virgolin",
+        "Giovanni Cinà"
+      ],
+      "abstract": "Improving TabPFN’s Synthetic Data Generation by Integrating Causal StructureDavide Tugnoli, Andrea De Lorenzo, Marco Virgolin, Giovanni CinàSy...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v337/main/assets/tugnoli26a/tugnoli26a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v337/tugnoli26a.html",
+      "venue": "UAI",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 18,
+      "why": [
+        "Synthetic Data: synthetic data"
+      ],
+      "projects": [
+        "synthetic-data"
+      ],
+      "total": 28,
+      "priority": "🔴",
+      "bibkey": "tugnoli2026improving",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v286/wang25g.html": {
+      "title": "Informative Synthetic Data Generation for Thorax Disease Classification",
+      "authors": [
+        "Yancheng Wang",
+        "Rajeev Goel",
+        "Marko Jojic",
+        "Alvin C. Silva",
+        "Teresa Wu",
+        "Yingzhen Yang"
+      ],
+      "abstract": "Informative Synthetic Data Generation for Thorax Disease ClassificationYancheng Wang, Rajeev Goel, Marko Jojic, Alvin C. Silva, Teresa Wu...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v286/main/assets/wang25g/wang25g.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v286/wang25g.html",
+      "venue": "UAI",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 18,
+      "why": [
+        "Synthetic Data: synthetic data"
+      ],
+      "projects": [
+        "synthetic-data"
+      ],
+      "total": 28,
+      "priority": "🔴",
+      "bibkey": "wang2025informative",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v286/aguas25a.html": {
+      "title": "Causal Inference amid Missingness-Specific Independences and Mechanism Shifts",
+      "authors": [
+        "Johan de Aguas",
+        "Leonard Henckel",
+        "Johan Pensar",
+        "Guido Biele"
+      ],
+      "abstract": "Causal Inference amid Missingness-Specific Independences and Mechanism ShiftsJohan de Aguas, Leonard Henckel, Johan Pensar, Guido BieleThe rec...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v286/main/assets/aguas25a/aguas25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v286/aguas25a.html",
+      "venue": "UAI",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 16,
+      "why": [
+        "Missing Data: missingness"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 26,
+      "priority": "🔴",
+      "bibkey": "aguas2025causal",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v286/aloui25a.html": {
+      "title": "CATE Estimation With Potential Outcome Imputation From Local Regression",
+      "authors": [
+        "Ahmed Aloui",
+        "Juncheng Dong",
+        "Cat Phuoc Le",
+        "Vahid Tarokh"
+      ],
+      "abstract": "CATE Estimation With Potential Outcome Imputation From Local RegressionAhmed Aloui, Juncheng Dong, Cat Phuoc Le, Vahid TarokhOne of the most s...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v286/main/assets/aloui25a/aloui25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v286/aloui25a.html",
+      "venue": "UAI",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 16,
+      "why": [
+        "Missing Data: imputation"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 26,
+      "priority": "🔴",
+      "bibkey": "aloui2025cate",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v337/chikahara26a.html": {
+      "title": "Fairness under Graph Uncertainty: Achieving Interventional Fairness with Partially Known Causal Graphs over Clusters of Variables",
+      "authors": [
+        "Yoichi Chikahara"
+      ],
+      "abstract": "Fairness under Graph Uncertainty: Achieving Interventional Fairness with Partially Known Causal Graphs over Clusters of VariablesYoichi ChikaharaAlgorithmic...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v337/main/assets/chikahara26a/chikahara26a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v337/chikahara26a.html",
+      "venue": "UAI",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 10,
+      "why": [
+        "Trustworthy ML: fairness"
+      ],
+      "projects": [
+        "trustworthy-ml"
+      ],
+      "total": 20,
+      "priority": "🔴",
+      "bibkey": "chikahara2026fairness",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v337/kim26b.html": {
+      "title": "Beyond Bounds: Quantifying the Probability of Counterfactual Fairness",
+      "authors": [
+        "Taehan Kim",
+        "Minyoung Cho",
+        "Sanghack Lee"
+      ],
+      "abstract": "Beyond Bounds: Quantifying the Probability of Counterfactual FairnessTaehan Kim, Minyoung Cho, Sanghack LeeCounterfactual fairness is a rigorous cr...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v337/main/assets/kim26b/kim26b.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v337/kim26b.html",
+      "venue": "UAI",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 10,
+      "why": [
+        "Trustworthy ML: fairness"
+      ],
+      "projects": [
+        "trustworthy-ml"
+      ],
+      "total": 20,
+      "priority": "🔴",
+      "bibkey": "kim2026beyond",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v336/ding26a.html": {
+      "title": "Minimax optimal differentially private synthetic data for smooth queries",
+      "authors": [
+        "Rundong Ding",
+        "Yiyun He",
+        "Yizhe Zhu"
+      ],
+      "abstract": "Minimax optimal differentially private synthetic data for smooth queriesRundong Ding, Yiyun He, Yizhe ZhuDifferentially private synthetic data enab...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v336/main/assets/ding26a/ding26a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v336/ding26a.html",
+      "venue": "COLT",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 22,
+      "why": [
+        "Synthetic Data: synthetic data, private synthetic data"
+      ],
+      "projects": [
+        "synthetic-data"
+      ],
+      "total": 32,
+      "priority": "🔴",
+      "bibkey": "ding2026minimax",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v336/nissim26a.html": {
+      "title": "Invited Open Problem: Does Differential Privacy Make PAC Learning Much Harder?",
+      "authors": [
+        "Kobbi Nissim",
+        "Uri Stemmer",
+        "Eliad Tsfadia"
+      ],
+      "abstract": "Invited Open Problem: Does Differential Privacy Make PAC Learning Much Harder?Kobbi Nissim, Uri Stemmer, Eliad Tsfadia What is the optim...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v336/main/assets/nissim26a/nissim26a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v336/nissim26a.html",
+      "venue": "COLT",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "nissim2026invited",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v291/chen25b.html": {
+      "title": "Decision Making in Changing Environments: Robustness, Query-Based Learning, and Differential Privacy",
+      "authors": [
+        "Fan Chen",
+        "Alexander Rakhlin"
+      ],
+      "abstract": "Decision Making in Changing Environments: Robustness, Query-Based Learning, and Differential PrivacyFan Chen, Alexander RakhlinWe study the problem of i...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v291/main/assets/chen25b/chen25b.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v291/chen25b.html",
+      "venue": "COLT",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Differential Privacy: differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "chen2025decision",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v291/kumar25a.html": {
+      "title": "Spike-and-Slab Posterior Sampling in High Dimensions",
+      "authors": [
+        "Symantak Kumar",
+        "Purnamrita Sarkar",
+        "Kevin Tian",
+        "Yusong Zhu"
+      ],
+      "abstract": "Spike-and-Slab Posterior Sampling in High DimensionsSymantak Kumar, Purnamrita Sarkar, Kevin Tian, Yusong ZhuPosterior sampling with the spike...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v291/main/assets/kumar25a/kumar25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v291/kumar25a.html",
+      "venue": "COLT",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Posterior Sampling: posterior sampling"
+      ],
+      "projects": [
+        "posterior-sampling"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "kumar2025spike",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v336/black26a.html": {
+      "title": "Actively Learning Halfspaces without Synthetic Data",
+      "authors": [
+        "Hadley Black",
+        "Kasper Green Larsen",
+        "Arya Mazumdar",
+        "Barna Saha",
+        "Geelon So"
+      ],
+      "abstract": "Actively Learning Halfspaces without Synthetic DataHadley Black, Kasper Green Larsen, Arya Mazumdar, Barna Saha, Geelon SoIn the classic ...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v336/main/assets/black26a/black26a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v336/black26a.html",
+      "venue": "COLT",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 18,
+      "why": [
+        "Synthetic Data: synthetic data"
+      ],
+      "projects": [
+        "synthetic-data"
+      ],
+      "total": 28,
+      "priority": "🔴",
+      "bibkey": "black2026actively",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v336/ghazi26b.html": {
+      "title": "Fixed-Parameter Tractability of Private Synthetic Data Generation",
+      "authors": [
+        "Badih Ghazi",
+        "Cristóbal Guzmán",
+        "Pritish Kamath",
+        "Alexander Knop",
+        "Ravi Kumar",
+        "Pasin Manurangsi"
+      ],
+      "abstract": "Fixed-Parameter Tractability of Private Synthetic Data GenerationBadih Ghazi, Cristóbal Guzmán, Pritish Kamath, Alexander Knop, Ravi Kuma...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v336/main/assets/ghazi26b/ghazi26b.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v336/ghazi26b.html",
+      "venue": "COLT",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 18,
+      "why": [
+        "Synthetic Data: synthetic data, private synthetic data"
+      ],
+      "projects": [
+        "synthetic-data"
+      ],
+      "total": 28,
+      "priority": "🔴",
+      "bibkey": "ghazi2026fixed",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v291/dwork25a.html": {
+      "title": "From Fairness to Infinity: Outcome-Indistinguishable (Omni)Prediction in Evolving Graphs",
+      "authors": [
+        "Cynthia Dwork",
+        "Chris Hays",
+        "Nicole Immorlica",
+        "Juan C. Perdomo",
+        "Pranay Tankala"
+      ],
+      "abstract": "From Fairness to Infinity: Outcome-Indistinguishable (Omni)Prediction in Evolving GraphsCynthia Dwork, Chris Hays, Nicole Immorlica, Juan C. P...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v291/main/assets/dwork25a/dwork25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v291/dwork25a.html",
+      "venue": "COLT",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 10,
+      "why": [
+        "Trustworthy ML: fairness"
+      ],
+      "projects": [
+        "trustworthy-ml"
+      ],
+      "total": 20,
+      "priority": "🔴",
+      "bibkey": "dwork2025fairness",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://openalex.org/w3039905535": {
+      "title": "Joint Causal Inference from Multiple Contexts",
+      "abstract": "The gold standard for discovering causal relations is by means of experimentation. Over the last decades, alternative methods have been proposed that can infer causal relations between variables from certain statistical patterns in purely observational data. We introduce Joint Causal Inference (JCI), a novel approach to causal discovery from multiple data sets from different contexts that elegantly unifies both approaches. JCI is a causal modeling framework rather than a specific algorithm, and it can be implemented using any causal discovery algorithm that can take into account certain background knowledge. JCI can deal with different types of interventions (e.g., perfect, imperfect, stochastic, etc.) in a unified fashion, and does not require knowledge of intervention targets or types in case of interventional data. We explain how several well-known causal discovery algorithms can be seen as addressing special cases of the JCI framework, and we also propose novel implementations that extend existing causal discovery methods for purely observational data to the JCI setting. We evaluate different JCI implementations on synthetic data and on flow cytometry protein expression data and conclude that JCI implementations can considerably outperform state-of-the-art causal discovery algorithms.",
+      "authors": [
+        "Joris M. Mooij",
+        "Sara Magliacane",
+        "Tom Claassen"
+      ],
+      "year": 2020,
+      "venue": "JMLR",
+      "kind": "journal",
+      "citations": 68,
+      "doi": "",
+      "url": "https://openalex.org/W3039905535",
+      "relevance": 9,
+      "why": [
+        "Synthetic Data: synthetic data"
+      ],
+      "projects": [
+        "synthetic-data"
+      ],
+      "total": 25,
+      "priority": "🔴",
+      "bibkey": "mooij2020joint",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://openalex.org/w3039874824": {
+      "title": "High-dimensional Linear Discriminant Analysis Classifier for Spiked Covariance Model",
+      "abstract": "Linear discriminant analysis (LDA) is a popular classifier that is built on the assumption of common population covariance matrix across classes. The performance of LDA depends heavily on the quality of estimating the mean vectors and the population covariance matrix. This issue becomes more challenging in high-dimensional settings where the number of features is of the same order as the number of training samples. Several techniques for estimating the covariance matrix can be found in the literature. One of the most popular approaches are estimators based on using a regularized sample covariance matrix, giving the name regularized LDA (R-LDA) to the corresponding classifier. These estimators are known to be more resilient to the sample noise than the traditional sample covariance matrix estimator. However, the main challenge of the regularization approach is the choice of the optimal regularization parameter, as an arbitrary choice could lead to severe degradation of the classifier performance. In this work, we propose an improved LDA classifier based on the assumption that the covariance matrix follows a spiked covariance model. The main principle of our proposed technique is the design of a parametrized inverse covariance matrix estimator, the parameters of which are shown to be easily optimized. Numerical simulations, using both real and synthetic data, show that the proposed classifier yields better classification performance than the classical R-LDA while requiring lower computational complexity.",
+      "authors": [
+        "Houssem Sifaou",
+        "Abla Kammoun",
+        "Mohamed‐Slim Alouini"
+      ],
+      "year": 2020,
+      "venue": "JMLR",
+      "kind": "journal",
+      "citations": 32,
+      "doi": "",
+      "url": "https://openalex.org/W3039874824",
+      "relevance": 9,
+      "why": [
+        "Synthetic Data: synthetic data"
+      ],
+      "projects": [
+        "synthetic-data"
+      ],
+      "total": 22,
+      "priority": "🔴",
+      "bibkey": "sifaou2020high",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://openalex.org/w3038711245": {
+      "title": "Change Point Estimation in a Dynamic Stochastic Block Model",
+      "abstract": "We consider the problem of estimating the location of a single change point in a dynamic stochastic block model. We propose two methods of estimating the change point, together with the model parameters. The first employs a least squares criterion function and takes into consideration the full structure of the stochastic block model and is evaluated at each point in time. Hence, as an intermediate step, it requires estimating the community structure based on a clustering algorithm at every time point. The second method comprises of the following two steps: in the first one, a least squares function is used and evaluated at each time point, but ignores the community structures and just considers a random graph generating mechanism exhibiting a change point. Once the change point is identified, in the second step, all network data before and after it are used together with a clustering algorithm to obtain the corresponding community structures and subsequently estimate the generating stochastic block model parameters. A comparison between these two methods is illustrated. Further, for both methods under their respective identifiability and certain additional regularity conditions, we establish rates of convergence and derive the asymptotic distributions of the change point estimators. The results are illustrated on synthetic data.",
+      "authors": [
+        "Monika Bhattacharjee",
+        "Moulinath Banerjee",
+        "George Michailidis"
+      ],
+      "year": 2020,
+      "venue": "JMLR",
+      "kind": "journal",
+      "citations": 20,
+      "doi": "",
+      "url": "https://openalex.org/W3038711245",
+      "relevance": 9,
+      "why": [
+        "Synthetic Data: synthetic data"
+      ],
+      "projects": [
+        "synthetic-data"
+      ],
+      "total": 21,
+      "priority": "🔴",
+      "bibkey": "bhattacharjee2020change",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.48550/arxiv.2001.06471": {
+      "title": "Learning Sparse Classifiers: Continuous and Mixed Integer Optimization Perspectives",
+      "abstract": "We consider a discrete optimization formulation for learning sparse classifiers, where the outcome depends upon a linear combination of a small subset of features. Recent work has shown that mixed integer programming (MIP) can be used to solve (to optimality) $\\ell_0$-regularized regression problems at scales much larger than what was conventionally considered possible. Despite their usefulness, MIP-based global optimization approaches are significantly slower compared to the relatively mature algorithms for $\\ell_1$-regularization and heuristics for nonconvex regularized problems. We aim to bridge this gap in computation times by developing new MIP-based algorithms for $\\ell_0$-regularized classification. We propose two classes of scalable algorithms: an exact algorithm that can handle $p\\approx 50,000$ features in a few minutes, and approximate algorithms that can address instances with $p\\approx 10^6$ in times comparable to the fast $\\ell_1$-based algorithms. Our exact algorithm is based on the novel idea of \\textsl{integrality generation}, which solves the original problem (with $p$ binary variables) via a sequence of mixed integer programs that involve a small number of binary variables. Our approximate algorithms are based on coordinate descent and local combinatorial search. In addition, we present new estimation error bounds for a class of $\\ell_0$-regularized estimators. Experiments on real and synthetic data demonstrate that our approach leads to models with considerably improved statistical performance (especially, variable selection) when compared to competing methods.",
+      "authors": [
+        "Antoine Dedieu",
+        "Hussein Hazimeh",
+        "Rahul Mazumder"
+      ],
+      "year": 2020,
+      "venue": "JMLR",
+      "kind": "journal",
+      "citations": 10,
+      "doi": "https://doi.org/10.48550/arxiv.2001.06471",
+      "url": "https://doi.org/10.48550/arxiv.2001.06471",
+      "relevance": 9,
+      "why": [
+        "Synthetic Data: synthetic data"
+      ],
+      "projects": [
+        "synthetic-data"
+      ],
+      "total": 20,
+      "priority": "🔴",
+      "bibkey": "dedieu2020learning",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://openalex.org/w3207236107": {
+      "title": "One-Shot Federated Learning: Theoretical Limits and Algorithms to Achieve Them",
+      "abstract": "We consider distributed statistical optimization in one-shot setting, where there are $m$ machines each observing $n$ i.i.d. samples. Based on its observed samples, each machine sends a $B$-bit-long message to a server. The server then collects messages from all machines, and estimates a parameter that minimizes an expected convex loss function. We investigate the impact of communication constraint, $B$, on the expected error and derive a tight lower bound on the error achievable by any algorithm. We then propose an estimator, which we call Multi-Resolution Estimator (MRE), whose expected error (when $B\\ge\\log mn$) meets the aforementioned lower bound up to poly-logarithmic factors, and is thereby order optimal. We also address the problem of learning under tiny communication budget, and present lower and upper error bounds when $B$ is a constant. The expected error of MRE, unlike existing algorithms, tends to zero as the number of machines ($m$) goes to infinity, even when the number of samples per machine ($n$) remains upper bounded by a constant. This property of the MRE algorithm makes it applicable in new machine learning paradigms where $m$ is much larger than $n$.",
+      "authors": [
+        "Saber Salehkaleybar",
+        "Arsalan Sharifnassab",
+        "S. Jamaloddin Golestani"
+      ],
+      "year": 2021,
+      "venue": "JMLR",
+      "kind": "journal",
+      "citations": 15,
+      "doi": "",
+      "url": "https://openalex.org/W3207236107",
+      "relevance": 6,
+      "why": [],
+      "projects": [],
+      "total": 17,
+      "priority": "🟠",
+      "bibkey": "salehkaleybar2021one",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/21-aos2058": {
+      "title": "The cost of privacy: Optimal rates of convergence for parameter estimation with differential privacy",
+      "abstract": "Privacy-preserving data analysis is a rising challenge in contemporary statistics, as the privacy guarantees of statistical methods are often achieved at the expense of accuracy. In this paper, we investigate the tradeoff between statistical accuracy and privacy in mean estimation and linear regression, under both the classical low-dimensional and modern high-dimensional settings. A primary focus is to establish minimax optimality for statistical estimation with the (ε,δ)-differential privacy constraint. By refining the “tracing adversary” technique for lower bounds in the theoretical computer science literature, we improve existing minimax lower bound for low-dimensional mean estimation and establish new lower bounds for high-dimensional mean estimation and linear regression problems. We also design differentially private algorithms that attain the minimax lower bounds up to logarithmic factors. In particular, for high-dimensional linear regression, a novel private iterative hard thresholding algorithm is proposed. The numerical performance of differentially private algorithms is demonstrated by simulation studies and applications to real data sets.",
+      "authors": [
+        "Tommaso Cai",
+        "Yichen Wang",
+        "Linjun Zhang"
+      ],
+      "year": 2021,
+      "venue": "Annals of Statistics",
+      "kind": "journal",
+      "citations": 66,
+      "doi": "https://doi.org/10.1214/21-aos2058",
+      "url": "https://doi.org/10.1214/21-aos2058",
+      "relevance": 28,
+      "why": [
+        "Differential Privacy: differential privacy, privacy-preserving"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 44,
+      "priority": "🔴",
+      "bibkey": "cai2021cost",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/21-aos2066": {
+      "title": "Bridging convex and nonconvex optimization in robust PCA: Noise, outliers and missing data",
+      "abstract": "This paper delivers improved theoretical guarantees for the convex programming approach in low-rank matrix estimation, in the presence of (1) random noise, (2) gross sparse outliers and (3) missing data. This problem, often dubbed as robust principal component analysis (robust PCA), finds applications in various domains. Despite the wide applicability of convex relaxation, the available statistical support (particularly the stability analysis in the presence of random noise) remains highly suboptimal, which we strengthen in this paper. When the unknown matrix is well conditioned, incoherent and of constant rank, we demonstrate that a principled convex program achieves near-optimal statistical accuracy, in terms of both the Euclidean loss and the ℓ∞ loss. All of this happens even when nearly a constant fraction of observations are corrupted by outliers with arbitrary magnitudes. The key analysis idea lies in bridging the convex program in use and an auxiliary nonconvex optimization algorithm, and hence the title of this paper.",
+      "authors": [
+        "Yuxin Chen",
+        "Jianqing Fan",
+        "Cong Ma",
+        "Yuling Yan"
+      ],
+      "year": 2021,
+      "venue": "Annals of Statistics",
+      "kind": "journal",
+      "citations": 58,
+      "doi": "https://doi.org/10.1214/21-aos2066",
+      "url": "https://doi.org/10.1214/21-aos2066",
+      "relevance": 16,
+      "why": [
+        "Missing Data: missing data"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 31,
+      "priority": "🔴",
+      "bibkey": "chen2021bridging",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/20-aos1986": {
+      "title": "Subspace estimation from unbalanced and incomplete data matrices: ℓ2,∞ statistical guarantees",
+      "abstract": "This paper is concerned with estimating the column space of an unknown low-rank matrix A⋆∈Rd1×d2, given noisy and partial observations of its entries. There is no shortage of scenarios where the observations—while being too noisy to support faithful recovery of the entire matrix—still convey sufficient information to enable reliable estimation of the column space of interest. This is particularly evident and crucial for the highly unbalanced case where the column dimension d2 far exceeds the row dimension d1, which is the focal point of the current paper. We investigate an efficient spectral method, which operates upon the sample Gram matrix with diagonal deletion. While this algorithmic idea has been studied before, we establish new statistical guarantees for this method in terms of both ℓ2 and ℓ2,∞ estimation accuracy, which improve upon prior results if d2 is substantially larger than d1. To illustrate the effectiveness of our findings, we derive matching minimax lower bounds with respect to the noise levels, and develop consequences of our general theory for three applications of practical importance: (1) tensor completion from noisy data, (2) covariance estimation/principal component analysis with missing data and (3) community recovery in bipartite graphs. Our theory leads to improved performance guarantees for all three cases.",
+      "authors": [
+        "Changxiao Cai",
+        "Gen Li",
+        "Yuejie Chi",
+        "H. Vincent Poor",
+        "Yuxin Chen"
+      ],
+      "year": 2021,
+      "venue": "Annals of Statistics",
+      "kind": "journal",
+      "citations": 39,
+      "doi": "https://doi.org/10.1214/20-aos1986",
+      "url": "https://doi.org/10.1214/20-aos1986",
+      "relevance": 16,
+      "why": [
+        "Missing Data: missing data"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 29,
+      "priority": "🔴",
+      "bibkey": "cai2021subspace",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/19-aos1827": {
+      "title": "$\\alpha $-variational inference with statistical guarantees",
+      "abstract": "We provide statistical guarantees for a family of variational approximations to Bayesian posterior distributions, called $\\alpha $-VB, which has close connections with variational approximations of tempered posteriors in the literature. The standard variational approximation is a special case of $\\alpha $-VB with $\\alpha =1$. When $\\alpha \\in (0,1]$, a novel class of variational inequalities are developed for linking the Bayes risk under the variational approximation to the objective function in the variational optimization problem, implying that maximizing the evidence lower bound in variational inference has the effect of minimizing the Bayes risk within the variational density family. Operating in a frequentist setup, the variational inequalities imply that point estimates constructed from the $\\alpha $-VB procedure converge at an optimal rate to the true parameter in a wide range of problems. We illustrate our general theory with a number of examples, including the mean-field variational approximation to (low)-high-dimensional Bayesian linear regression with spike and slab priors, Gaussian mixture models and latent Dirichlet allocation.",
+      "authors": [
+        "Yun Yang",
+        "Debdeep Pati",
+        "Anirban Bhattacharya"
+      ],
+      "year": 2020,
+      "venue": "Annals of Statistics",
+      "kind": "journal",
+      "citations": 72,
+      "doi": "https://doi.org/10.1214/19-aos1827",
+      "url": "https://doi.org/10.1214/19-aos1827",
+      "relevance": 14,
+      "why": [
+        "Posterior Sampling: bayesian posterior"
+      ],
+      "projects": [
+        "posterior-sampling"
+      ],
+      "total": 31,
+      "priority": "🔴",
+      "bibkey": "yang2020alpha",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/21-aos2061": {
+      "title": "An optimal statistical and computational framework for generalized tensor estimation",
+      "abstract": "This paper describes a flexible framework for generalized low-rank tensor estimation problems that includes many important instances arising from applications in computational imaging, genomics, and network analysis. The proposed estimator consists of finding a low-rank tensor fit to the data under generalized parametric models. To overcome the difficulty of nonconvexity in these problems, we introduce a unified approach of projected gradient descent that adapts to the underlying low-rank structure. Under mild conditions on the loss function, we establish both an upper bound on statistical error and the linear rate of computational convergence through a general deterministic analysis. Then we further consider a suite of generalized tensor estimation problems, including sub-Gaussian tensor PCA, tensor regression, and Poisson and binomial tensor PCA. We prove that the proposed algorithm achieves the minimax optimal rate of convergence in estimation error. Finally, we demonstrate the superiority of the proposed framework via extensive experiments on both simulated and real data.",
+      "authors": [
+        "Rungang Han",
+        "Rebecca Willett",
+        "Anru R. Zhang"
+      ],
+      "year": 2022,
+      "venue": "Annals of Statistics",
+      "kind": "journal",
+      "citations": 67,
+      "doi": "https://doi.org/10.1214/21-aos2061",
+      "url": "https://doi.org/10.1214/21-aos2061",
+      "relevance": 10,
+      "why": [],
+      "projects": [],
+      "total": 26,
+      "priority": "🔴",
+      "bibkey": "han2022optimal",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/21-aos2129": {
+      "title": "Adaptive test of independence based on HSIC measures",
+      "abstract": "The Hilbert–Schmidt Independence Criterion (HSIC) is a dependence measure based on reproducing kernel Hilbert spaces that is widely used to test independence between two random vectors. Remains the delicate choice of the kernel. In this work, we develop a new HSIC-based aggregated procedure which avoids such a kernel choice, and provide theoretical guarantees for this procedure. To achieve this, on the one hand, we introduce non-asymptotic single tests based on Gaussian kernels with a given bandwidth, which are of prescribed level. Then, we aggregate several single tests with different bandwidths, and prove sharp upper bounds for the uniform separation rate of the aggregated procedure over Sobolev balls. On the other hand, we provide a lower bound for the non-asymptotic minimax separation rate of testing over Sobolev balls, and deduce that the aggregated procedure is adaptive in the minimax sense over such regularity spaces. Finally, from a practical point of view, we perform numerical studies in order to assess the efficiency of our aggregated procedure and compare it to existing tests in the literature.",
+      "authors": [
+        "Mélisande Albert",
+        "Béatrice Laurent",
+        "Amandine Marrel",
+        "Anouar Meynaoui"
+      ],
+      "year": 2022,
+      "venue": "Annals of Statistics",
+      "kind": "journal",
+      "citations": 35,
+      "doi": "https://doi.org/10.1214/21-aos2129",
+      "url": "https://doi.org/10.1214/21-aos2129",
+      "relevance": 10,
+      "why": [],
+      "projects": [],
+      "total": 23,
+      "priority": "🔴",
+      "bibkey": "albert2022adaptive",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/22-aos2181": {
+      "title": "Exact minimax risk for linear least squares, and the lower tail of sample covariance matrices",
+      "abstract": "We consider random-design linear prediction and related questions on the lower tail of random matrices. It is known that, under boundedness constraints, the minimax risk is of order d/n in dimension d with n samples. Here, we study the minimax expected excess risk over the full linear class, depending on the distribution of covariates. First, the least squares estimator is exactly minimax optimal in the well-specified case, for every distribution of covariates. We express the minimax risk in terms of the distribution of statistical leverage scores of individual samples, and deduce a minimax lower bound of d/(n−d+1) for any covariate distribution, nearly matching the risk for Gaussian design. We then obtain sharp nonasymptotic upper bounds for covariates that satisfy a “small ball”-type regularity condition in both well-specified and misspecified cases. Our main technical contribution is the study of the lower tail of the smallest singular value of empirical covariance matrices at small values. We establish a lower bound on this lower tail, valid for any distribution in dimension d≥2, together with a matching upper bound under a necessary regularity condition. Our proof relies on the PAC-Bayes technique for controlling empirical processes, and extends an analysis of Oliveira devoted to a different part of the lower tail.",
+      "authors": [
+        "Jaouad Mourtada"
+      ],
+      "year": 2022,
+      "venue": "Annals of Statistics",
+      "kind": "journal",
+      "citations": 33,
+      "doi": "https://doi.org/10.1214/22-aos2181",
+      "url": "https://doi.org/10.1214/22-aos2181",
+      "relevance": 10,
+      "why": [],
+      "projects": [],
+      "total": 23,
+      "priority": "🔴",
+      "bibkey": "mourtada2022exact",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/20-aos2004": {
+      "title": "Learning models with uniform performance via distributionally robust optimization",
+      "abstract": "A common goal in statistics and machine learning is to learn models that can perform well against distributional shifts, such as latent heterogeneous subpopulations, unknown covariate shifts or unmodeled temporal effects. We develop and analyze a distributionally robust stochastic optimization (DRO) framework that learns a model providing good performance against perturbations to the data-generating distribution. We give a convex formulation for the problem, providing several convergence guarantees. We prove finite-sample minimax upper and lower bounds, showing that distributional robustness sometimes comes at a cost in convergence rates. We give limit theorems for the learned parameters, where we fully specify the limiting distribution so that confidence intervals can be computed. On real tasks including generalizing to unknown subpopulations, fine-grained recognition and providing good tail performance, the distributionally robust approach often exhibits improved performance.",
+      "authors": [
+        "John C. Duchi",
+        "Hongseok Namkoong"
+      ],
+      "year": 2021,
+      "venue": "Annals of Statistics",
+      "kind": "journal",
+      "citations": 80,
+      "doi": "https://doi.org/10.1214/20-aos2004",
+      "url": "https://doi.org/10.1214/20-aos2004",
+      "relevance": 8,
+      "why": [],
+      "projects": [],
+      "total": 26,
+      "priority": "🔴",
+      "bibkey": "duchi2021learning",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/20-aos1962": {
+      "title": "Classification accuracy as a proxy for two-sample testing",
+      "abstract": "When data analysts train a classifier and check if its accuracy is significantly different from chance, they are implicitly performing a two-sample test. We investigate the statistical properties of this flexible approach in the high-dimensional setting. We prove two results that hold for all classifiers in any dimensions: if its true error remains $\\epsilon $-better than chance for some $\\epsilon >0$ as $d,n\\to \\infty $, then (a) the permutation-based test is consistent (has power approaching to one), (b) a computationally efficient test based on a Gaussian approximation of the null distribution is also consistent. To get a finer understanding of the rates of consistency, we study a specialized setting of distinguishing Gaussians with mean-difference $\\delta $ and common (known or unknown) covariance $\\Sigma $, when $d/n\\to c\\in (0,\\infty )$. We study variants of Fisher’s linear discriminant analysis (LDA) such as “naive Bayes” in a nontrivial regime when $\\epsilon \\to 0$ (the Bayes classifier has true accuracy approaching 1/2), and contrast their power with corresponding variants of Hotelling’s test. Surprisingly, the expressions for their power match exactly in terms of $n$, $d$, $\\delta $, $\\Sigma $, and the LDA approach is only worse by a constant factor, achieving an asymptotic relative efficiency (ARE) of $1/\\sqrt{\\pi }$ for balanced samples. We also extend our results to high-dimensional elliptical distributions with finite kurtosis. Other results of independent interest include minimax lower bounds, and the optimality of Hotelling’s test when $d=o(n)$. Simulation results validate our theory, and we present practical takeaway messages along with natural open problems.",
+      "authors": [
+        "Ilmun Kim",
+        "Aaditya Ramdas",
+        "Aarti Singh",
+        "Larry Wasserman"
+      ],
+      "year": 2021,
+      "venue": "Annals of Statistics",
+      "kind": "journal",
+      "citations": 52,
+      "doi": "https://doi.org/10.1214/20-aos1962",
+      "url": "https://doi.org/10.1214/20-aos1962",
+      "relevance": 8,
+      "why": [],
+      "projects": [],
+      "total": 23,
+      "priority": "🔴",
+      "bibkey": "kim2021classification",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/21-aos2089": {
+      "title": "Optimal adaptivity of signed-polygon statistics for network testing",
+      "abstract": "Given a symmetric social network, we are interested in testing whether it has only one community or multiple communities. The desired tests should (a) accommodate severe degree heterogeneity, (b) accommodate mixed memberships, (c) have a tractable null distribution and (d) adapt automatically to different levels of sparsity, and achieve the optimal phase diagram. How to find such a test is a challenging problem. We propose the Signed Polygon as a class of new tests. Fixing m≥3, for each m-gon in the network, define a score using the centered adjacency matrix. The sum of such scores is then the mth order Signed Polygon statistic. The Signed Triangle (SgnT) and the Signed Quadrilateral (SgnQ) are special examples of the Signed Polygon. We show that both the SgnT and SgnQ tests satisfy (a)–(d), and especially, they work well for both very sparse and less sparse networks. Our proposed tests compare favorably with existing tests. For example, the EZ and GC tests behave unsatisfactorily in the less sparse case and do not achieve the optimal phase diagram. Also, many existing tests do not allow for severe heterogeneity or mixed memberships, and they behave unsatisfactorily in our settings. The analysis of the SgnT and SgnQ tests is delicate and extremely tedious, and the main reason is that we need a unified proof that covers a wide range of sparsity levels and a wide range of degree heterogeneity. For lower bound theory, we use a phase transition framework, which includes the standard minimax argument, but is more informative. The proof uses classical theorems on matrix scaling.",
+      "authors": [
+        "Jiashun Jin",
+        "Zheng Tracy Ke",
+        "Shengming Luo"
+      ],
+      "year": 2021,
+      "venue": "Annals of Statistics",
+      "kind": "journal",
+      "citations": 40,
+      "doi": "https://doi.org/10.1214/21-aos2089",
+      "url": "https://doi.org/10.1214/21-aos2089",
+      "relevance": 8,
+      "why": [],
+      "projects": [],
+      "total": 22,
+      "priority": "🔴",
+      "bibkey": "jin2021optimal",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1093/biomet/asab020": {
+      "title": "High-dimensional log-error-in-variable regression with applications to microbial compositional data analysis",
+      "abstract": "Summary In microbiome and genomic studies, the regression of compositional data has been a crucial tool for identifying microbial taxa or genes that are associated with clinical phenotypes. To account for the variation in sequencing depth, the classic log-contrast model is often used where read counts are normalized into compositions. However, zero read counts and the randomness in covariates remain critical issues. We introduce a surprisingly simple, interpretable and efficient method for the estimation of compositional data regression through the lens of a novel high-dimensional log-error-in-variable regression model. The proposed method provides corrections on sequencing data with possible overdispersion and simultaneously avoids any subjective imputation of zero read counts. We provide theoretical justifications with matching upper and lower bounds for the estimation error. The merit of the procedure is illustrated through real data analysis and simulation studies.",
+      "authors": [
+        "Pixu Shi",
+        "Yuchen Zhou",
+        "Anru R. Zhang"
+      ],
+      "year": 2021,
+      "venue": "Biometrika",
+      "kind": "journal",
+      "citations": 14,
+      "doi": "https://doi.org/10.1093/biomet/asab020",
+      "url": "https://doi.org/10.1093/biomet/asab020",
+      "relevance": 12,
+      "why": [
+        "Missing Data: imputation"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 23,
+      "priority": "🔴",
+      "bibkey": "shi2021high",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1093/biomet/asaa029": {
+      "title": "Extended stochastic gradient Markov chain Monte Carlo for large-scale Bayesian variable selection",
+      "abstract": "Stochastic gradient Markov chain Monte Carlo (MCMC) algorithms have received much attention in Bayesian computing for big data problems, but they are only applicable to a small class of problems for which the parameter space has a fixed dimension and the log-posterior density is differentiable with respect to the parameters. This paper proposes an extended stochastic gradient MCMC algorithm which, by introducing appropriate latent variables, can be applied to more general large-scale Bayesian computing problems, such as those involving dimension jumping and missing data. Numerical studies show that the proposed algorithm is highly scalable and much more efficient than traditional MCMC algorithms. The proposed algorithms have much alleviated the pain of Bayesian methods in big data computing.",
+      "authors": [
+        "Qifan Song",
+        "Yan Sun",
+        "Mao Ye",
+        "Faming Liang"
+      ],
+      "year": 2020,
+      "venue": "Biometrika",
+      "kind": "journal",
+      "citations": 20,
+      "doi": "https://doi.org/10.1093/biomet/asaa029",
+      "url": "https://doi.org/10.1093/biomet/asaa029",
+      "relevance": 9,
+      "why": [
+        "Missing Data: missing data"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 21,
+      "priority": "🔴",
+      "bibkey": "song2020extended",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1093/biomet/asab063": {
+      "title": "Joint latent space models for network data with high-dimensional node variables",
+      "abstract": "Summary Network latent space models assume that each node is associated with an unobserved latent position in a Euclidean , and such latent variables determine the probability of two nodes connecting with each other. In many applications, nodes in the network are often observed along with high-dimensional node variables, and these node variables provide important information for understanding the network structure. However, classical network latent space models have several limitations in incorporating node variables. In this paper, we propose a joint latent space model where we assume that the latent variables not only explain the network structure, but are also informative for the multivariate node variables. We develop a projected gradient descent algorithm that estimates the latent positions using a criterion incorporating both network structure and node variables. We establish theoretical properties of the estimators and provide insights into how incorporating high-dimensional node variables could improve the estimation accuracy of the latent positions. We demonstrate the improvement in latent variable estimation and the improvements in associated downstream tasks, such as missing value imputation for node variables, by simulation studies and an application to a Facebook data example.",
+      "authors": [
+        "Xuefei Zhang",
+        "Gongjun Xu",
+        "Ji Zhu"
+      ],
+      "year": 2021,
+      "venue": "Biometrika",
+      "kind": "journal",
+      "citations": 31,
+      "doi": "https://doi.org/10.1093/biomet/asab063",
+      "url": "https://doi.org/10.1093/biomet/asab063",
+      "relevance": 8,
+      "why": [
+        "Missing Data: imputation"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 21,
+      "priority": "🔴",
+      "bibkey": "zhang2021joint",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1093/biomet/asaa026": {
+      "title": "Demystifying a class of multiply robust estimators",
+      "abstract": "Summary For estimating the population mean of a response variable subject to ignorable missingness, a new class of methods, called multiply robust procedures, has been proposed. The advantage of multiply robust procedures over the traditional doubly robust methods is that they permit the use of multiple candidate models for both the propensity score and the outcome regression, and they are consistent if any one of the multiple models is correctly specified, a property termed multiple robustness. This paper shows that, somewhat surprisingly, multiply robust estimators are special cases of doubly robust estimators, where the final propensity score and outcome regression models are certain combinations of the candidate models. To further improve model specifications in the doubly robust estimators, we adapt a model mixing procedure as an alternative method for combining multiple candidate models. We show that multiple robustness and asymptotic normality can also be achieved by our mixing-based doubly robust estimator. Moreover, our estimator and its theoretical properties are not confined to parametric models. Numerical examples demonstrate that the proposed estimator is comparable to and can even outperform existing multiply robust estimators.",
+      "authors": [
+        "Wei Li",
+        "Yuwen Gu",
+        "Lan Liu"
+      ],
+      "year": 2020,
+      "venue": "Biometrika",
+      "kind": "journal",
+      "citations": 18,
+      "doi": "https://doi.org/10.1093/biomet/asaa026",
+      "url": "https://doi.org/10.1093/biomet/asaa026",
+      "relevance": 8,
+      "why": [
+        "Missing Data: missingness"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 19,
+      "priority": "🟠",
+      "bibkey": "li2020demystifying",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1111/rssb.12550": {
+      "title": "High-Dimensional Principal Component Analysis with Heterogeneous Missingness",
+      "abstract": "We study the problem of high-dimensional Principal Component Analysis (PCA) with missing observations. In a simple, homogeneous observation model, we show that an existing observed-proportion weighted (OPW) estimator of the leading principal components can (nearly) attain the minimax optimal rate of convergence, which exhibits an interesting phase transition. However, deeper investigation reveals that, particularly in more realistic settings where the observation probabilities are heterogeneous, the empirical performance of the OPW estimator can be unsatisfactory; moreover, in the noiseless case, it fails to provide exact recovery of the principal components. Our main contribution, then, is to introduce a new method, which we call primePCA, that is designed to cope with situations where observations may be missing in a heterogeneous manner. Starting from the OPW estimator, primePCA iteratively projects the observed entries of the data matrix onto the column space of our current estimate to impute the missing entries, and then updates our estimate by computing the leading right singular space of the imputed data matrix. We prove that the error of primePCA converges to zero at a geometric rate in the noiseless case, and when the signal strength is not too small. An important feature of our theoretical guarantees is that they depend on average, as opposed to worst-case, properties of the missingness mechanism. Our numerical studies on both simulated and real data reveal that primePCA exhibits very encouraging performance across a wide range of scenarios, including settings where the data are not Missing Completely At Random.",
+      "authors": [
+        "Ziwei Zhu",
+        "Tengyao Wang",
+        "Richard J. Samworth"
+      ],
+      "year": 2022,
+      "venue": "JRSSB",
+      "kind": "journal",
+      "citations": 41,
+      "doi": "https://doi.org/10.1111/rssb.12550",
+      "url": "https://doi.org/10.1111/rssb.12550",
+      "relevance": 20,
+      "why": [
+        "Missing Data: missingness"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 34,
+      "priority": "🔴",
+      "bibkey": "zhu2022high",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1111/rssb.12540": {
+      "title": "High-dimensional Changepoint Estimation with Heterogeneous Missingness",
+      "abstract": "Abstract We propose a new method for changepoint estimation in partially observed, high-dimensional time series that undergo a simultaneous change in mean in a sparse subset of coordinates. Our first methodological contribution is to introduce a ‘MissCUSUM’ transformation (a generalisation of the popular cumulative sum statistics), that captures the interaction between the signal strength and the level of missingness in each coordinate. In order to borrow strength across the coordinates, we propose to project these MissCUSUM statistics along a direction found as the solution to a penalised optimisation problem tailored to the specific sparsity structure. The changepoint can then be estimated as the location of the peak of the absolute value of the projected univariate series. In a model that allows different missingness probabilities in different component series, we identify that the key interaction between the missingness and the signal is a weighted sum of squares of the signal change in each coordinate, with weights given by the observation probabilities. More specifically, we prove that the angle between the estimated and oracle projection directions, as well as the changepoint location error, are controlled with high probability by the sum of two terms, both involving this weighted sum of squares, and representing the error incurred due to noise and the error due to missingness respectively. A lower bound confirms that our changepoint estimator, which we call MissInspect, is optimal up to a logarithmic factor. The striking effectiveness of the MissInspect methodology is further demonstrated both on simulated data, and on an oceanographic data set covering the Neogene period.",
+      "authors": [
+        "Bertille Follain",
+        "Tengyao Wang",
+        "Richard J. Samworth"
+      ],
+      "year": 2022,
+      "venue": "JRSSB",
+      "kind": "journal",
+      "citations": 19,
+      "doi": "https://doi.org/10.1111/rssb.12540",
+      "url": "https://doi.org/10.1111/rssb.12540",
+      "relevance": 20,
+      "why": [
+        "Missing Data: missingness"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 31,
+      "priority": "🔴",
+      "bibkey": "follain2022high",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1111/rssb.12363": {
+      "title": "Exchangeable Random Measures for Sparse and Modular Graphs with Overlapping Communities",
+      "abstract": "Summary We propose a novel statistical model for sparse networks with overlapping community structure. The model is based on representing the graph as an exchangeable point process and naturally generalizes existing probabilistic models with overlapping block structure to the sparse regime. Our construction builds on vectors of completely random measures and has interpretable parameters, each node being assigned a vector representing its levels of affiliation to some latent communities. We develop methods for efficient simulation of this class of random graphs and for scalable posterior inference. We show that the approach proposed can recover interpretable structure of real world networks and can handle graphs with thousands of nodes and tens of thousands of edges.",
+      "authors": [
+        "Adrien Todeschini",
+        "Xenia Miscouridou",
+        "François Caron"
+      ],
+      "year": 2020,
+      "venue": "JRSSB",
+      "kind": "journal",
+      "citations": 16,
+      "doi": "https://doi.org/10.1111/rssb.12363",
+      "url": "https://doi.org/10.1111/rssb.12363",
+      "relevance": 10,
+      "why": [
+        "Posterior Sampling: posterior inference"
+      ],
+      "projects": [
+        "posterior-sampling"
+      ],
+      "total": 21,
+      "priority": "🔴",
+      "bibkey": "todeschini2020exchangeable",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1093/jrsssb/qkac004": {
+      "title": "Conformalized survival analysis",
+      "abstract": "Existing survival analysis techniques heavily rely on strong modelling assumptions and are, therefore, prone to model misspecification errors. In this paper, we develop an inferential method based on ideas from conformal prediction, which can wrap around any survival prediction algorithm to produce calibrated, covariate-dependent lower predictive bounds on survival times. In the Type I right-censoring setting, when the censoring times are completely exogenous, the lower predictive bounds have guaranteed coverage in finite samples without any assumptions other than that of operating on independent and identically distributed data points. Under a more general conditionally independent censoring assumption, the bounds satisfy a doubly robust property which states the following: marginal coverage is approximately guaranteed if either the censoring mechanism or the conditional survival function is estimated well. Further, we demonstrate that the lower predictive bounds remain valid and informative for other types of censoring. The validity and efficiency of our procedure are demonstrated on synthetic data and real COVID-19 data from the UK Biobank.",
+      "authors": [
+        "Emmanuel J. Candès",
+        "Lihua Lei",
+        "Zhimei Ren"
+      ],
+      "year": 2023,
+      "venue": "JRSSB",
+      "kind": "journal",
+      "citations": 42,
+      "doi": "https://doi.org/10.1093/jrsssb/qkac004",
+      "url": "https://doi.org/10.1093/jrsssb/qkac004",
+      "relevance": 9,
+      "why": [
+        "Synthetic Data: synthetic data"
+      ],
+      "projects": [
+        "synthetic-data"
+      ],
+      "total": 23,
+      "priority": "🔴",
+      "bibkey": "cands2023conformalized",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1093/jrsssb/qkae009": {
+      "title": "Doubly robust calibration of prediction sets under covariate shift",
+      "abstract": "Conformal prediction has received tremendous attention in recent years and has offered new solutions to problems in missing data and causal inference; yet these advances have not leveraged modern semi-parametric efficiency theory for more efficient uncertainty quantification. We consider the problem of obtaining well-calibrated prediction regions that can data adaptively account for a shift in the distribution of covariates between training and test data. Under a covariate shift assumption analogous to the standard missing at random assumption, we propose a general framework based on efficient influence functions to construct well-calibrated prediction regions for the unobserved outcome in the test sample without compromising coverage.",
+      "authors": [
+        "Yachong Yang",
+        "Arun Kumar Kuchibhotla",
+        "Eric Tchetgen Tchetgen"
+      ],
+      "year": 2024,
+      "venue": "JRSSB",
+      "kind": "journal",
+      "citations": 19,
+      "doi": "https://doi.org/10.1093/jrsssb/qkae009",
+      "url": "https://doi.org/10.1093/jrsssb/qkae009",
+      "relevance": 9,
+      "why": [
+        "Missing Data: missing data"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 20,
+      "priority": "🔴",
+      "bibkey": "yang2024doubly",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1111/rssb.12487": {
+      "title": "Semiparametric Estimation for Causal Mediation Analysis with Multiple Causally Ordered Mediators",
+      "abstract": "Abstract Causal mediation analysis concerns the pathways through which a treatment affects an outcome. While most of the mediation literature focuses on settings with a single mediator, a flourishing line of research has examined settings involving multiple mediators, under which path-specific effects (PSEs) are often of interest. We consider estimation of PSEs when the treatment effect operates through K(≥ 1) causally ordered, possibly multivariate mediators. In this setting, the PSEs for many causal paths are not nonparametrically identified, and we focus on a set of PSEs that are identified under Pearl's nonparametric structural equation model. These PSEs are defined as contrasts between the expectations of 2K+1 potential outcomes and identified via what we call the generalized mediation functional (GMF). We introduce an array of regression-imputation, weighting and ‘hybrid’ estimators, and, in particular, two K + 2-robust and locally semiparametric efficient estimators for the GMF. The latter estimators are well suited to the use of data-adaptive methods for estimating their nuisance functions. We establish the rate conditions required of the nuisance functions for semiparametric efficiency. We also discuss how our framework applies to several estimands that may be of particular interest in empirical applications. The proposed estimators are illustrated with a simulation study and an empirical example.",
+      "authors": [
+        "Xiang Zhou"
+      ],
+      "year": 2021,
+      "venue": "JRSSB",
+      "kind": "journal",
+      "citations": 39,
+      "doi": "https://doi.org/10.1111/rssb.12487",
+      "url": "https://doi.org/10.1111/rssb.12487",
+      "relevance": 8,
+      "why": [
+        "Missing Data: imputation"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 21,
+      "priority": "🔴",
+      "bibkey": "zhou2021semiparametric",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1111/rssb.12502": {
+      "title": "Efficient Evaluation of Prediction Rules in Semi-Supervised Settings under Stratified Sampling",
+      "abstract": "In many contemporary applications, large amounts of unlabeled data are readily available while labeled examples are limited. There has been substantial interest in semi-supervised learning (SSL) which aims to leverage unlabeled data to improve estimation or prediction. However, current SSL literature focuses primarily on settings where labeled data is selected uniformly at random from the population of interest. Stratified sampling, while posing additional analytical challenges, is highly applicable to many real world problems. Moreover, no SSL methods currently exist for estimating the prediction performance of a fitted model when the labeled data is not selected uniformly at random. In this paper, we propose a two-step SSL procedure for evaluating a prediction rule derived from a working binary regression model based on the Brier score and overall misclassification rate under stratified sampling. In step I, we impute the missing labels via weighted regression with nonlinear basis functions to account for stratified sampling and to improve efficiency. In step II, we augment the initial imputations to ensure the consistency of the resulting estimators regardless of the specification of the prediction model or the imputation model. The final estimator is then obtained with the augmented imputations. We provide asymptotic theory and numerical studies illustrating that our proposals outperform their supervised counterparts in terms of efficiency gain. Our methods are motivated by electronic health record (EHR) research and validated with a real data analysis of an EHR-based study of diabetic neuropathy.",
+      "authors": [
+        "Jessica Gronsbell",
+        "Molei Liu",
+        "Lü Tian",
+        "Tianxi Cai"
+      ],
+      "year": 2022,
+      "venue": "JRSSB",
+      "kind": "journal",
+      "citations": 22,
+      "doi": "https://doi.org/10.1111/rssb.12502",
+      "url": "https://doi.org/10.1111/rssb.12502",
+      "relevance": 8,
+      "why": [
+        "Missing Data: imputation"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 20,
+      "priority": "🔴",
+      "bibkey": "gronsbell2022efficient",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1111/rssb.12539": {
+      "title": "The Debiased Spatial Whittle Likelihood",
+      "abstract": "Abstract We provide a computationally and statistically efficient method for estimating the parameters of a stochastic covariance model observed on a regular spatial grid in any number of dimensions. Our proposed method, which we call the Debiased Spatial Whittle likelihood, makes important corrections to the well-known Whittle likelihood to account for large sources of bias caused by boundary effects and aliasing. We generalize the approach to flexibly allow for significant volumes of missing data including those with lower-dimensional substructure, and for irregular sampling boundaries. We build a theoretical framework under relatively weak assumptions which ensures consistency and asymptotic normality in numerous practical settings including missing data and non-Gaussian processes. We also extend our consistency results to multivariate processes. We provide detailed implementation guidelines which ensure the estimation procedure can be conducted in O(nlogn) operations, where n is the number of points of the encapsulating rectangular grid, thus keeping the computational scalability of Fourier and Whittle-based methods for large data sets. We validate our procedure over a range of simulated and realworld settings, and compare with state-of-the-art alternatives, demonstrating the enduring practical appeal of Fourier-based methods, provided they are corrected by the procedures developed in this paper.",
+      "authors": [
+        "Arthur P. Guillaumin",
+        "Adam M. Sykulski",
+        "Sofia C. Olhede",
+        "Frederik J. Simons"
+      ],
+      "year": 2022,
+      "venue": "JRSSB",
+      "kind": "journal",
+      "citations": 17,
+      "doi": "https://doi.org/10.1111/rssb.12539",
+      "url": "https://doi.org/10.1111/rssb.12539",
+      "relevance": 8,
+      "why": [
+        "Missing Data: missing data"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 19,
+      "priority": "🟠",
+      "bibkey": "guillaumin2022debiased",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1093/jrsssb/qkad026": {
+      "title": "Fast and fair simultaneous confidence bands for functional parameters",
+      "abstract": "Abstract Quantifying uncertainty using confidence regions is a central goal of statistical inference. Despite this, methodologies for confidence bands in functional data analysis are still underdeveloped compared to estimation and hypothesis testing. In this work, we present a new methodology for constructing simultaneous confidence bands for functional parameter estimates. Our bands possess a number of positive qualities: (1) they are not based on resampling and thus are fast to compute, (2) they are constructed under the fairness constraint of balanced false positive rates across partitions of the bands’ domain which facilitates the typical global, but also novel local interpretations, and (3) they do not require an estimate of the full covariance function and thus can be used in the case of fragmentary functional data. Simulations show the excellent finite-sample behaviour of our bands in comparison to existing alternatives. The practical use of our bands is demonstrated in two case studies on sports biomechanics and fragmentary growth curves.",
+      "authors": [
+        "Dominik Liebl",
+        "Matthew Reimherr"
+      ],
+      "year": 2023,
+      "venue": "JRSSB",
+      "kind": "journal",
+      "citations": 19,
+      "doi": "https://doi.org/10.1093/jrsssb/qkad026",
+      "url": "https://doi.org/10.1093/jrsssb/qkad026",
+      "relevance": 6,
+      "why": [
+        "Trustworthy ML: fairness"
+      ],
+      "projects": [
+        "trustworthy-ml"
+      ],
+      "total": 17,
+      "priority": "🟠",
+      "bibkey": "liebl2023fast",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1080/01621459.2020.1751176": {
+      "title": "Integrating Multisource Block-Wise Missing Data in Model Selection",
+      "abstract": "For multisource data, blocks of variable information from certain sources are likely missing. Existing methods for handling missing data do not take structures of block-wise missing data into consideration. In this article, we propose a multiple block-wise imputation (MBI) approach, which incorporates imputations based on both complete and incomplete observations. Specifically, for a given missing pattern group, the imputations in MBI incorporate more samples from groups with fewer observed variables in addition to the group with complete observations. We propose to construct estimating equations based on all available information, and integrate informative estimating functions to achieve efficient estimators. We show that the proposed method has estimation and model selection consistency under both fixed-dimensional and high-dimensional settings. Moreover, the proposed estimator is asymptotically more efficient than the estimator based on a single imputation from complete observations only. In addition, the proposed method is not restricted to missing completely at random. Numerical studies and ADNI data application confirm that the proposed method outperforms existing variable selection methods under various missing mechanisms. Supplementary materials for this article are available online.",
+      "authors": [
+        "Fei Xue",
+        "Annie Qu"
+      ],
+      "year": 2020,
+      "venue": "JASA",
+      "kind": "journal",
+      "citations": 64,
+      "doi": "https://doi.org/10.1080/01621459.2020.1751176",
+      "url": "https://doi.org/10.1080/01621459.2020.1751176",
+      "relevance": 16,
+      "why": [
+        "Missing Data: missing data, imputation"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 32,
+      "priority": "🔴",
+      "bibkey": "xue2020integrating",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1080/01621459.2021.1967163": {
+      "title": "Matrix Completion, Counterfactuals, and Factor Analysis of Missing Data",
+      "abstract": "This article proposes an imputation procedure that uses the factors estimated from a tall block along with the re-rotated loadings estimated from a wide block to impute missing values in a panel of data. Assuming that a strong factor structure holds for the full panel of data and its sub-blocks, it is shown that the common component can be consistently estimated at four different rates of convergence without requiring regularization or iteration. An asymptotic analysis of the estimation error is obtained. An application of our analysis is estimation of counterfactuals when potential outcomes have a factor structure. We study the estimation of average and individual treatment effects on the treated and establish a normal distribution theory that can be useful for hypothesis testing.",
+      "authors": [
+        "Jushan Bai",
+        "Serena Ng"
+      ],
+      "year": 2021,
+      "venue": "JASA",
+      "kind": "journal",
+      "citations": 49,
+      "doi": "https://doi.org/10.1080/01621459.2021.1967163",
+      "url": "https://doi.org/10.1080/01621459.2021.1967163",
+      "relevance": 16,
+      "why": [
+        "Missing Data: missing data, imputation"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "bai2021matrix",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1080/01621459.2022.2054817": {
+      "title": "Bias-Adjusted Spectral Clustering in Multi-Layer Stochastic Block Models",
+      "abstract": "We consider the problem of estimating common community structures in multi-layer stochastic block models, where each single layer may not have sufficient signal strength to recover the full community structure. In order to efficiently aggregate signal across different layers, we argue that the sum-of-squared adjacency matrices contain sufficient signal even when individual layers are very sparse. Our method uses a bias-removal step that is necessary when the squared noise matrices may overwhelm the signal in the very sparse regime. The analysis of our method relies on several novel tail probability bounds for matrix linear combinations with matrix-valued coefficients and matrix-valued quadratic forms, which may be of independent interest. The performance of our method and the necessity of bias removal is demonstrated in synthetic data and in microarray analysis about gene co-expression networks.",
+      "authors": [
+        "Jing Lei",
+        "Kevin Lin"
+      ],
+      "year": 2022,
+      "venue": "JASA",
+      "kind": "journal",
+      "citations": 52,
+      "doi": "https://doi.org/10.1080/01621459.2022.2054817",
+      "url": "https://doi.org/10.1080/01621459.2022.2054817",
+      "relevance": 9,
+      "why": [
+        "Synthetic Data: synthetic data"
+      ],
+      "projects": [
+        "synthetic-data"
+      ],
+      "total": 24,
+      "priority": "🔴",
+      "bibkey": "lei2022bias",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1080/01621459.2019.1699421": {
+      "title": "Global and Simultaneous Hypothesis Testing for High-Dimensional Logistic Regression Models",
+      "abstract": "High-dimensional logistic regression is widely used in analyzing data with binary outcomes. In this paper, global testing and large-scale multiple testing for the regression coefficients are considered in both single- and two-regression settings. A test statistic for testing the global null hypothesis is constructed using a generalized low-dimensional projection for bias correction and its asymptotic null distribution is derived. A lower bound for the global testing is established, which shows that the proposed test is asymptotically minimax optimal over some sparsity range. For testing the individual coefficients simultaneously, multiple testing procedures are proposed and shown to control the false discovery rate (FDR) and falsely discovered variables (FDV) asymptotically. Simulation studies are carried out to examine the numerical performance of the proposed tests and their superiority over existing methods. The testing procedures are also illustrated by analyzing a data set of a metabolomics study that investigates the association between fecal metabolites and pediatric Crohn's disease and the effects of treatment on such associations.",
+      "authors": [
+        "Rong Ma",
+        "Tommaso Cai",
+        "Hongzhe Li"
+      ],
+      "year": 2020,
+      "venue": "JASA",
+      "kind": "journal",
+      "citations": 62,
+      "doi": "https://doi.org/10.1080/01621459.2019.1699421",
+      "url": "https://doi.org/10.1080/01621459.2019.1699421",
+      "relevance": 8,
+      "why": [],
+      "projects": [],
+      "total": 24,
+      "priority": "🔴",
+      "bibkey": "ma2020global",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1080/01621459.2022.2123814": {
+      "title": "To Adjust or not to Adjust? Estimating the Average Treatment Effect in Randomized Experiments with Missing Covariates",
+      "abstract": "Randomized experiments allow for consistent estimation of the average treatment effect based on the difference in mean outcomes without strong modeling assumptions. Appropriate use of pretreatment covariates can further improve the estimation efficiency. Missingness in covariates is nevertheless common in practice, and raises an important question: should we adjust for covariates subject to missingness, and if so, how? The unadjusted difference in means is always unbiased. The complete-covariate analysis adjusts for all completely observed covariates, and is asymptotically more efficient than the difference in means if at least one completely observed covariate is predictive of the outcome. Then what is the additional gain of adjusting for covariates subject to missingness? To reconcile the conflicting recommendations in the literature, we analyze and compare five strategies for handling missing covariates in randomized experiments under the design-based framework, and recommend the missingness-indicator method, as a known but not so popular strategy in the literature, due to its multiple advantages. First, it removes the dependence of the regression-adjusted estimators on the imputed values for the missing covariates. Second, it does not require modeling the missingness mechanism, and yields consistent estimators even when the missingness mechanism is related to the missing covariates and unobservable potential outcomes. Third, it ensures large-sample efficiency over the complete-covariate analysis and the analysis based on only the imputed covariates. Lastly, it is easy to implement via least squares. We also propose modifications to it based on asymptotic and finite sample considerations. Importantly, our theory views randomization as the basis for inference, and does not impose any modeling assumptions on the data-generating process or missingness mechanism. Supplementary materials for this article are available online.",
+      "authors": [
+        "Anqi Zhao",
+        "Peng Ding"
+      ],
+      "year": 2022,
+      "venue": "JASA",
+      "kind": "journal",
+      "citations": 42,
+      "doi": "https://doi.org/10.1080/01621459.2022.2123814",
+      "url": "https://doi.org/10.1080/01621459.2022.2123814",
+      "relevance": 8,
+      "why": [
+        "Missing Data: missingness"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 22,
+      "priority": "🔴",
+      "bibkey": "zhao2022adjust",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1080/01621459.2020.1750415": {
+      "title": "Randomization Tests for Weak Null Hypotheses in Randomized Experiments",
+      "abstract": "The Fisher randomization test (FRT) is appropriate for any test statistic, under a sharp null hypothesis that can recover all missing potential outcomes. However, it is often sought after to test a weak null hypothesis that the treatment does not affect the units on average. To use the FRT for a weak null hypothesis, we must address two issues. First, we need to impute the missing potential outcomes although the weak null hypothesis cannot determine all of them. Second, we need to choose a proper test statistic. For a general weak null hypothesis, we propose an approach to imputing missing potential outcomes under a compatible sharp null hypothesis. Building on this imputation scheme, we advocate a studentized statistic. The resulting FRT has multiple desirable features. First, it is model-free. Second, it is finite-sample exact under the sharp null hypothesis that we use to impute the potential outcomes. Third, it conservatively controls large-sample Type I error under the weak null hypothesis of interest. Therefore, our FRT is agnostic to the treatment effect heterogeneity. We establish a unified theory for general factorial experiments and extend it to stratified and clustered experiments. Supplementary materials for this article are available online.",
+      "authors": [
+        "Jason Wu",
+        "Peng Ding"
+      ],
+      "year": 2020,
+      "venue": "JASA",
+      "kind": "journal",
+      "citations": 35,
+      "doi": "https://doi.org/10.1080/01621459.2020.1750415",
+      "url": "https://doi.org/10.1080/01621459.2020.1750415",
+      "relevance": 8,
+      "why": [
+        "Missing Data: imputation"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 21,
+      "priority": "🔴",
+      "bibkey": "wu2020randomization",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/19-sts742": {
+      "title": "Comparative Study of Differentially Private Data Synthesis Methods",
+      "abstract": "When sharing data among researchers or releasing data for public use, there is a risk of exposing sensitive information of individuals in the data set. Data synthesis is a statistical disclosure limitation technique for releasing synthetic data sets with pseudo individual records. Traditional data synthesis techniques often rely on strong assumptions of a data intruder’s behaviors and background knowledge to assess disclosure risk. Differential privacy (DP) formulates a theoretical approach for a strong and robust privacy guarantee in data release without having to model intruders’ behaviors. Efforts have been made aiming to incorporate the DP concept in the data synthesis process. In this paper, we examine current DIfferentially Private Data Synthesis (DIPS) techniques for releasing individual-level surrogate data for the original data, compare the techniques conceptually and evaluate the statistical utility and inferential properties of the synthetic data via each DIPS technique through extensive simulation studies. Our work sheds light on the practical feasibility and utility of the various DIPS approaches, and suggests future research directions for DIPS.",
+      "authors": [
+        "Claire McKay Bowen",
+        "Fang Liu"
+      ],
+      "year": 2020,
+      "venue": "Statistical Science",
+      "kind": "journal",
+      "citations": 54,
+      "doi": "https://doi.org/10.1214/19-sts742",
+      "url": "https://doi.org/10.1214/19-sts742",
+      "relevance": 32,
+      "why": [
+        "Differential Privacy: differential privacy",
+        "Synthetic Data: synthetic data, data synthesis"
+      ],
+      "projects": [
+        "privacy",
+        "synthetic-data"
+      ],
+      "total": 47,
+      "priority": "🔴",
+      "bibkey": "bowen2020comparative",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/20-sts793": {
+      "title": "Maximum Likelihood Multiple Imputation: Faster Imputations and Consistent Standard Errors Without Posterior Draws",
+      "abstract": "Multiple imputation (MI) is a method for repairing and analyzing data with missing values. MI replaces missing values with a sample of random values drawn from an imputation model. The most popular form of MI, which we call posterior draw multiple imputation (PDMI), draws the parameters of the imputation model from a Bayesian posterior distribution. An alternative, which we call maximum likelihood multiple imputation (MLMI), estimates the parameters of the imputation model using maximum likelihood (or equivalent). Compared to PDMI, MLMI is faster and yields slightly more efficient point estimates. A past barrier to using MLMI was the difficulty of estimating the standard errors of MLMI point estimates. We derive, implement and evaluate three consistent standard error formulas: (1) one combines variances within and between the imputed datasets, (2) one uses the score function and (3) one uses the bootstrap with two imputations of each bootstrapped sample. Formula (1) modifies for MLMI a formula that has long been used under PDMI, while formulas (2) and (3) can be used without modification under either PDMI or MLMI. We have implemented MLMI and the standard error estimators in the mlmi and bootImpute packages for R.",
+      "authors": [
+        "Paul T. von Hippel",
+        "Jonathan W. Bartlett"
+      ],
+      "year": 2021,
+      "venue": "Statistical Science",
+      "kind": "journal",
+      "citations": 16,
+      "doi": "https://doi.org/10.1214/20-sts793",
+      "url": "https://doi.org/10.1214/20-sts793",
+      "relevance": 27,
+      "why": [
+        "Posterior Sampling: bayesian posterior",
+        "Missing Data: imputation"
+      ],
+      "projects": [
+        "missing-data",
+        "posterior-sampling"
+      ],
+      "total": 38,
+      "priority": "🔴",
+      "bibkey": "hippel2021maximum",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/24-sts927": {
+      "title": "30 Years of Synthetic Data",
+      "abstract": "The idea to generate synthetic data as a tool for broadening access to sensitive microdata has been proposed for the first time three decades ago. While first applications of the idea emerged around the turn of the century, the approach really gained momentum over the last ten years, stimulated at least in parts by some recent developments in computer science. We consider the 30th jubilee of Rubin’s seminal paper on synthetic data (J. Off. Stat. 9 (1993) 462–468) as an opportunity to look back at the historical developments but also to offer a review of the diverse approaches and methodological underpinnings proposed over the years. We will also discuss the various strategies that have been suggested to measure the utility and remaining risk of disclosure of the generated data.",
+      "authors": [
+        "Jörg Drechsler",
+        "Anna‐Carolina Haensch"
+      ],
+      "year": 2024,
+      "venue": "Statistical Science",
+      "kind": "journal",
+      "citations": 33,
+      "doi": "https://doi.org/10.1214/24-sts927",
+      "url": "https://doi.org/10.1214/24-sts927",
+      "relevance": 19,
+      "why": [
+        "Synthetic Data: synthetic data"
+      ],
+      "projects": [
+        "synthetic-data"
+      ],
+      "total": 32,
+      "priority": "🔴",
+      "bibkey": "drechsler202430",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/22-sts872": {
+      "title": "Principal Fairness for Human and Algorithmic Decision-Making",
+      "abstract": "Using the concept of principal stratification from the causal inference literature, we introduce a new notion of fairness, called principal fairness, for human and algorithmic decision-making. Principal fairness states that one should not discriminate among individuals who would be similarly affected by the decision. Unlike the existing statistical definitions of fairness, principal fairness explicitly accounts for the fact that individuals can be impacted by the decision. This causal fairness formulation also enables online or post-hoc fairness evaluation and policy learning. We also explain how principal fairness relates to the existing causality-based fairness criteria. In contrast to the counterfactual fairness criteria, for example, principal fairness considers the effects of decision in question rather than those of protected attributes of interest. Finally, we discuss how to conduct empirical evaluation and policy learning under the proposed principal fairness criterion.",
+      "authors": [
+        "Kosuke Imai",
+        "Zhichao Jiang"
+      ],
+      "year": 2023,
+      "venue": "Statistical Science",
+      "kind": "journal",
+      "citations": 14,
+      "doi": "https://doi.org/10.1214/22-sts872",
+      "url": "https://doi.org/10.1214/22-sts872",
+      "relevance": 11,
+      "why": [
+        "Trustworthy ML: fairness"
+      ],
+      "projects": [
+        "trustworthy-ml"
+      ],
+      "total": 22,
+      "priority": "🔴",
+      "bibkey": "imai2023principal",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/20-sts818": {
+      "title": "Bayesian Analysis of Rank Data with Covariates and Heterogeneous Rankers",
+      "abstract": "Data in the form of ranking lists are frequently encountered, and combining ranking results from different sources can potentially generate a better ranking list and help understand behaviors of the rankers. Of interest here are the rank data under the following settings: (i) covariate information available for the ranked entities; (ii) rankers of varying qualities or having different opinions; and (iii) incomplete ranking lists for nonoverlapping subgroups. We review some key ideas built around the Thurstone model family by researchers in the past few decades and provide a unifying approach for Bayesian Analysis of Rank data with Covariates (BARC) and its extensions in handling heterogeneous rankers. With this Bayesian framework, we can study rankers’ varying quality, cluster rankers’ heterogeneous opinions, and measure the corresponding uncertainties. To enable an efficient Bayesian inference, we advocate a parameter-expanded Gibbs sampler to sample from the target posterior distribution. The posterior samples also result in a Bayesian aggregated ranking list, with credible intervals quantifying its uncertainty. We investigate and compare performances of the proposed methods and other rank aggregation methods in both simulation studies and two real-data examples.",
+      "authors": [
+        "Xinran Li",
+        "Dingdong Yi",
+        "Jun S. Liu"
+      ],
+      "year": 2022,
+      "venue": "Statistical Science",
+      "kind": "journal",
+      "citations": 10,
+      "doi": "https://doi.org/10.1214/20-sts818",
+      "url": "https://doi.org/10.1214/20-sts818",
+      "relevance": 11,
+      "why": [
+        "Posterior Sampling: posterior sample"
+      ],
+      "projects": [
+        "posterior-sampling"
+      ],
+      "total": 22,
+      "priority": "🔴",
+      "bibkey": "li2022bayesian",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/21-sts840": {
+      "title": "Challenges in Markov Chain Monte Carlo for Bayesian Neural Networks",
+      "abstract": "Markov chain Monte Carlo (MCMC) methods have not been broadly adopted in Bayesian neural networks (BNNs). This paper initially reviews the main challenges in sampling from the parameter posterior of a neural network via MCMC. Such challenges culminate to lack of convergence to the parameter posterior. Nevertheless, this paper shows that a nonconverged Markov chain, generated via MCMC sampling from the parameter space of a neural network, can yield via Bayesian marginalization a valuable posterior predictive distribution of the output of the neural network. Classification examples based on multilayer perceptrons showcase highly accurate posterior predictive distributions. The postulate of limited scope for MCMC developments in BNNs is partially valid; an asymptotically exact parameter posterior seems less plausible, yet an accurate posterior predictive distribution is a tenable research avenue.",
+      "authors": [
+        "Theodore Papamarkou",
+        "Jacob Hinkle",
+        "M. Todd Young",
+        "David E. Womble"
+      ],
+      "year": 2022,
+      "venue": "Statistical Science",
+      "kind": "journal",
+      "citations": 59,
+      "doi": "https://doi.org/10.1214/21-sts840",
+      "url": "https://doi.org/10.1214/21-sts840",
+      "relevance": 10,
+      "why": [
+        "Posterior Sampling: posterior predictive"
+      ],
+      "projects": [
+        "posterior-sampling"
+      ],
+      "total": 25,
+      "priority": "🔴",
+      "bibkey": "papamarkou2022challenges",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/19-sts7560": {
+      "title": "Data Denoising and Post-Denoising Corrections in Single Cell RNA Sequencing",
+      "abstract": "Single cell sequencing technologies are transforming biomedical research. However, due to the inherent nature of the data, single cell RNA sequencing analysis poses new computational and statistical challenges. We begin with a survey of a selection of topics in this field, with a gentle introduction to the biology and a more detailed exploration of the technical noise. We consider in detail the problem of single cell data denoising, sometimes referred to as “imputation” in the relevant literature. We discuss why this is not a typical statistical imputation problem, and review current approaches to this problem. We then explore why the use of denoised values in downstream analyses invites novel statistical insights, and how denoising uncertainty should be accounted for to yield valid statistical inference. The utilization of denoised or imputed matrices in statistical inference is not unique to single cell genomics, and arises in many other fields. We describe the challenges in this type of analysis, discuss some preliminary solutions, and highlight unresolved issues.",
+      "authors": [
+        "Divyansh Agarwal",
+        "Jingshu Wang",
+        "Nancy R. Zhang"
+      ],
+      "year": 2020,
+      "venue": "Statistical Science",
+      "kind": "journal",
+      "citations": 24,
+      "doi": "https://doi.org/10.1214/19-sts7560",
+      "url": "https://doi.org/10.1214/19-sts7560",
+      "relevance": 9,
+      "why": [
+        "Missing Data: imputation"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 21,
+      "priority": "🔴",
+      "bibkey": "agarwal2020data",
+      "status": "🔴 To read",
+      "notes": ""
+    }
+  }
 }
