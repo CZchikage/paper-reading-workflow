@@ -1,143 +1,272 @@
 {
-  "lookback_days": 14,
-  "top_n": 20,
-  "must_read_n": 5,
-  "min_score": 4,
-  "sources": {
-    "arxiv": {
-      "enabled": true,
-      "max_results": 80
-    },
-    "semantic_scholar": {
-      "enabled": true,
-      "max_results": 40
-    },
-    "openreview": {
-      "enabled": true,
-      "venues": [
+  "conference_years": [
+    2025,
+    2026
+  ],
+  "top_n": 30,
+  "must_read_max": 8,
+  "conference_venues": [
+    {
+      "name": "NeurIPS",
+      "aliases": [
         "NeurIPS",
-        "ICLR",
-        "AISTATS",
-        "ICML",
-        "UAI",
-        "FAccT",
+        "Advances in Neural Information Processing Systems",
+        "NIPS"
+      ]
+    },
+    {
+      "name": "ICML",
+      "aliases": [
+        "International Conference on Machine Learning",
+        "ICML"
+      ]
+    },
+    {
+      "name": "ICLR",
+      "aliases": [
+        "International Conference on Learning Representations",
+        "ICLR"
+      ]
+    },
+    {
+      "name": "AISTATS",
+      "aliases": [
+        "International Conference on Artificial Intelligence and Statistics",
+        "AISTATS"
+      ]
+    },
+    {
+      "name": "UAI",
+      "aliases": [
+        "Conference on Uncertainty in Artificial Intelligence",
+        "Uncertainty in Artificial Intelligence",
+        "UAI"
+      ]
+    },
+    {
+      "name": "COLT",
+      "aliases": [
+        "Conference on Learning Theory",
+        "COLT"
+      ]
+    },
+    {
+      "name": "SaTML",
+      "aliases": [
+        "IEEE Conference on Secure and Trustworthy Machine Learning",
+        "Secure and Trustworthy Machine Learning",
         "SaTML"
       ]
+    },
+    {
+      "name": "FAccT",
+      "aliases": [
+        "ACM Conference on Fairness, Accountability, and Transparency",
+        "FAccT"
+      ]
+    },
+    {
+      "name": "AAAI",
+      "aliases": [
+        "AAAI Conference on Artificial Intelligence",
+        "AAAI"
+      ]
+    },
+    {
+      "name": "KDD",
+      "aliases": [
+        "ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+        "KDD"
+      ]
     }
-  },
-  "arxiv_categories": [
-    "cs.LG",
-    "stat.ML",
-    "cs.CR",
-    "stat.ME",
-    "cs.AI",
-    "cs.CY"
   ],
+  "top_journals": [
+    {
+      "name": "JMLR",
+      "aliases": [
+        "Journal of Machine Learning Research"
+      ]
+    },
+    {
+      "name": "TMLR",
+      "aliases": [
+        "Transactions on Machine Learning Research"
+      ]
+    },
+    {
+      "name": "Annals of Statistics",
+      "aliases": [
+        "The Annals of Statistics",
+        "Annals of Statistics"
+      ]
+    },
+    {
+      "name": "Biometrika",
+      "aliases": [
+        "Biometrika"
+      ]
+    },
+    {
+      "name": "JRSSB",
+      "aliases": [
+        "Journal of the Royal Statistical Society Series B",
+        "Journal of the Royal Statistical Society: Series B"
+      ]
+    },
+    {
+      "name": "JASA",
+      "aliases": [
+        "Journal of the American Statistical Association"
+      ]
+    },
+    {
+      "name": "Statistical Science",
+      "aliases": [
+        "Statistical Science"
+      ]
+    },
+    {
+      "name": "Machine Learning",
+      "aliases": [
+        "Machine Learning"
+      ]
+    },
+    {
+      "name": "TPAMI",
+      "aliases": [
+        "IEEE Transactions on Pattern Analysis and Machine Intelligence"
+      ]
+    },
+    {
+      "name": "TKDE",
+      "aliases": [
+        "IEEE Transactions on Knowledge and Data Engineering"
+      ]
+    }
+  ],
+  "journal_min_citations": 10,
+  "journal_from_year": 2022,
   "topics": [
     {
       "name": "Differential Privacy",
-      "weight": 6,
       "project": "privacy",
-      "keywords": [
+      "weight": 10,
+      "core_keywords": [
         "differential privacy",
         "renyi differential privacy",
-        "privacy amplification",
         "private learning",
-        "privacy-preserving",
+        "privacy amplification",
+        "privacy-preserving"
+      ],
+      "support_keywords": [
         "membership inference",
-        "privacy leakage"
+        "privacy leakage",
+        "privacy guarantee",
+        "synthetic data",
+        "posterior",
+        "bayesian"
       ]
     },
     {
       "name": "Posterior Sampling",
-      "weight": 6,
       "project": "posterior-sampling",
-      "keywords": [
+      "weight": 10,
+      "core_keywords": [
         "posterior sampling",
         "posterior sample",
-        "bayesian posterior",
-        "one posterior sample",
         "posterior predictive",
-        "bayesian inference"
+        "bayesian posterior",
+        "posterior inference"
+      ],
+      "support_keywords": [
+        "bayesian inference",
+        "privacy",
+        "differential privacy",
+        "sub-gaussian",
+        "subgaussian",
+        "synthetic data"
       ]
     },
     {
       "name": "Synthetic Data",
-      "weight": 5,
       "project": "synthetic-data",
-      "keywords": [
+      "weight": 9,
+      "core_keywords": [
         "synthetic data",
         "data synthesis",
         "synthetic dataset",
-        "generative data",
-        "tabular synthesis",
-        "private synthetic data"
-      ]
-    },
-    {
-      "name": "Trustworthy ML",
-      "weight": 3,
-      "project": "trustworthy-ml",
-      "keywords": [
-        "trustworthy machine learning",
-        "fairness",
-        "robustness",
-        "uncertainty quantification",
-        "calibration",
-        "responsible ai"
+        "private synthetic data",
+        "tabular synthesis"
+      ],
+      "support_keywords": [
+        "differential privacy",
+        "privacy",
+        "posterior",
+        "bayesian",
+        "tabular",
+        "utility"
       ]
     },
     {
       "name": "Missing Data",
-      "weight": 4,
       "project": "missing-data",
-      "keywords": [
+      "weight": 8,
+      "core_keywords": [
         "missing data",
         "missingness",
         "imputation",
         "missing not at random",
-        "mnar",
-        "incomplete data"
+        "mnar"
+      ],
+      "support_keywords": [
+        "tabular",
+        "transformer",
+        "uncertainty",
+        "bayesian",
+        "synthetic data"
+      ]
+    },
+    {
+      "name": "Trustworthy ML",
+      "project": "trustworthy-ml",
+      "weight": 5,
+      "core_keywords": [
+        "algorithmic fairness",
+        "fairness",
+        "trustworthy machine learning",
+        "responsible ai",
+        "robustness",
+        "calibration"
+      ],
+      "support_keywords": [
+        "theory",
+        "statistical",
+        "generalization",
+        "privacy"
       ]
     }
   ],
-  "bonus_keywords": {
-    "theory": 2,
-    "theoretical": 2,
-    "minimax": 2,
-    "generalization": 1,
-    "sub-gaussian": 3,
-    "subgaussian": 3,
+  "theory_bonus": {
+    "minimax": 4,
+    "lower bound": 4,
+    "upper bound": 2,
+    "sample complexity": 3,
+    "generalization bound": 3,
+    "sub-gaussian": 4,
+    "subgaussian": 4,
+    "renyi": 3,
     "bayesian": 1,
-    "tabular": 1,
-    "posterior": 1,
-    "privacy": 1
+    "posterior": 1
   },
-  "venue_bonus": {
-    "NeurIPS": 3,
-    "ICML": 3,
-    "ICLR": 3,
-    "AISTATS": 2,
-    "UAI": 2,
-    "FAccT": 2,
-    "SaTML": 2,
-    "JMLR": 2,
-    "TMLR": 2,
-    "Annals of Statistics": 3,
-    "JRSSB": 3,
-    "Biometrika": 3
+  "min_relevance": 5,
+  "priority": {
+    "red": 18,
+    "orange": 12,
+    "yellow": 8
   },
-  "exclude_keywords": [
-    "survey of surveys"
-  ],
-  "priority_thresholds": {
-    "must_read": 16,
-    "high": 10,
-    "maybe": 6
-  },
-  "bibtex": {
-    "enabled": true,
-    "output_file": "bib/discovered.bib",
-    "key_style": "firstauthorYYYYfirstword"
+  "openalex": {
+    "mailto": "",
+    "per_page": 100,
+    "max_pages_per_venue": 5
   }
 }
