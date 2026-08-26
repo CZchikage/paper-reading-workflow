@@ -3,80 +3,76 @@
     2025,
     2026
   ],
-  "top_n": 30,
-  "must_read_max": 8,
+  "conference_per_venue": 8,
+  "journal_per_venue": 8,
+  "top_n": 40,
   "conference_venues": [
     {
       "name": "NeurIPS",
+      "priority": 10,
       "aliases": [
         "NeurIPS",
         "Advances in Neural Information Processing Systems",
-        "NIPS"
+        "Neural Information Processing Systems"
       ]
     },
     {
       "name": "ICML",
+      "priority": 10,
       "aliases": [
-        "International Conference on Machine Learning",
-        "ICML"
+        "ICML",
+        "International Conference on Machine Learning"
       ]
     },
     {
       "name": "ICLR",
+      "priority": 10,
       "aliases": [
-        "International Conference on Learning Representations",
-        "ICLR"
+        "ICLR",
+        "International Conference on Learning Representations"
       ]
     },
     {
       "name": "AISTATS",
+      "priority": 9,
       "aliases": [
+        "AISTATS",
         "International Conference on Artificial Intelligence and Statistics",
-        "AISTATS"
+        "Artificial Intelligence and Statistics"
       ]
     },
     {
       "name": "UAI",
+      "priority": 9,
       "aliases": [
+        "UAI",
         "Conference on Uncertainty in Artificial Intelligence",
-        "Uncertainty in Artificial Intelligence",
-        "UAI"
+        "Uncertainty in Artificial Intelligence"
       ]
     },
     {
       "name": "COLT",
+      "priority": 9,
       "aliases": [
-        "Conference on Learning Theory",
-        "COLT"
+        "COLT",
+        "Conference on Learning Theory"
       ]
     },
     {
       "name": "SaTML",
+      "priority": 9,
       "aliases": [
-        "IEEE Conference on Secure and Trustworthy Machine Learning",
+        "SaTML",
         "Secure and Trustworthy Machine Learning",
-        "SaTML"
+        "IEEE Conference on Secure and Trustworthy Machine Learning"
       ]
     },
     {
       "name": "FAccT",
+      "priority": 7,
       "aliases": [
-        "ACM Conference on Fairness, Accountability, and Transparency",
-        "FAccT"
-      ]
-    },
-    {
-      "name": "AAAI",
-      "aliases": [
-        "AAAI Conference on Artificial Intelligence",
-        "AAAI"
-      ]
-    },
-    {
-      "name": "KDD",
-      "aliases": [
-        "ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
-        "KDD"
+        "FAccT",
+        "Fairness, Accountability, and Transparency"
       ]
     }
   ],
@@ -124,33 +120,19 @@
       "aliases": [
         "Statistical Science"
       ]
-    },
-    {
-      "name": "Machine Learning",
-      "aliases": [
-        "Machine Learning"
-      ]
-    },
-    {
-      "name": "TPAMI",
-      "aliases": [
-        "IEEE Transactions on Pattern Analysis and Machine Intelligence"
-      ]
-    },
-    {
-      "name": "TKDE",
-      "aliases": [
-        "IEEE Transactions on Knowledge and Data Engineering"
-      ]
     }
   ],
   "journal_min_citations": 10,
-  "journal_from_year": 2022,
+  "journal_from_year": 2020,
   "topics": [
     {
       "name": "Differential Privacy",
       "project": "privacy",
       "weight": 10,
+      "queries": [
+        "differential privacy",
+        "privacy preserving machine learning"
+      ],
       "core_keywords": [
         "differential privacy",
         "renyi differential privacy",
@@ -161,7 +143,6 @@
       "support_keywords": [
         "membership inference",
         "privacy leakage",
-        "privacy guarantee",
         "synthetic data",
         "posterior",
         "bayesian"
@@ -171,6 +152,10 @@
       "name": "Posterior Sampling",
       "project": "posterior-sampling",
       "weight": 10,
+      "queries": [
+        "posterior sampling",
+        "bayesian posterior sampling"
+      ],
       "core_keywords": [
         "posterior sampling",
         "posterior sample",
@@ -183,7 +168,6 @@
         "privacy",
         "differential privacy",
         "sub-gaussian",
-        "subgaussian",
         "synthetic data"
       ]
     },
@@ -191,6 +175,10 @@
       "name": "Synthetic Data",
       "project": "synthetic-data",
       "weight": 9,
+      "queries": [
+        "synthetic data",
+        "private synthetic data"
+      ],
       "core_keywords": [
         "synthetic data",
         "data synthesis",
@@ -211,6 +199,10 @@
       "name": "Missing Data",
       "project": "missing-data",
       "weight": 8,
+      "queries": [
+        "missing data imputation",
+        "missing not at random"
+      ],
       "core_keywords": [
         "missing data",
         "missingness",
@@ -230,13 +222,15 @@
       "name": "Trustworthy ML",
       "project": "trustworthy-ml",
       "weight": 5,
+      "queries": [
+        "algorithmic fairness",
+        "trustworthy machine learning"
+      ],
       "core_keywords": [
         "algorithmic fairness",
         "fairness",
         "trustworthy machine learning",
-        "responsible ai",
-        "robustness",
-        "calibration"
+        "responsible ai"
       ],
       "support_keywords": [
         "theory",
@@ -254,19 +248,16 @@
     "generalization bound": 3,
     "sub-gaussian": 4,
     "subgaussian": 4,
-    "renyi": 3,
-    "bayesian": 1,
-    "posterior": 1
+    "renyi": 3
   },
-  "min_relevance": 5,
-  "priority": {
-    "red": 18,
-    "orange": 12,
-    "yellow": 8
+  "min_relevance": 6,
+  "priority_thresholds": {
+    "red": 20,
+    "orange": 14,
+    "yellow": 9
   },
   "openalex": {
     "mailto": "",
-    "per_page": 100,
-    "max_pages_per_venue": 5
+    "per_page": 100
   }
 }
