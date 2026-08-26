@@ -1,97 +1,238 @@
 #!/usr/bin/env python3
 """
-v5 venue-balanced discovery.
+v7 — proceedings-first literature tracker.
 
-Important design choices:
-- No arXiv feed.
-- No AAAI/KDD.
-- Conference candidates are discovered by research query, then venue-validated.
-- PMLR conferences are validated using raw source names where available.
-- Each conference gets its own quota before global merging, so one venue cannot dominate.
-- Journals must be whitelisted AND have >= configured citations.
+Conference membership comes ONLY from:
+- official NeurIPS proceedings
+- official PMLR conference volumes
+- ICLR OpenReview Conference venues
+- official SaTML accepted-paper pages
+
+Semantic Scholar is used only for citation enrichment and top-journal discovery.
+It is NOT used to decide conference membership.
 """
 from __future__ import annotations
-import html, json, re, time, urllib.parse, urllib.request
+import html, json, os, re, time
+import urllib.parse, urllib.request, urllib.error
+from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import urljoin
 
-API="https://api.openalex.org"
+CFG="config/paper_discovery.json"
+S2_SEARCH="https://api.semanticscholar.org/graph/v1/paper/search"
+OR_NOTES="https://api2.openreview.net/notes"
 
-def load(p): return json.loads(Path(p).read_text(encoding="utf-8"))
-def norm(s): return re.sub(r"\s+"," ",html.unescape(s or "")).strip()
+def load(): return json.loads(Path(CFG).read_text(encoding="utf-8"))
+def clean(s): return re.sub(r"\s+"," ",html.unescape(s or "")).strip()
 
-def get_json(path,params,cfg):
-    if cfg["openalex"].get("mailto"): params["mailto"]=cfg["openalex"]["mailto"]
-    url=API+path+"?"+urllib.parse.urlencode(params)
-    req=urllib.request.Request(url,headers={"User-Agent":"paper-reading-workflow/5.0"})
-    with urllib.request.urlopen(req,timeout=40) as r: return json.loads(r.read())
+def http_text(url, timeout=45):
+    req=urllib.request.Request(url,headers={"User-Agent":"paper-reading-workflow/7.0"})
+    with urllib.request.urlopen(req,timeout=timeout) as r:
+        return r.read().decode("utf-8","replace")
 
-def abstract(w):
-    inv=w.get("abstract_inverted_index") or {}
-    pairs=[]
-    for word,poses in inv.items():
-        for p in poses: pairs.append((p,word))
-    return " ".join(w for _,w in sorted(pairs))
+def http_json(url, headers=None, timeout=45):
+    h={"User-Agent":"paper-reading-workflow/7.0"}
+    if headers: h.update(headers)
+    req=urllib.request.Request(url,headers=h)
+    with urllib.request.urlopen(req,timeout=timeout) as r:
+        return json.loads(r.read())
 
-def venue_strings(w):
-    vals=[]
-    pl=w.get("primary_location") or {}
-    locs=[pl]+(w.get("locations") or [])
-    for loc in locs:
-        if not loc: continue
-        raw=loc.get("raw_source_name")
-        if raw: vals.append(raw)
-        src=loc.get("source") or {}
-        if src.get("display_name"): vals.append(src["display_name"])
-    # OpenAlex may expose venue-like information elsewhere too.
-    for key in ("display_name","title"):
-        if w.get(key): vals.append(w[key])
-    return [norm(x) for x in vals if x]
+class LinkParser(HTMLParser):
+    def __init__(self):
+        super().__init__(); self.links=[]; self._href=None; self._text=[]
+    def handle_starttag(self,tag,attrs):
+        if tag=="a":
+            self._href=dict(attrs).get("href"); self._text=[]
+    def handle_data(self,data):
+        if self._href is not None: self._text.append(data)
+    def handle_endtag(self,tag):
+        if tag=="a" and self._href is not None:
+            self.links.append((self._href,clean(" ".join(self._text))))
+            self._href=None; self._text=[]
 
-def match_venue(w,venue):
-    strings=[s.lower() for s in venue_strings(w)]
-    for alias in venue["aliases"]:
-        a=alias.lower()
-        if any(a in s for s in strings):
-            return True
-    return False
+class MetaParser(HTMLParser):
+    def __init__(self):
+        super().__init__(); self.meta={}; self.title=""
+    def handle_starttag(self,tag,attrs):
+        d=dict(attrs)
+        if tag=="meta":
+            key=d.get("name") or d.get("property")
+            val=d.get("content")
+            if key and val:
+                self.meta.setdefault(key,[]).append(clean(val))
+    def handle_data(self,data):
+        pass
 
-def journal_match(w,journal):
-    strings=[s.lower() for s in venue_strings(w)]
-    return any(any(a.lower() in s for s in strings) for a in journal["aliases"])
-
-def authors(w):
-    return [a.get("author",{}).get("display_name","") for a in w.get("authorships",[]) if a.get("author")]
-
-def to_paper(w,venue,kind):
+def parse_meta_page(url):
+    txt=http_text(url)
+    p=MetaParser(); p.feed(txt)
+    m=p.meta
+    def one(*keys):
+        for k in keys:
+            if m.get(k): return m[k][0]
+        return ""
     return {
-      "id":w.get("id",""),
-      "title":norm(w.get("title","")),
-      "abstract":abstract(w),
-      "authors":authors(w),
-      "year":w.get("publication_year"),
-      "date":w.get("publication_date") or "",
-      "venue":venue,
-      "kind":kind,
-      "citations":w.get("cited_by_count") or 0,
-      "doi":w.get("doi") or "",
-      "url":w.get("doi") or w.get("id") or ""
+      "title":one("citation_title","dc.Title","og:title"),
+      "authors":m.get("citation_author",[]),
+      "abstract":one("description","citation_abstract","og:description"),
+      "pdf":one("citation_pdf_url"),
+      "doi":one("citation_doi"),
+      "url":url
     }
 
+def pmlr_volume(url, venue, year):
+    txt=http_text(url); lp=LinkParser(); lp.feed(txt)
+    links=[]
+    for href,text in lp.links:
+        full=urljoin(url,href)
+        # PMLR paper landing pages are direct children like smith25a.html.
+        if re.search(r"/v\d+/[^/]+\.html$", full) and not full.endswith("index.html"):
+            links.append(full)
+    out=[]; seen=set()
+    for u in links:
+        if u in seen: continue
+        seen.add(u)
+        try:
+            p=parse_meta_page(u)
+            if not p["title"]: continue
+            p.update(venue=venue,year=int(year),kind="conference",source="PMLR")
+            out.append(p)
+        except Exception as e:
+            print("WARN PMLR paper",u,type(e).__name__)
+        time.sleep(0.03)
+    return out
+
+def neurips_volume(url, venue, year):
+    txt=http_text(url); lp=LinkParser(); lp.feed(txt)
+    links=[]
+    for href,text in lp.links:
+        full=urljoin(url,href)
+        if ("Abstract-Conference.html" in full or "/paper/" in full and full.endswith(".html")):
+            links.append(full)
+    out=[]; seen=set()
+    for u in links:
+        if u in seen: continue
+        seen.add(u)
+        try:
+            p=parse_meta_page(u)
+            if not p["title"]: continue
+            p.update(venue=venue,year=int(year),kind="conference",source="NeurIPS Proceedings")
+            out.append(p)
+        except Exception as e:
+            print("WARN NeurIPS paper",u,type(e).__name__)
+        time.sleep(0.03)
+    return out
+
+def orval(c,k):
+    v=(c or {}).get(k,"")
+    if isinstance(v,dict): return v.get("value","")
+    return v
+
+def iclr_venue(venue_id, venue, year):
+    # OpenReview stores accepted conference papers with content.venueid.
+    params={"content.venueid":venue_id,"limit":1000}
+    data=http_json(OR_NOTES+"?"+urllib.parse.urlencode(params))
+    out=[]
+    for n in data.get("notes",[]):
+        c=n.get("content") or {}
+        title=clean(orval(c,"title"))
+        if not title: continue
+        authors=orval(c,"authors") or []
+        if isinstance(authors,str): authors=[authors]
+        abstract=clean(orval(c,"abstract"))
+        forum=n.get("forum") or n.get("id")
+        out.append({
+          "title":title,"authors":authors,"abstract":abstract,
+          "pdf":"https://openreview.net/pdf?id="+str(forum),
+          "url":"https://openreview.net/forum?id="+str(forum),
+          "doi":"","venue":venue,"year":int(year),"kind":"conference","source":"OpenReview"
+        })
+    return out
+
+class SaTMLParser(HTMLParser):
+    def __init__(self,base):
+        super().__init__(); self.base=base; self.in_heading=False; self.heading_tag=None
+        self.buf=[]; self.items=[]; self.current=None; self.in_p=False
+    def handle_starttag(self,tag,attrs):
+        if tag in ("h3","h4","h5"):
+            self.in_heading=True; self.heading_tag=tag; self.buf=[]
+        elif tag=="p":
+            self.in_p=True; self.buf=[]
+        elif tag=="a" and self.current is not None:
+            href=dict(attrs).get("href","")
+            text=dict(attrs).get("title","")
+            if href:
+                full=urljoin(self.base,href)
+                if ".pdf" in href.lower(): self.current["pdf"]=full
+                elif "arxiv.org" in href: self.current.setdefault("url",full)
+    def handle_data(self,data):
+        if self.in_heading or self.in_p: self.buf.append(data)
+    def handle_endtag(self,tag):
+        if self.in_heading and tag==self.heading_tag:
+            txt=clean(" ".join(self.buf))
+            # Conference section headings are short generic labels; paper headings are substantive.
+            generic={"research papers","position papers","systematization of knowledge papers","sok papers","accepted papers"}
+            if len(txt)>12 and txt.lower() not in generic:
+                self.current={"title":txt,"authors":[],"abstract":"","pdf":"","url":""}
+                self.items.append(self.current)
+            self.in_heading=False; self.buf=[]
+        elif self.in_p and tag=="p":
+            txt=clean(" ".join(self.buf))
+            if self.current and txt:
+                if len(txt)>180 and not self.current["abstract"]:
+                    self.current["abstract"]=txt
+                elif not self.current["authors"] and len(txt)<300:
+                    # Best-effort author line.
+                    self.current["authors"]=[x.strip() for x in re.split(r",|;|\band\b",txt) if x.strip()]
+            self.in_p=False; self.buf=[]
+
+def satml_page(url,venue,year):
+    txt=http_text(url)
+    p=SaTMLParser(url); p.feed(txt)
+    out=[]
+    for x in p.items:
+        x["url"]=x.get("url") or url+"#"+re.sub(r"[^a-z0-9]+","-",x["title"].lower()).strip("-")
+        x.update(doi="",venue=venue,year=int(year),kind="conference",source="SaTML Accepted Papers")
+        out.append(x)
+    return out
+
 def relevance(p,cfg):
-    text=(p["title"]+" "+p["abstract"]).lower()
-    title=p["title"].lower()
+    text=(p.get("title","")+" "+p.get("abstract","")).lower()
+    title=p.get("title","").lower()
     score=0; why=[]; projects=[]
     for t in cfg["topics"]:
-        hits=[k for k in t["core_keywords"] if k.lower() in text]
+        hits=[k for k in t["core"] if k.lower() in text]
         if not hits: continue
         best=max(t["weight"]*(2 if k.lower() in title else 1) for k in hits)
-        supp=[k for k in t.get("support_keywords",[]) if k.lower() in text]
+        supp=[k for k in t.get("support",[]) if k.lower() in text]
         score+=best+min(4,len(supp))
         why.append(t["name"]+": "+", ".join(hits[:2]))
         projects.append(t["project"])
     for k,b in cfg.get("theory_bonus",{}).items():
         if k.lower() in text: score+=b
     return score,why,sorted(set(projects))
+
+def s2_enrich(p):
+    # Citation enrichment only. Never used for conference membership.
+    key=os.environ.get("S2_API_KEY","").strip()
+    headers={"User-Agent":"paper-reading-workflow/7.0"}
+    if key: headers["x-api-key"]=key
+    params={"query":p["title"],"limit":3,"fields":"title,citationCount,influentialCitationCount,externalIds,url"}
+    try:
+        data=http_json(S2_SEARCH+"?"+urllib.parse.urlencode(params),headers=headers)
+    except Exception:
+        return p
+    target=set(re.findall(r"\w+",p["title"].lower()))
+    best=None; bs=0
+    for x in data.get("data",[]):
+        s=len(target & set(re.findall(r"\w+",(x.get("title") or "").lower())))
+        if s>bs: bs=s; best=x
+    if best and bs>=max(4,int(len(target)*0.55)):
+        p["citations"]=best.get("citationCount") or 0
+        p["influential"]=best.get("influentialCitationCount") or 0
+        ext=best.get("externalIds") or {}
+        if not p.get("doi"): p["doi"]=ext.get("DOI") or ""
+    return p
 
 def priority(total,cfg):
     t=cfg["priority_thresholds"]
@@ -102,166 +243,150 @@ def priority(total,cfg):
 
 def bibkey(p):
     last="anon"
-    if p["authors"]:
+    if p.get("authors"):
         last=re.sub(r"[^A-Za-z0-9]","",p["authors"][0].split()[-1]).lower() or "anon"
     stop={"a","an","the","of","on","for","to","in","with","and","via","from","by","using"}
-    ws=[w.lower() for w in re.findall(r"[A-Za-z0-9]+",p["title"]) if w.lower() not in stop]
-    return f"{last}{p['year'] or '0000'}{ws[0] if ws else 'paper'}"
+    words=[w.lower() for w in re.findall(r"[A-Za-z0-9]+",p["title"]) if w.lower() not in stop]
+    return f"{last}{p['year']}{words[0] if words else 'paper'}"
 
-def discover_query(query,year,cfg):
-    params={
-      "search":query,
-      "filter":f"publication_year:{year}",
-      "per-page":cfg["openalex"]["per_page"],
-      "sort":"cited_by_count:desc"
-    }
-    return get_json("/works",params,cfg).get("results",[])
-
-def discover_conferences(cfg):
-    buckets={v["name"]:{} for v in cfg["conference_venues"]}
-    for year in cfg["conference_years"]:
-        for topic in cfg["topics"]:
-            for query in topic["queries"]:
-                try:
-                    works=discover_query(query,year,cfg)
-                except Exception as e:
-                    print("WARN query",query,year,type(e).__name__)
-                    continue
-                for w in works:
-                    for venue in cfg["conference_venues"]:
-                        if match_venue(w,venue):
-                            p=to_paper(w,venue["name"],"conference")
-                            rel,why,projects=relevance(p,cfg)
-                            if rel<cfg["min_relevance"]: continue
-                            p.update(relevance=rel,reasons=why,projects=projects)
-                            # conference quality gate already passed; add venue priority + citations
-                            cite_bonus=5 if p["citations"]>=30 else 3 if p["citations"]>=10 else 1 if p["citations"]>=3 else 0
-                            p["total"]=rel+venue["priority"]+cite_bonus
-                            p["priority"]=priority(p["total"],cfg)
-                            p["bibkey"]=bibkey(p)
-                            buckets[venue["name"]][p["id"]]=p
-                time.sleep(0.12)
-
-    selected=[]
-    for venue in cfg["conference_venues"]:
-        arr=list(buckets[venue["name"]].values())
-        arr.sort(key=lambda p:(p["total"],p["relevance"],p["citations"]),reverse=True)
-        arr=arr[:cfg["conference_per_venue"]]
-        selected.extend(arr)
-        print(f"{venue['name']}: {len(arr)} selected")
-    return selected
-
-def discover_journals(cfg):
-    out=[]
-    # Search by topic and then hard-filter journal + citation.
+def journal_search(journal,cfg):
+    # Journals are the one place S2 is appropriate: venue filter + citation hard gate.
+    key=os.environ.get("S2_API_KEY","").strip()
+    headers={"User-Agent":"paper-reading-workflow/7.0"}
+    if key: headers["x-api-key"]=key
+    queries=["differential privacy","posterior sampling","synthetic data","missing data imputation","algorithmic fairness"]
     seen={}
-    for topic in cfg["topics"]:
-        for query in topic["queries"]:
-            params={
-              "search":query,
-              "filter":f"from_publication_date:{cfg['journal_from_year']}-01-01,cited_by_count:>{cfg['journal_min_citations']-1}",
-              "per-page":cfg["openalex"]["per_page"],
-              "sort":"cited_by_count:desc"
+    for q in queries:
+        params={
+          "query":q,"limit":100,
+          "fields":"title,abstract,authors,year,publicationDate,venue,citationCount,influentialCitationCount,externalIds,url,openAccessPdf"
+        }
+        try:
+            data=http_json(S2_SEARCH+"?"+urllib.parse.urlencode(params),headers=headers)
+        except Exception as e:
+            print("WARN journal",journal,q,type(e).__name__); continue
+        for x in data.get("data",[]):
+            if (x.get("venue") or "").lower()!=journal.lower(): continue
+            if (x.get("citationCount") or 0)<cfg["journal_min_citations"]: continue
+            y=x.get("year") or 0
+            lo,hi=map(int,cfg["journal_year_range"].split("-"))
+            if not (lo<=y<=hi): continue
+            ext=x.get("externalIds") or {}
+            doi=ext.get("DOI") or ""
+            url=("https://doi.org/"+doi) if doi else (x.get("url") or "")
+            p={
+              "title":x.get("title") or "","abstract":x.get("abstract") or "",
+              "authors":[a.get("name","") for a in (x.get("authors") or [])],
+              "year":y,"venue":journal,"kind":"journal","source":"Semantic Scholar",
+              "citations":x.get("citationCount") or 0,
+              "influential":x.get("influentialCitationCount") or 0,
+              "doi":doi,"url":url,
+              "pdf":((x.get("openAccessPdf") or {}).get("url") or "")
             }
-            try: works=get_json("/works",params,cfg).get("results",[])
-            except Exception as e:
-                print("WARN journal query",query,type(e).__name__); continue
-            for w in works:
-                matched=None
-                for j in cfg["top_journals"]:
-                    if journal_match(w,j): matched=j["name"]; break
-                if not matched: continue
-                p=to_paper(w,matched,"journal")
-                if p["citations"]<cfg["journal_min_citations"]: continue
-                rel,why,projects=relevance(p,cfg)
-                if rel<cfg["min_relevance"]: continue
-                p.update(relevance=rel,reasons=why,projects=projects)
-                cite_bonus=min(10,2+(p["citations"]//20))
-                p["total"]=rel+10+cite_bonus
-                p["priority"]=priority(p["total"],cfg)
-                p["bibkey"]=bibkey(p)
-                seen[p["id"]]=p
-            time.sleep(0.12)
-
-    # quota by journal
-    for j in cfg["top_journals"]:
-        arr=[p for p in seen.values() if p["venue"]==j["name"]]
-        arr.sort(key=lambda p:(p["total"],p["citations"],p["relevance"]),reverse=True)
-        out.extend(arr[:cfg["journal_per_venue"]])
-        print(f"{j['name']}: {min(len(arr),cfg['journal_per_venue'])} selected")
-    return out
+            rel,why,projects=relevance(p,cfg)
+            if rel<cfg["min_relevance"]: continue
+            p.update(relevance=rel,why=why,projects=projects)
+            p["total"]=rel+10+min(8,p["citations"]//10)
+            p["priority"]=priority(p["total"],cfg); p["bibkey"]=bibkey(p)
+            seen[x.get("paperId") or doi or p["title"]]=p
+        time.sleep(0.8)
+    arr=list(seen.values())
+    arr.sort(key=lambda p:(p["relevance"],p["citations"]),reverse=True)
+    return arr[:cfg["journal_per_venue"]]
 
 def bibtex(p):
     typ="inproceedings" if p["kind"]=="conference" else "article"
-    fields=[
+    fs=[
       f"  title = {{{p['title'].replace('{','').replace('}','')}}}",
-      f"  author = {{{' and '.join(p['authors'])}}}",
+      f"  author = {{{' and '.join(p.get('authors',[]))}}}",
       f"  year = {{{p['year']}}}",
       (f"  booktitle = {{{p['venue']}}}" if p["kind"]=="conference" else f"  journal = {{{p['venue']}}}"),
       f"  url = {{{p['url']}}}"
     ]
-    if p["doi"]: fields.append(f"  doi = {{{p['doi'].replace('https://doi.org/','')}}}")
-    return "@"+typ+"{"+p["bibkey"]+",\n"+",\n".join(fields)+"\n}\n"
+    if p.get("doi"): fs.append(f"  doi = {{{p['doi'].replace('https://doi.org/','')}}}")
+    return "@"+typ+"{"+p["bibkey"]+",\n"+",\n".join(fs)+"\n}\n"
 
-def load_state(path):
-    st={}
-    if not Path(path).exists(): return st
-    for line in Path(path).read_text(encoding="utf-8").splitlines():
-        if not line.startswith("|"): continue
-        cells=[x.strip() for x in line.strip("|").split("|")]
-        if len(cells)<10: continue
-        m=re.search(r"\((https?://[^)]+)\)",cells[4])
-        if m: st[m.group(1)]={"status":cells[1],"notes":cells[-1]}
-    return st
-
-def row(p,st):
-    old=st.get(p["url"],{})
+def row(p):
+    why="; ".join(p.get("why",[]))
     return (
-      f"| {p['priority']} | {old.get('status','TODO')} | {p['relevance']} | {p['citations']} | "
+      f"| {p['priority']} | TODO | {p['relevance']} | {p.get('citations',0)} | "
       f"[{p['title'].replace('|','/')}]({p['url']}) | {p['venue']} | {p['year']} | "
-      f"{', '.join(p['projects']) or '—'} | `{p['bibkey']}` | {'; '.join(p['reasons'])} | {old.get('notes','')} |"
+      f"{', '.join(p.get('projects',[])) or '—'} | `{p['bibkey']}` | {why} | |"
     )
 
-def render(papers,cfg):
-    st=load_state("reading_queue.md")
-    conf=[p for p in papers if p["kind"]=="conference"]
-    jour=[p for p in papers if p["kind"]=="journal"]
-    lines=[
-      "# Paper Reading Queue","",
-      "_Venue-balanced, quality-first. No arXiv feed; no AAAI/KDD._","",
-      "## Top Conference Papers — 2025–2026","",
-      "| Priority | Status | Relevance | Citations | Paper | Venue | Year | Project | BibTeX | Why | Notes |",
-      "|---|---|---:|---:|---|---|---:|---|---|---|---|"
-    ]
-    # group conferences to make venue balance visible
-    for v in cfg["conference_venues"]:
-        arr=[p for p in conf if p["venue"]==v["name"]]
-        if not arr: continue
-        lines += [f"| **{v['name']}** |  |  |  |  |  |  |  |  |  |  |"]
-        lines += [row(p,st) for p in arr]
-    lines += [
-      "","## Top Journal Papers — citation ≥ "+str(cfg["journal_min_citations"]),"",
-      "| Priority | Status | Relevance | Citations | Paper | Venue | Year | Project | BibTeX | Why | Notes |",
-      "|---|---|---:|---:|---|---|---:|---|---|---|---|"
-    ]
-    for j in cfg["top_journals"]:
-        arr=[p for p in jour if p["venue"]==j["name"]]
-        if not arr: continue
-        lines += [f"| **{j['name']}** |  |  |  |  |  |  |  |  |  |  |"]
-        lines += [row(p,st) for p in arr]
-    Path("reading_queue.md").write_text("\n".join(lines)+"\n",encoding="utf-8")
-
 def main():
-    cfg=load("config/paper_discovery.json")
-    conf=discover_conferences(cfg)
-    jour=discover_journals(cfg)
+    cfg=load()
+    all_conf=[]; notes=[]
+    for conf in cfg["conferences"]:
+        venue=conf["name"]
+        bucket=[]
+        for year,locator in conf["years"].items():
+            try:
+                if conf["type"]=="pmlr":
+                    raw=pmlr_volume(locator,venue,year)
+                elif conf["type"]=="neurips":
+                    raw=neurips_volume(locator,venue,year)
+                elif conf["type"]=="openreview":
+                    raw=iclr_venue(locator,venue,year)
+                elif conf["type"]=="satml":
+                    raw=satml_page(locator,venue,year)
+                else:
+                    raw=[]
+                print(venue,year,"official papers:",len(raw))
+                for p in raw:
+                    rel,why,projects=relevance(p,cfg)
+                    if rel<cfg["min_relevance"]: continue
+                    p.update(relevance=rel,why=why,projects=projects,citations=0,influential=0)
+                    p=s2_enrich(p)
+                    # Proceedings membership itself supplies the venue-quality gate.
+                    p["total"]=rel+10+min(5,p.get("citations",0)//10)
+                    p["priority"]=priority(p["total"],cfg); p["bibkey"]=bibkey(p)
+                    bucket.append(p)
+                    time.sleep(0.15)
+            except Exception as e:
+                notes.append(f"{venue} {year}: {type(e).__name__}: {e}")
+        # per-venue ranking / quota prevents domination
+        seen={}
+        for p in bucket:
+            key=(p.get("doi") or p["url"] or p["title"]).lower()
+            if key not in seen or p["total"]>seen[key]["total"]: seen[key]=p
+        arr=list(seen.values())
+        arr.sort(key=lambda p:(p["relevance"],p.get("citations",0)),reverse=True)
+        all_conf.extend(arr[:cfg["top_per_venue"]])
+        print(venue,"selected:",min(len(arr),cfg["top_per_venue"]))
 
-    # preserve venue balance. We don't globally truncate before each venue got its quota.
-    papers=conf+jour
-    render(papers,cfg)
+    journals=[]
+    for j in cfg["top_journals"]:
+        arr=journal_search(j,cfg)
+        journals.extend(arr)
+        print(j,"selected:",len(arr))
+
+    lines=["# Paper Reading Queue","",
+      "_Conference papers come directly from official proceedings / accepted-paper lists. No arXiv feed and no metadata-based venue guessing._","",
+      "## Conference papers","",
+      "| Priority | Status | Relevance | Citations | Paper | Venue | Year | Project | BibTeX | Why | Notes |",
+      "|---|---|---:|---:|---|---|---:|---|---|---|---|"]
+    for conf in cfg["conferences"]:
+        arr=[p for p in all_conf if p["venue"]==conf["name"]]
+        if not arr: continue
+        lines.append(f"| **{conf['name']}** | | | | | | | | | | |")
+        lines.extend(row(p) for p in arr)
+    lines += ["","## Top journal papers — citation ≥ "+str(cfg["journal_min_citations"]),"",
+      "| Priority | Status | Relevance | Citations | Paper | Venue | Year | Project | BibTeX | Why | Notes |",
+      "|---|---|---:|---:|---|---|---:|---|---|---|---|"]
+    for j in cfg["top_journals"]:
+        arr=[p for p in journals if p["venue"]==j]
+        if not arr: continue
+        lines.append(f"| **{j}** | | | | | | | | | | |")
+        lines.extend(row(p) for p in arr)
+    if notes:
+        lines += ["","## Fetch notes",""]+[f"- {n}" for n in notes]
+
+    Path("reading_queue.md").write_text("\n".join(lines)+"\n",encoding="utf-8")
     Path("bib").mkdir(exist_ok=True)
-    Path("bib/discovered.bib").write_text("\n".join(bibtex(p) for p in papers),encoding="utf-8")
-    print("Total:",len(papers))
+    allp=all_conf+journals
+    Path("bib/discovered.bib").write_text("\n".join(bibtex(p) for p in allp),encoding="utf-8")
+    print("TOTAL",len(allp))
 
 if __name__=="__main__":
     main()
