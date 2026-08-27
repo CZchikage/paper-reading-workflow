@@ -21,7 +21,15 @@
     "uncertainty",
     "sub-gaussian",
     "subgaussian",
-    "minimax"
+    "minimax",
+    "optimal transport",
+    "wasserstein",
+    "transport",
+    "sinkhorn",
+    "adversarial",
+    "robustness",
+    "poisoning",
+    "backdoor"
   ],
   "conferences": [
     {
@@ -137,8 +145,8 @@
       "project": "privacy",
       "weight": 10,
       "core": [
-        "DP",
-        "renyi DP",
+        "differential privacy",
+        "renyi differential privacy",
         "private learning",
         "privacy amplification",
         "privacy-preserving"
@@ -224,6 +232,48 @@
         "theory",
         "statistical",
         "generalization",
+        "privacy"
+      ]
+    },
+    {
+      "name": "Optimal Transport",
+      "project": "optimal-transport",
+      "weight": 8,
+      "core": [
+        "optimal transport",
+        "wasserstein",
+        "transport map",
+        "transport plan",
+        "entropic optimal transport",
+        "sinkhorn"
+      ],
+      "support": [
+        "distribution shift",
+        "domain adaptation",
+        "fairness",
+        "robustness",
+        "generative model",
+        "barycenter"
+      ]
+    },
+    {
+      "name": "Adversarial ML",
+      "project": "adversarial-ml",
+      "weight": 8,
+      "core": [
+        "adversarial machine learning",
+        "adversarial attack",
+        "adversarial example",
+        "adversarial robustness",
+        "robust classification",
+        "certified robustness"
+      ],
+      "support": [
+        "poisoning attack",
+        "evasion attack",
+        "backdoor attack",
+        "robust optimization",
+        "distribution shift",
         "privacy"
       ]
     }
