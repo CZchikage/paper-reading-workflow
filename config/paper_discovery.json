@@ -133,7 +133,7 @@
   "journal_from_year": 2020,
   "topics": [
     {
-      "name": "Differential Privacy",
+      "name": "DP",
       "project": "privacy",
       "weight": 10,
       "core": [
