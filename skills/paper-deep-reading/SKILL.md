@@ -215,7 +215,7 @@ If committed locally, tell the user to run `git push`.
 ## Output Files
 
 Use topic folders such as:
-- `notes/privacy/`
+- `notes/dp/`
 - `notes/posterior-sampling/`
 - `notes/synthetic-data/`
 - `notes/missing-data/`
