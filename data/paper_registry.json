@@ -21,7 +21,8 @@
       "citations": 0,
       "relevance": 23,
       "why": [
-        "DP: differential privacy, renyi differential privacy"
+        "differential privacy",
+        "renyi differential privacy"
       ],
       "projects": [
         "privacy"
@@ -48,7 +49,7 @@
       "citations": 0,
       "relevance": 21,
       "why": [
-        "DP: differential privacy"
+        "differential privacy"
       ],
       "projects": [
         "privacy"
@@ -106,7 +107,7 @@
       "citations": 0,
       "relevance": 20,
       "why": [
-        "DP: differential privacy"
+        "differential privacy"
       ],
       "projects": [
         "privacy"
@@ -136,7 +137,7 @@
       "citations": 0,
       "relevance": 20,
       "why": [
-        "DP: differential privacy"
+        "differential privacy"
       ],
       "projects": [
         "privacy"
@@ -226,7 +227,7 @@
       "citations": 0,
       "relevance": 20,
       "why": [
-        "DP: differential privacy"
+        "differential privacy"
       ],
       "projects": [
         "privacy"
@@ -314,7 +315,7 @@
       "citations": 0,
       "relevance": 20,
       "why": [
-        "DP: differential privacy"
+        "differential privacy"
       ],
       "projects": [
         "privacy"
@@ -489,16 +490,14 @@
       "year": 2026,
       "kind": "conference",
       "citations": 0,
-      "relevance": 41,
+      "relevance": 20,
       "why": [
-        "DP",
         "posterior sampling"
       ],
       "projects": [
-        "posterior-sampling",
-        "privacy"
+        "posterior-sampling"
       ],
-      "total": 51,
+      "total": 30,
       "priority": "🔴",
       "bibkey": "linfeng2026cl",
       "status": "🔴 To read",
@@ -672,7 +671,7 @@
       "citations": 0,
       "relevance": 20,
       "why": [
-        "DP: differential privacy"
+        "differential privacy"
       ],
       "projects": [
         "privacy"
@@ -935,7 +934,7 @@
       "citations": 0,
       "relevance": 21,
       "why": [
-        "DP: differential privacy"
+        "differential privacy"
       ],
       "projects": [
         "privacy"
@@ -962,7 +961,7 @@
       "citations": 0,
       "relevance": 20,
       "why": [
-        "DP: differential privacy"
+        "differential privacy"
       ],
       "projects": [
         "privacy"
@@ -1018,7 +1017,7 @@
       "citations": 0,
       "relevance": 20,
       "why": [
-        "DP: differential privacy"
+        "differential privacy"
       ],
       "projects": [
         "privacy"
@@ -1046,7 +1045,7 @@
       "citations": 0,
       "relevance": 20,
       "why": [
-        "DP: differential privacy"
+        "differential privacy"
       ],
       "projects": [
         "privacy"
@@ -1074,7 +1073,7 @@
       "citations": 0,
       "relevance": 20,
       "why": [
-        "DP: differential privacy"
+        "differential privacy"
       ],
       "projects": [
         "privacy"
@@ -1101,7 +1100,7 @@
       "citations": 0,
       "relevance": 20,
       "why": [
-        "DP: differential privacy"
+        "differential privacy"
       ],
       "projects": [
         "privacy"
@@ -1129,7 +1128,7 @@
       "citations": 0,
       "relevance": 20,
       "why": [
-        "DP: differential privacy"
+        "differential privacy"
       ],
       "projects": [
         "privacy"
@@ -1158,7 +1157,7 @@
       "citations": 0,
       "relevance": 20,
       "why": [
-        "DP: differential privacy"
+        "differential privacy"
       ],
       "projects": [
         "privacy"
@@ -1508,7 +1507,7 @@
       "citations": 0,
       "relevance": 20,
       "why": [
-        "DP: differential privacy"
+        "differential privacy"
       ],
       "projects": [
         "privacy"
@@ -1535,7 +1534,7 @@
       "citations": 0,
       "relevance": 20,
       "why": [
-        "DP: differential privacy"
+        "differential privacy"
       ],
       "projects": [
         "privacy"
@@ -1812,14 +1811,15 @@
       "citations": 66,
       "doi": "https://doi.org/10.1214/21-aos2058",
       "url": "https://doi.org/10.1214/21-aos2058",
-      "relevance": 18,
+      "relevance": 28,
       "why": [
+        "differential privacy",
         "privacy-preserving"
       ],
       "projects": [
         "privacy"
       ],
-      "total": 34,
+      "total": 44,
       "priority": "🔴",
       "bibkey": "cai2021cost",
       "status": "🔴 To read",
@@ -2567,7 +2567,7 @@
       "url": "https://doi.org/10.1214/19-sts742",
       "relevance": 32,
       "why": [
-        "DP",
+        "differential privacy",
         "synthetic data",
         "data synthesis"
       ],
@@ -2775,126 +2775,6 @@
       "status": "🔴 To read",
       "notes": ""
     },
-    "doi:10.52202/079017-0840": {
-      "title": "Achieving Tractable Minimax Optimal Regret in Average Reward MDPs",
-      "authors": [
-        "Boone, Victor",
-        "Zhang, Zihan"
-      ],
-      "abstract": "",
-      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2024/file/2f0bb736ccc8551ef5bcc9165c2a4d9e-Paper-Conference.pdf",
-      "doi": "10.52202/079017-0840",
-      "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/2f0bb736ccc8551ef5bcc9165c2a4d9e-Abstract-Conference.html",
-      "venue": "NeurIPS",
-      "year": 2024,
-      "kind": "conference",
-      "citations": 0,
-      "relevance": 24,
-      "why": [
-        "DP"
-      ],
-      "projects": [
-        "privacy"
-      ],
-      "total": 34,
-      "priority": "🔴",
-      "bibkey": "victor2024achieving",
-      "status": "🔴 To read",
-      "notes": ""
-    },
-    "doi:10.52202/085713-0922": {
-      "title": "Private Training Large-scale Models with Efficient DP-SGD",
-      "authors": [
-        "Wang, Liangyu",
-        "Wang, Junxiao",
-        "Ren, Jie",
-        "Xiang, Zihang",
-        "Keyes, David",
-        "Wang, Di"
-      ],
-      "abstract": "",
-      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/27aa3a0e6d63db269977bb2df5607cb8-Paper-Conference.pdf",
-      "doi": "10.52202/085713-0922",
-      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/27aa3a0e6d63db269977bb2df5607cb8-Abstract-Conference.html",
-      "venue": "NeurIPS",
-      "year": 2025,
-      "kind": "conference",
-      "citations": 0,
-      "relevance": 20,
-      "why": [
-        "DP"
-      ],
-      "projects": [
-        "privacy"
-      ],
-      "total": 30,
-      "priority": "🔴",
-      "bibkey": "liangyu2025private",
-      "status": "🔴 To read",
-      "notes": ""
-    },
-    "doi:10.52202/085713-1291": {
-      "title": "Non-rectangular Robust MDPs with Normed Uncertainty Sets",
-      "authors": [
-        "Kumar, Navdeep",
-        "Gupta, Adarsh",
-        "ELFATIHI, Maxence Mohamed",
-        "Ramponi, Giorgia",
-        "Levy, Kfir Y.",
-        "Mannor, Shie"
-      ],
-      "abstract": "",
-      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/372cb7805eaccb2b7eed641271a30eec-Paper-Conference.pdf",
-      "doi": "10.52202/085713-1291",
-      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/372cb7805eaccb2b7eed641271a30eec-Abstract-Conference.html",
-      "venue": "NeurIPS",
-      "year": 2025,
-      "kind": "conference",
-      "citations": 0,
-      "relevance": 20,
-      "why": [
-        "DP"
-      ],
-      "projects": [
-        "privacy"
-      ],
-      "total": 30,
-      "priority": "🔴",
-      "bibkey": "navdeep2025non",
-      "status": "🔴 To read",
-      "notes": ""
-    },
-    "doi:10.52202/085713-1851": {
-      "title": "Tru-POMDP: Task Planning Under Uncertainty via Tree of Hypotheses and Open-Ended POMDPs",
-      "authors": [
-        "Tang, Wenjing",
-        "He, Xinyu",
-        "Huang, Yongxi",
-        "Xiao, Yunxiao",
-        "Lu, Cewu",
-        "Cai, Panpan"
-      ],
-      "abstract": "",
-      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/4fb6b4482e4e24a33a3de5b01a011eb0-Paper-Conference.pdf",
-      "doi": "10.52202/085713-1851",
-      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/4fb6b4482e4e24a33a3de5b01a011eb0-Abstract-Conference.html",
-      "venue": "NeurIPS",
-      "year": 2025,
-      "kind": "conference",
-      "citations": 0,
-      "relevance": 20,
-      "why": [
-        "DP"
-      ],
-      "projects": [
-        "privacy"
-      ],
-      "total": 30,
-      "priority": "🔴",
-      "bibkey": "wenjing2025tru",
-      "status": "🔴 To read",
-      "notes": ""
-    },
     "doi:10.52202/085713-1857": {
       "title": "Coupled Data and Measurement Space Dynamics for Enhanced Diffusion Posterior Sampling",
       "authors": [
@@ -2983,36 +2863,6 @@
       "total": 51,
       "priority": "🔴",
       "bibkey": "badr2025variational",
-      "status": "🔴 To read",
-      "notes": ""
-    },
-    "url:https://proceedings.iclr.cc/paper_files/paper/2026/hash/5cc19d8570ebe171ffad101fef1e4dde-abstract-conference.html": {
-      "title": "P$^2$-DPO: Grounding Hallucination in Perceptual Processing via Calibration Direct Preference Optimization",
-      "authors": [
-        "Zhang, RuiPeng",
-        "Li, Zhihao",
-        "Yuan, Haozhang",
-        "Chen, C.L.Philip",
-        "Zhang, Tong"
-      ],
-      "abstract": "",
-      "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/5cc19d8570ebe171ffad101fef1e4dde-Paper-Conference.pdf",
-      "doi": "",
-      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/5cc19d8570ebe171ffad101fef1e4dde-Abstract-Conference.html",
-      "venue": "ICLR",
-      "year": 2026,
-      "kind": "conference",
-      "citations": 0,
-      "relevance": 20,
-      "why": [
-        "DP"
-      ],
-      "projects": [
-        "privacy"
-      ],
-      "total": 30,
-      "priority": "🔴",
-      "bibkey": "ruipeng2026p",
       "status": "🔴 To read",
       "notes": ""
     },
@@ -3166,34 +3016,6 @@
       "total": 30,
       "priority": "🔴",
       "bibkey": "wang2025adapting",
-      "status": "🔴 To read",
-      "notes": ""
-    },
-    "url:https://proceedings.mlr.press/v258/kalagarla25a.html": {
-      "title": "A Safe Bayesian Learning Algorithm for Constrained MDPs with Bounded Constraint Violation",
-      "authors": [
-        "Krishna C Kalagarla",
-        "Rahul Jain",
-        "Pierluigi Nuzzo"
-      ],
-      "abstract": "A Safe Bayesian Learning Algorithm for Constrained MDPs with Bounded Constraint ViolationKrishna C Kalagarla, Rahul Jain, Pierluigi Nuzzo ...",
-      "pdf": "https://raw.githubusercontent.com/mlresearch/v258/main/assets/kalagarla25a/kalagarla25a.pdf",
-      "doi": "",
-      "url": "https://proceedings.mlr.press/v258/kalagarla25a.html",
-      "venue": "AISTATS",
-      "year": 2025,
-      "kind": "conference",
-      "citations": 0,
-      "relevance": 21,
-      "why": [
-        "DP"
-      ],
-      "projects": [
-        "privacy"
-      ],
-      "total": 31,
-      "priority": "🔴",
-      "bibkey": "kalagarla2025safe",
       "status": "🔴 To read",
       "notes": ""
     },
@@ -3397,225 +3219,752 @@
       "status": "🔴 To read",
       "notes": ""
     },
-    "url:https://proceedings.mlr.press/v286/tonekaboni25a.html": {
-      "title": "HDP-Flow: Generalizable Bayesian Nonparametric Model for Time Series State Discovery",
+    "doi:10.52202/079017-0332": {
+      "title": "Fairness in Social Influence Maximization via Optimal Transport",
       "authors": [
-        "Sana Tonekaboni",
-        "Tina Behrouzi",
-        "Addison Weatherhead",
-        "Emily Fox",
-        "David Blei",
-        "Anna Goldenberg"
+        "Chowdhary, Shubham",
+        "De Pasquale, Giulia",
+        "Lanzetti, Nicolas",
+        "Stoica, Ana-Andreea",
+        "Dörfler, Florian"
       ],
-      "abstract": "HDP-Flow: Generalizable Bayesian Nonparametric Model for Time Series State DiscoverySana Tonekaboni, Tina Behrouzi, Addison Weatherhead, Emily...",
-      "pdf": "https://raw.githubusercontent.com/mlresearch/v286/main/assets/tonekaboni25a/tonekaboni25a.pdf",
+      "abstract": "",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2024/file/140edeced4facf41b14ca4f71a2322b7-Paper-Conference.pdf",
+      "doi": "10.52202/079017-0332",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/140edeced4facf41b14ca4f71a2322b7-Abstract-Conference.html",
+      "venue": "NeurIPS",
+      "year": 2024,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 27,
+      "why": [
+        "fairness",
+        "optimal transport"
+      ],
+      "projects": [
+        "optimal-transport",
+        "trustworthy-ml"
+      ],
+      "total": 37,
+      "priority": "🔴",
+      "bibkey": "shubham2024fairness",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.52202/079017-1344": {
+      "title": "Wasserstein Distributionally Robust Optimization through the Lens of Structural Causal Models and Individual Fairness",
+      "authors": [
+        "Ehyaei, Ahmad-Reza",
+        "Farnadi, Golnoosh",
+        "Samadi, Samira"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2024/file/4ae5cdacb9152d95661bc3c620b75aba-Paper-Conference.pdf",
+      "doi": "10.52202/079017-1344",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/4ae5cdacb9152d95661bc3c620b75aba-Abstract-Conference.html",
+      "venue": "NeurIPS",
+      "year": 2024,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 27,
+      "why": [
+        "fairness",
+        "wasserstein"
+      ],
+      "projects": [
+        "optimal-transport",
+        "trustworthy-ml"
+      ],
+      "total": 37,
+      "priority": "🔴",
+      "bibkey": "ahmadreza2024wasserstein",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.iclr.cc/paper_files/paper/2025/hash/033394ac055e3c47bfc3c967ffcfee74-abstract-conference.html": {
+      "title": "Optimal Transport for Time Series Imputation",
+      "authors": [
+        "Wang, Hao",
+        "li, zhengnan",
+        "Li, Haoxuan",
+        "Chen, Xu",
+        "Gong, Mingming",
+        "Chen, Zhichao"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.iclr.cc/paper_files/paper/2025/file/033394ac055e3c47bfc3c967ffcfee74-Paper-Conference.pdf",
       "doi": "",
-      "url": "https://proceedings.mlr.press/v286/tonekaboni25a.html",
-      "venue": "UAI",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/033394ac055e3c47bfc3c967ffcfee74-Abstract-Conference.html",
+      "venue": "ICLR",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 32,
+      "why": [
+        "imputation",
+        "optimal transport"
+      ],
+      "projects": [
+        "missing-data",
+        "optimal-transport"
+      ],
+      "total": 42,
+      "priority": "🔴",
+      "bibkey": "hao2025optimal",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.iclr.cc/paper_files/paper/2025/hash/8711bd7223057ce98a6030a687609b87-abstract-conference.html": {
+      "title": "Towards Marginal Fairness Sliced Wasserstein Barycenter",
+      "authors": [
+        "Nguyen, Khai",
+        "Nguyen, Hai",
+        "Ho, Nhat"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.iclr.cc/paper_files/paper/2025/file/8711bd7223057ce98a6030a687609b87-Paper-Conference.pdf",
+      "doi": "",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/8711bd7223057ce98a6030a687609b87-Abstract-Conference.html",
+      "venue": "ICLR",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 28,
+      "why": [
+        "fairness",
+        "wasserstein"
+      ],
+      "projects": [
+        "optimal-transport",
+        "trustworthy-ml"
+      ],
+      "total": 38,
+      "priority": "🔴",
+      "bibkey": "khai2025towards",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.iclr.cc/paper_files/paper/2026/hash/f68548dd3335a4997206cad2c647c94d-abstract-conference.html": {
+      "title": "FERD: Fairness-Enhanced Data-Free Adversarial Robustness Distillation",
+      "authors": [
+        "Li, Zhengxiao",
+        "Lu, Liming",
+        "Zheng, Xu",
+        "Liang, Si-Yuan",
+        "Chen, Taric",
+        "Zhou, Yongbin",
+        "Pang, Shuchao"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/f68548dd3335a4997206cad2c647c94d-Paper-Conference.pdf",
+      "doi": "",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/f68548dd3335a4997206cad2c647c94d-Abstract-Conference.html",
+      "venue": "ICLR",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 26,
+      "why": [
+        "fairness",
+        "adversarial robustness"
+      ],
+      "projects": [
+        "adversarial-ml",
+        "trustworthy-ml"
+      ],
+      "total": 36,
+      "priority": "🔴",
+      "bibkey": "zhengxiao2026ferd",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v235/donhauser24a.html": {
+      "title": "Privacy-Preserving Data Release Leveraging Optimal Transport and Particle Gradient Descent",
+      "authors": [
+        "Konstantin Donhauser",
+        "Javier Abad",
+        "Neha Hulkund",
+        "Fanny Yang"
+      ],
+      "abstract": "Privacy-Preserving Data Release Leveraging Optimal Transport and Particle Gradient DescentKonstantin Donhauser, Javier Abad, Neha Hulkund, Fan...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/donhauser24a/donhauser24a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v235/donhauser24a.html",
+      "venue": "ICML",
+      "year": 2024,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 36,
+      "why": [
+        "privacy-preserving",
+        "optimal transport"
+      ],
+      "projects": [
+        "optimal-transport",
+        "privacy"
+      ],
+      "total": 46,
+      "priority": "🔴",
+      "bibkey": "donhauser2024privacy",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v235/vo24b.html": {
+      "title": "Optimal Transport for Structure Learning Under Missing Data",
+      "authors": [
+        "Vy Vo",
+        "He Zhao",
+        "Trung Le",
+        "Edwin V. Bonilla",
+        "Dinh Phung"
+      ],
+      "abstract": "Optimal Transport for Structure Learning Under Missing DataVy Vo, He Zhao, Trung Le, Edwin V. Bonilla, Dinh PhungCausal discovery in the ...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/vo24b/vo24b.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v235/vo24b.html",
+      "venue": "ICML",
+      "year": 2024,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 32,
+      "why": [
+        "missing data",
+        "optimal transport"
+      ],
+      "projects": [
+        "missing-data",
+        "optimal-transport"
+      ],
+      "total": 42,
+      "priority": "🔴",
+      "bibkey": "vo2024optimal",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v267/wang25be.html": {
+      "title": "Finding Wasserstein Ball Center: Efficient Algorithm and The Applications in Fairness",
+      "authors": [
+        "Yuntao Wang",
+        "Yuxuan Li",
+        "Qingyuan Yang",
+        "Hu Ding"
+      ],
+      "abstract": "Finding Wasserstein Ball Center: Efficient Algorithm and The Applications in FairnessYuntao Wang, Yuxuan Li, Qingyuan Yang, Hu DingWasserstein...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/wang25be/wang25be.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v267/wang25be.html",
+      "venue": "ICML",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 27,
+      "why": [
+        "fairness",
+        "wasserstein"
+      ],
+      "projects": [
+        "optimal-transport",
+        "trustworthy-ml"
+      ],
+      "total": 37,
+      "priority": "🔴",
+      "bibkey": "wang2025finding",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v267/chai25c.html": {
+      "title": "On the Alignment between Fairness and Accuracy: from the Perspective of Adversarial Robustness",
+      "authors": [
+        "Junyi Chai",
+        "Taeuk Jang",
+        "Jing Gao",
+        "Xiaoqian Wang"
+      ],
+      "abstract": "On the Alignment between Fairness and Accuracy: from the Perspective of Adversarial RobustnessJunyi Chai, Taeuk Jang, Jing Gao, Xiaoqian WangW...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/chai25c/chai25c.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v267/chai25c.html",
+      "venue": "ICML",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 26,
+      "why": [
+        "fairness",
+        "adversarial robustness"
+      ],
+      "projects": [
+        "adversarial-ml",
+        "trustworthy-ml"
+      ],
+      "total": 36,
+      "priority": "🔴",
+      "bibkey": "chai2025alignment",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v267/kim25al.html": {
+      "title": "Optimal Transport Barycenter via Nonconvex-Concave Minimax Optimization",
+      "authors": [
+        "Kaheon Kim",
+        "Rentian Yao",
+        "Changbo Zhu",
+        "Xiaohui Chen"
+      ],
+      "abstract": "Optimal Transport Barycenter via Nonconvex-Concave Minimax OptimizationKaheon Kim, Rentian Yao, Changbo Zhu, Xiaohui ChenThe optimal transport...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/kim25al/kim25al.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v267/kim25al.html",
+      "venue": "ICML",
       "year": 2025,
       "kind": "conference",
       "citations": 0,
       "relevance": 21,
       "why": [
-        "DP"
+        "optimal transport"
       ],
       "projects": [
-        "privacy"
+        "optimal-transport"
       ],
       "total": 31,
       "priority": "🔴",
-      "bibkey": "tonekaboni2025hdp",
+      "bibkey": "kim2025optimal",
       "status": "🔴 To read",
       "notes": ""
     },
-    "url:https://proceedings.mlr.press/v291/peng25a.html": {
-      "title": "Differentially Private Synthetic Graphs Preserving Triangle-Motif Cuts",
+    "url:https://proceedings.mlr.press/v337/fernandes-montesuma26a.html": {
+      "title": "Wasserstein Gradient Flows for Scalable and Regularized Barycenter Computation",
       "authors": [
-        "Pan Peng",
-        "Hangyu Xu"
+        "Eduardo Fernandes Montesuma",
+        "Yassir Bendou",
+        "Mike Gartrell"
       ],
-      "abstract": "Differentially Private Synthetic Graphs Preserving Triangle-Motif CutsPan Peng, Hangyu XuWe study the problem of releasing a differentially private (DP)...",
-      "pdf": "https://raw.githubusercontent.com/mlresearch/v291/main/assets/peng25a/peng25a.pdf",
+      "abstract": "Wasserstein Gradient Flows for Scalable and Regularized Barycenter ComputationEduardo Fernandes Montesuma, Yassir Bendou, Mike Gartrell{Wasserstein...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v337/main/assets/fernandes-montesuma26a/fernandes-montesuma26a.pdf",
       "doi": "",
-      "url": "https://proceedings.mlr.press/v291/peng25a.html",
+      "url": "https://proceedings.mlr.press/v337/fernandes-montesuma26a.html",
+      "venue": "UAI",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 17,
+      "why": [
+        "wasserstein"
+      ],
+      "projects": [
+        "optimal-transport"
+      ],
+      "total": 27,
+      "priority": "🔴",
+      "bibkey": "montesuma2026wasserstein",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v337/melo26a.html": {
+      "title": "Conformal Graph Prediction with Z-Gromov Wasserstein Distances",
+      "authors": [
+        "Gabriel Melo",
+        "Thibaut de Saivre",
+        "Anna Calissano",
+        "Florence d’Alché-Buc"
+      ],
+      "abstract": "Conformal Graph Prediction with Z-Gromov Wasserstein DistancesGabriel Melo, Thibaut de Saivre, Anna Calissano, Florence d’Alché-BucSupervised ...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v337/main/assets/melo26a/melo26a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v337/melo26a.html",
+      "venue": "UAI",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 16,
+      "why": [
+        "wasserstein"
+      ],
+      "projects": [
+        "optimal-transport"
+      ],
+      "total": 26,
+      "priority": "🔴",
+      "bibkey": "melo2026conformal",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v336/genans26a.html": {
+      "title": "Fast and Large-Scale Unbalanced Optimal Transport via its Semi-Dual and Adaptive Gradient Methods",
+      "authors": [
+        "Ferdinand Genans"
+      ],
+      "abstract": "Fast and Large-Scale Unbalanced Optimal Transport via its Semi-Dual and Adaptive Gradient MethodsFerdinand GenansUnbalanced Optimal Transport (UOT) has emerg...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v336/main/assets/genans26a/genans26a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v336/genans26a.html",
+      "venue": "COLT",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 16,
+      "why": [
+        "optimal transport"
+      ],
+      "projects": [
+        "optimal-transport"
+      ],
+      "total": 26,
+      "priority": "🔴",
+      "bibkey": "genans2026fast",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v336/huang26a.html": {
+      "title": "Wasserstein Policy Learning for Distributional Outcomes",
+      "authors": [
+        "Yiyan Huang",
+        "Cheuk Hang Leung",
+        "Qi Wu",
+        "Zhiheng Zhang"
+      ],
+      "abstract": "Wasserstein Policy Learning for Distributional OutcomesYiyan Huang, Cheuk Hang Leung, Qi Wu, Zhiheng ZhangOffline policy learning has received...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v336/main/assets/huang26a/huang26a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v336/huang26a.html",
+      "venue": "COLT",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 16,
+      "why": [
+        "wasserstein"
+      ],
+      "projects": [
+        "optimal-transport"
+      ],
+      "total": 26,
+      "priority": "🔴",
+      "bibkey": "huang2026wasserstein",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v336/thurin26a.html": {
+      "title": "CONVERGENCE RATES FOR DISTRIBUTION MATCHING WITH SLICED OPTIMAL TRANSPORT",
+      "authors": [
+        "Gauthier Thurin",
+        "Claire Boyer",
+        "Kimia Nadjahi"
+      ],
+      "abstract": "CONVERGENCE RATES FOR DISTRIBUTION MATCHING WITH SLICED OPTIMAL TRANSPORTGauthier Thurin, Claire Boyer, Kimia NadjahiWe study the slice-matching sc...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v336/main/assets/thurin26a/thurin26a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v336/thurin26a.html",
+      "venue": "COLT",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 16,
+      "why": [
+        "optimal transport"
+      ],
+      "projects": [
+        "optimal-transport"
+      ],
+      "total": 26,
+      "priority": "🔴",
+      "bibkey": "thurin2026convergence",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v291/daniely25a.html": {
+      "title": "Existence of Adversarial Examples for Random Convolutional Networks via Isoperimetric Inequalities on $\\mathbb{SO}(d)$",
+      "authors": [
+        "Amit Daniely"
+      ],
+      "abstract": "Existence of Adversarial Examples for Random Convolutional Networks via Isoperimetric Inequalities on $\\mathbb{SO}(d)$Amit DanielyWe show that adversarial e...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v291/main/assets/daniely25a/daniely25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v291/daniely25a.html",
       "venue": "COLT",
       "year": 2025,
       "kind": "conference",
       "citations": 0,
-      "relevance": 10,
+      "relevance": 16,
       "why": [
-        "DP"
+        "adversarial example"
       ],
       "projects": [
-        "privacy"
+        "adversarial-ml"
+      ],
+      "total": 26,
+      "priority": "🔴",
+      "bibkey": "daniely2025existence",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/21-aos2161": {
+      "title": "Minimax estimation of smooth densities in Wasserstein distance",
+      "abstract": "We study nonparametric density estimation problems where error is measured in the Wasserstein distance, a metric on probability distributions popular in many areas of statistics and machine learning. We give the first minimax-optimal rates for this problem for general Wasserstein distances for two classes of densities: smooth probability densities on [0,1]d bounded away from 0, and sub-Gaussian densities lying in the Hölder class Cs, s∈(0,1). Unlike classical nonparametric density estimation, these rates depend on whether the densities in question are bounded below, even in the compactly supported case. Motivated by variational problems involving the Wasserstein distance, we also show how to construct discretely supported measures, suitable for computational purposes, which achieve the minimax rates. Our main technical tool is an inequality giving a nearly tight dual characterization of the Wasserstein distances in terms of Besov norms.",
+      "authors": [
+        "Jonathan Niles‐Weed",
+        "Quentin Berthet"
+      ],
+      "year": 2022,
+      "venue": "Annals of Statistics",
+      "kind": "journal",
+      "citations": 34,
+      "doi": "https://doi.org/10.1214/21-aos2161",
+      "url": "https://doi.org/10.1214/21-aos2161",
+      "relevance": 24,
+      "why": [
+        "wasserstein"
+      ],
+      "projects": [
+        "optimal-transport"
+      ],
+      "total": 37,
+      "priority": "🔴",
+      "bibkey": "nilesweed2022minimax",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/21-aos2136": {
+      "title": "Multivariate ranks and quantiles using optimal transport: Consistency, rates and nonparametric testing",
+      "abstract": "In this paper, we study multivariate ranks and quantiles, defined using the theory of optimal transport, and build on the work of Chernozhukov et al. (Ann. Statist. 45 (2017) 223–256) and Hallin et al. (Ann. Statist. 49 (2021) 1139–1165). We study the characterization, computation and properties of the multivariate rank and quantile functions and their empirical counterparts. We derive the uniform consistency of these empirical estimates to their population versions, under certain assumptions. In fact, we prove a Glivenko–Cantelli type theorem that shows the asymptotic stability of the empirical rank map in any direction. Under mild structural assumptions, we provide global and local rates of convergence of the empirical quantile and rank maps. We also provide a sub-Gaussian tail bound for the global L2-loss of the empirical quantile function. Further, we propose tuning parameter-free multivariate nonparametric tests—a two-sample test and a test for mutual independence—based on our notion of multivariate quantiles/ranks. Asymptotic consistency of these tests are shown and the rates of convergence of the associated test statistics are derived, both under the null and alternative hypotheses.",
+      "authors": [
+        "Promit Ghosal",
+        "Bodhisattva Sen"
+      ],
+      "year": 2022,
+      "venue": "Annals of Statistics",
+      "kind": "journal",
+      "citations": 48,
+      "doi": "https://doi.org/10.1214/21-aos2136",
+      "url": "https://doi.org/10.1214/21-aos2136",
+      "relevance": 20,
+      "why": [
+        "optimal transport"
+      ],
+      "projects": [
+        "optimal-transport"
+      ],
+      "total": 34,
+      "priority": "🔴",
+      "bibkey": "ghosal2022multivariate",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/24-aos2379": {
+      "title": "Plugin estimation of smooth optimal transport maps",
+      "abstract": "We analyze a number of natural estimators for the optimal transport map between two distributions and show that they are minimax optimal. We adopt the plugin approach: our estimators are simply optimal couplings between measures derived from our observations, appropriately extended so that they define functions on Rd. When the underlying map is assumed to be Lipschitz, we show that computing the optimal coupling between the empirical measures, and extending it using linear smoothers, already gives a minimax optimal estimator. When the underlying map enjoys higher regularity, we show that the optimal coupling between appropriate nonparametric density estimates yields faster rates. Our work also provides new bounds on the risk of corresponding plugin estimators for the quadratic Wasserstein distance, and we show how this problem relates to that of estimating optimal transport maps using stability arguments for smooth and strongly convex Brenier potentials. As an application of our results, we derive central limit theorems for plugin estimators of the squared Wasserstein distance, which are centered at their population counterpart when the underlying distributions have sufficiently smooth densities. In contrast to known central limit theorems for empirical estimators, this result easily lends itself to statistical inference for the quadratic Wasserstein distance.",
+      "authors": [
+        "Tudor Manole",
+        "Sivaraman Balakrishnan",
+        "Jonathan Niles‐Weed",
+        "Larry Wasserman"
+      ],
+      "year": 2024,
+      "venue": "Annals of Statistics",
+      "kind": "journal",
+      "citations": 32,
+      "doi": "https://doi.org/10.1214/24-aos2379",
+      "url": "https://doi.org/10.1214/24-aos2379",
+      "relevance": 20,
+      "why": [
+        "optimal transport",
+        "wasserstein"
+      ],
+      "projects": [
+        "optimal-transport"
+      ],
+      "total": 33,
+      "priority": "🔴",
+      "bibkey": "manole2024plugin",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1093/biomet/asab026": {
+      "title": "Confidence regions in Wasserstein distributionally robust estimation",
+      "abstract": "Summary Estimators based on Wasserstein distributionally robust optimization are obtained as solutions of min-max problems in which the statistician selects a parameter minimizing the worst-case loss among all probability models within a certain distance from the underlying empirical measure in a Wasserstein sense. While motivated by the need to identify optimal model parameters or decision choices that are robust to model misspecification, these distributionally robust estimators recover a wide range of regularized estimators, including square-root lasso and support vector machines, among others. This paper studies the asymptotic normality of these distributionally robust estimators as well as the properties of an optimal confidence region induced by the Wasserstein distributionally robust optimization formulation. In addition, key properties of min-max distributionally robust optimization problems are also studied; for example, we show that distributionally robust estimators regularize the loss based on its derivative, and we also derive general sufficient conditions which show the equivalence between the min-max distributionally robust optimization problem and the corresponding max-min formulation.",
+      "authors": [
+        "José Blanchet",
+        "Karthyek Murthy",
+        "Nian Si"
+      ],
+      "year": 2021,
+      "venue": "Biometrika",
+      "kind": "journal",
+      "citations": 29,
+      "doi": "https://doi.org/10.1093/biomet/asab026",
+      "url": "https://doi.org/10.1093/biomet/asab026",
+      "relevance": 16,
+      "why": [
+        "wasserstein"
+      ],
+      "projects": [
+        "optimal-transport"
+      ],
+      "total": 28,
+      "priority": "🔴",
+      "bibkey": "blanchet2021confidence",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1093/jrsssb/qkad051": {
+      "title": "Autoregressive optimal transport models",
+      "abstract": "Abstract Series of univariate distributions indexed by equally spaced time points are ubiquitous in applications and their analysis constitutes one of the challenges of the emerging field of distributional data analysis. To quantify such distributional time series, we propose a class of intrinsic autoregressive models that operate in the space of optimal transport maps. The autoregressive transport models that we introduce here are based on regressing optimal transport maps on each other, where predictors can be transport maps from an overall barycenter to a current distribution or transport maps between past consecutive distributions of the distributional time series. Autoregressive transport models and their associated distributional regression models specify the link between predictor and response transport maps by moving along geodesics in Wasserstein space. These models emerge as natural extensions of the classical autoregressive models in Euclidean space. Unique stationary solutions of autoregressive transport models are shown to exist under a geometric moment contraction condition of Wu & Shao [(2004) Limit theorems for iterated random functions. Journal of Applied Probability 41, 425–436)], using properties of iterated random functions. We also discuss an extension to a varying coefficient model for first-order autoregressive transport models. In addition to simulations, the proposed models are illustrated with distributional time series of house prices across U.S. counties and annual summer temperature distributions.",
+      "authors": [
+        "Changbo Zhu",
+        "Hans‐Georg Müller"
+      ],
+      "year": 2023,
+      "venue": "JRSSB",
+      "kind": "journal",
+      "citations": 20,
+      "doi": "https://doi.org/10.1093/jrsssb/qkad051",
+      "url": "https://doi.org/10.1093/jrsssb/qkad051",
+      "relevance": 17,
+      "why": [
+        "optimal transport",
+        "wasserstein"
+      ],
+      "projects": [
+        "optimal-transport"
+      ],
+      "total": 29,
+      "priority": "🔴",
+      "bibkey": "zhu2023autoregressive",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1111/rssb.12476": {
+      "title": "Inferential Wasserstein Generative Adversarial Networks",
+      "abstract": "Abstract Generative adversarial networks (GANs) have been impactful on many problems and applications but suffer from unstable training. The Wasserstein GAN (WGAN) leverages the Wasserstein distance to avoid the caveats in the minmax two-player training of GANs but has other defects such as mode collapse and lack of metric to detect the convergence. We introduce a novel inferential Wasserstein GAN (iWGAN) model, which is a principled framework to fuse autoencoders and WGANs. The iWGAN model jointly learns an encoder network and a generator network motivated by the iterative primal-dual optimization process. The encoder network maps the observed samples to the latent space and the generator network maps the samples from the latent space to the data space. We establish the generalization error bound of the iWGAN to theoretically justify its performance. We further provide a rigorous probabilistic interpretation of our model under the framework of maximum likelihood estimation. The iWGAN, with a clear stopping criteria, has many advantages over other autoencoder GANs. The empirical experiments show that the iWGAN greatly mitigates the symptom of mode collapse, speeds up the convergence, and is able to provide a measurement of quality check for each individual sample. We illustrate the ability of the iWGAN by obtaining competitive and stable performances for benchmark datasets.",
+      "authors": [
+        "Yao Chen",
+        "Qingyi Gao",
+        "Xiao Wang"
+      ],
+      "year": 2021,
+      "venue": "JRSSB",
+      "kind": "journal",
+      "citations": 21,
+      "doi": "https://doi.org/10.1111/rssb.12476",
+      "url": "https://doi.org/10.1111/rssb.12476",
+      "relevance": 16,
+      "why": [
+        "wasserstein"
+      ],
+      "projects": [
+        "optimal-transport"
+      ],
+      "total": 28,
+      "priority": "🔴",
+      "bibkey": "chen2021inferential",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1111/rssb.12404": {
+      "title": "Gibbs Flow for Approximate Transport with Applications to Bayesian Computation",
+      "abstract": "Abstract Let π0 and π1 be two distributions on the Borel space (Rd,B(Rd)). Any measurable function T:Rd→Rd such that Y=T(X)∼π1 if X∼π0 is called a transport map from π0 to π1. For any π0 and π1, if one could obtain an analytical expression for a transport map from π0 to π1, then this could be straightforwardly applied to sample from any distribution. One would map draws from an easy-to-sample distribution π0 to the target distribution π1 using this transport map. Although it is usually impossible to obtain an explicit transport map for complex target distributions, we show here how to build a tractable approximation of a novel transport map. This is achieved by moving samples from π0 using an ordinary differential equation with a velocity field that depends on the full conditional distributions of the target. Even when this ordinary differential equation is time-discretised and the full conditional distributions are numerically approximated, the resulting distribution of mapped samples can be efficiently evaluated and used as a proposal within sequential Monte Carlo samplers. We demonstrate significant gains over state-of-the-art sequential Monte Carlo samplers at a fixed computational complexity on a variety of applications.",
+      "authors": [
+        "Jeremy Heng",
+        "Arnaud Doucet",
+        "Yvo Pokern"
+      ],
+      "year": 2021,
+      "venue": "JRSSB",
+      "kind": "journal",
+      "citations": 22,
+      "doi": "https://doi.org/10.1111/rssb.12404",
+      "url": "https://doi.org/10.1111/rssb.12404",
+      "relevance": 8,
+      "why": [
+        "transport map"
+      ],
+      "projects": [
+        "optimal-transport"
       ],
       "total": 20,
       "priority": "🔴",
-      "bibkey": "peng2025differentially",
+      "bibkey": "heng2021gibbs",
       "status": "🔴 To read",
       "notes": ""
     },
-    "url:https://openalex.org/w3027501728": {
-      "title": "Expected Policy Gradients for Reinforcement Learning",
-      "abstract": "We propose expected policy gradients (EPG), which unify stochastic policy gradients (SPG) and deterministic policy gradients (DPG) for reinforcement learning. Inspired by expected sarsa, EPG integrates (or sums) across actions when estimating the gradient, instead of relying only on the action in the sampled trajectory. For continuous action spaces, we first derive a practical result for Gaussian policies and quadratic critics and then extend it to a universal analytical method, covering a broad class of actors and critics, including Gaussian, exponential families, and policies with bounded support. For Gaussian policies, we introduce an exploration method that uses covariance proportional to the matrix exponential of the scaled Hessian of the critic with respect to the actions. For discrete action spaces, we derive a variant of EPG based on softmax policies. We also establish a new general policy gradient theorem, of which the stochastic and deterministic policy gradient theorems are special cases. Furthermore, we prove that EPG reduces the variance of the gradient estimates without requiring deterministic policies and with little computational overhead. Finally, we provide an extensive experimental evaluation of EPG and show that it outperforms existing approaches on multiple challenging control domains.",
+    "doi:10.1080/01621459.2021.1956937": {
+      "title": "Wasserstein Regression",
+      "abstract": "The analysis of samples of random objects that do not lie in a vector space is gaining increasing attention in statistics. An important class of such object data is univariate probability measures defined on the real line. Adopting the Wasserstein metric, we develop a class of regression models for such data, where random distributions serve as predictors and the responses are either also distributions or scalars. To define this regression model, we use the geometry of tangent bundles of the space of random measures endowed with the Wasserstein metric for mapping distributions to tangent spaces. The proposed distribution-to-distribution regression model provides an extension of multivariate linear regression for Euclidean data and function-to-function regression for Hilbert space-valued data in functional data analysis. In simulations, it performs better than an alternative transformation approach where one maps distributions to a Hilbert space through the log quantile density transformation and then applies traditional functional regression. We derive asymptotic rates of convergence for the estimator of the regression operator and for predicted distributions and also study an extension to autoregressive models for distribution-valued time series. The proposed methods are illustrated with data on human mortality and distributional time series of house prices.",
       "authors": [
-        "Kamil Ciosek",
-        "Shimon Whiteson"
+        "Yaqing Chen",
+        "Zhenhua Lin",
+        "Hans‐Georg Müller"
+      ],
+      "year": 2021,
+      "venue": "JASA",
+      "kind": "journal",
+      "citations": 76,
+      "doi": "https://doi.org/10.1080/01621459.2021.1956937",
+      "url": "https://doi.org/10.1080/01621459.2021.1956937",
+      "relevance": 16,
+      "why": [
+        "wasserstein"
+      ],
+      "projects": [
+        "optimal-transport"
+      ],
+      "total": 33,
+      "priority": "🔴",
+      "bibkey": "chen2021wasserstein",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1080/01621459.2020.1783272": {
+      "title": "A Semiparametric Instrumental Variable Approach to Optimal Treatment Regimes Under Endogeneity",
+      "abstract": "There is a fast-growing literature on estimating optimal treatment regimes based on randomized trials or observational studies under a key identifying condition of no unmeasured confounding. Because confounding by unmeasured factors cannot generally be ruled out with certainty in observational studies or randomized trials subject to noncompliance, we propose a general instrumental variable (IV) approach to learning optimal treatment regimes under endogeneity. Specifically, we establish identification of both value function E[YD(L)] for a given regime D and optimal regimes argmaxDE[YD(L)] with the aid of a binary IV, when no unmeasured confounding fails to hold. We also construct novel multiply robust classification-based estimators. Furthermore, we propose to identify and estimate optimal treatment regimes among those who would comply to the assigned treatment under a monotonicity assumption. In this latter case, we establish the somewhat surprising result that complier optimal regimes can be consistently estimated without directly collecting compliance information and therefore without the complier average treatment effect itself being identified. Our approach is illustrated via extensive simulation studies and a data application on the effect of child rearing on labor participation. Supplementary materials for this article are available online.",
+      "authors": [
+        "Yifan Cui",
+        "Eric Tchetgen Tchetgen"
       ],
       "year": 2020,
-      "venue": "JMLR",
+      "venue": "JASA",
       "kind": "journal",
-      "citations": 14,
-      "doi": "",
-      "url": "https://openalex.org/W3027501728",
-      "relevance": 10,
+      "citations": 58,
+      "doi": "https://doi.org/10.1080/01621459.2020.1783272",
+      "url": "https://doi.org/10.1080/01621459.2020.1783272",
+      "relevance": 8,
       "why": [
-        "DP"
+        "robust classification"
       ],
       "projects": [
-        "privacy"
-      ],
-      "total": 21,
-      "priority": "🔴",
-      "bibkey": "ciosek2020expected",
-      "status": "🔴 To read",
-      "notes": ""
-    },
-    "doi:10.1214/23-aos2297": {
-      "title": "Optimal change-point detection and localization",
-      "abstract": "Given a times series Y in Rn, with a piecewise constant mean and independent components, the twin problems of change-point detection and change-point localization, respectively amount to detecting the existence of times where the mean varies and estimating the positions of those change-points. In this work, we tightly characterize optimal rates for both problems and uncover the phase transition phenomenon from a global testing problem to a local estimation problem. Introducing a suitable definition of the energy of a change-point, we first establish in the single change-point setting that the optimal detection threshold is 2loglog(n). When the energy is just above the detection threshold, then the problem of localizing the change-point becomes purely parametric: it only depends on the difference in means and not on the position of the change-point anymore. Interestingly, for most change-point positions, including all those away from the endpoints of the time series, it is possible to detect and localize them at a much smaller energy level. In the multiple change-point setting, we establish the energy detection threshold and show similarly that the optimal localization error of a specific change-point becomes purely parametric. Along the way, tight minimax rates for Hausdorff and l 1 estimation losses of the vector of all change-points positions are also established. Two procedures achieving these optimal rates are introduced. The first one is a least-squares estimator with a new multiscale penalty that favours well spread change-points. The second one is a two-step multiscale post-processing procedure whose computational complexity can be as low as O(nlog(n)). Notably, these two procedures accommodate with the presence of possibly many low-energy and therefore undetectable change-points and are still able to detect and localize high-energy change-points even with the presence of those nuisance parameters.",
-      "authors": [
-        "Nicolas Verzélen",
-        "Magalie Fromont",
-        "Matthieu Lerasle",
-        "Patricia Reynaud-Bouret"
-      ],
-      "year": 2023,
-      "venue": "Annals of Statistics",
-      "kind": "journal",
-      "citations": 41,
-      "doi": "https://doi.org/10.1214/23-aos2297",
-      "url": "https://doi.org/10.1214/23-aos2297",
-      "relevance": 14,
-      "why": [
-        "DP"
-      ],
-      "projects": [
-        "privacy"
-      ],
-      "total": 28,
-      "priority": "🔴",
-      "bibkey": "verzlen2023optimal",
-      "status": "🔴 To read",
-      "notes": ""
-    },
-    "doi:10.1214/18-aos1797": {
-      "title": "Optimal rates for community estimation in the weighted stochastic block model",
-      "abstract": "Community identification in a network is an important problem in fields such as social science, neuroscience and genetics. Over the past decade, stochastic block models (SBMs) have emerged as a popular statistical framework for this problem. However, SBMs have an important limitation in that they are suited only for networks with unweighted edges; in various scientific applications, disregarding the edge weights may result in a loss of valuable information. We study a weighted generalization of the SBM, in which observations are collected in the form of a weighted adjacency matrix and the weight of each edge is generated independently from an unknown probability density determined by the community membership of its endpoints. We characterize the optimal rate of misclustering error of the weighted SBM in terms of the Renyi divergence of order 1/2 between the weight distributions of within-community and between-community edges, substantially generalizing existing results for unweighted SBMs. Furthermore, we present a computationally tractable algorithm based on discretization that achieves the optimal error rate. Our method is adaptive in the sense that the algorithm, without assuming knowledge of the weight densities, performs as well as the best algorithm that knows the weight densities.",
-      "authors": [
-        "Min Xu",
-        "Varun Jog",
-        "Po‐Ling Loh"
-      ],
-      "year": 2020,
-      "venue": "Annals of Statistics",
-      "kind": "journal",
-      "citations": 55,
-      "doi": "https://doi.org/10.1214/18-aos1797",
-      "url": "https://doi.org/10.1214/18-aos1797",
-      "relevance": 13,
-      "why": [
-        "DP"
-      ],
-      "projects": [
-        "privacy"
-      ],
-      "total": 28,
-      "priority": "🔴",
-      "bibkey": "xu2020optimal",
-      "status": "🔴 To read",
-      "notes": ""
-    },
-    "doi:10.1214/19-aos1906": {
-      "title": "Which bridge estimator is the best for variable selection?",
-      "abstract": "We study the problem of variable selection for linear models under the high-dimensional asymptotic setting, where the number of observations $n$ grows at the same rate as the number of predictors $p$. We consider two-stage variable selection techniques (TVS) in which the first stage uses bridge estimators to obtain an estimate of the regression coefficients, and the second stage simply thresholds this estimate to select the “important” predictors. The asymptotic false discovery proportion ($\\operatorname{AFDP}$) and true positive proportion (ATPP) of these TVS are evaluated. We prove that for a fixed ATPP, in order to obtain a smaller $\\operatorname{AFDP}$, one should pick a bridge estimator with smaller asymptotic mean square error in the first stage of TVS. Based on such principled discovery, we present a sharp comparison of different TVS, via an in-depth investigation of the estimation properties of bridge estimators. Rather than “orderwise” error bounds with loose constants, our analysis focuses on precise error characterization. Various interesting signal-to-noise ratio and sparsity settings are studied. Our results offer new and thorough insights into high-dimensional variable selection. For instance, we prove that a TVS with Ridge in its first stage outperforms TVS with other bridge estimators in large noise settings; two-stage LASSO becomes inferior when the signal is rare and weak. As a by-product, we show that two-stage methods outperform some standard variable selection techniques, such as $\\operatorname{LASSO}$ and Sure Independence Screening, under certain conditions.",
-      "authors": [
-        "Shuaiwen Wang",
-        "Haolei Weng",
-        "Arian Maleki"
-      ],
-      "year": 2020,
-      "venue": "Annals of Statistics",
-      "kind": "journal",
-      "citations": 33,
-      "doi": "https://doi.org/10.1214/19-aos1906",
-      "url": "https://doi.org/10.1214/19-aos1906",
-      "relevance": 10,
-      "why": [
-        "DP"
-      ],
-      "projects": [
-        "privacy"
+        "adversarial-ml"
       ],
       "total": 23,
       "priority": "🔴",
-      "bibkey": "wang2020which",
+      "bibkey": "cui2020semiparametric",
       "status": "🔴 To read",
       "notes": ""
     },
-    "doi:10.1080/01621459.2022.2060113": {
-      "title": "False Discovery Rate Control via Data Splitting",
-      "abstract": "Selecting relevant features associated with a given response variable is an important problem in many scientific fields. Quantifying quality and uncertainty of a selection result via false discovery rate (FDR) control has been of recent interest. This article introduces a data-splitting method (referred to as “DS”) to asymptotically control the FDR while maintaining a high power. For each feature, DS constructs a test statistic by estimating two independent regression coefficients via data splitting. FDR control is achieved by taking advantage of the statistic’s property that, for any null feature, its sampling distribution is symmetric about zero; whereas for a relevant feature, its sampling distribution has a positive mean. Furthermore, a Multiple Data Splitting (MDS) method is proposed to stabilize the selection result and boost the power. Surprisingly, with the FDR under control, MDS not only helps overcome the power loss caused by data splitting, but also results in a lower variance of the false discovery proportion (FDP) compared with all other methods in consideration. Extensive simulation studies and a real-data application show that the proposed methods are robust to the unknown distribution of features, easy to implement and computationally efficient, and are often the most powerful ones among competitors especially when the signals are weak and correlations or partial correlations among features are high. Supplementary materials for this article are available online.",
+    "doi:10.1214/24-sts969": {
+      "title": "A Primer on Bayesian Neural Networks: Review and Debates",
+      "abstract": "Neural networks have achieved remarkable performance across various problem domains, but their widespread applicability is hindered by inherent limitations such as overconfidence in predictions, lack of interpretability and vulnerability to adversarial attacks. To address these challenges, Bayesian neural networks (BNNs) have emerged as a compelling extension of conventional neural networks, integrating uncertainty estimation into their predictive capabilities. This comprehensive primer presents a systematic introduction to the fundamental concepts of neural networks and Bayesian inference, elucidating their synergistic integration for the development of BNNs. The target audience comprises statisticians with a potential background in Bayesian methods but lacking deep learning expertise, as well as machine learners proficient in deep neural networks but with limited exposure to Bayesian statistics. We provide an overview of commonly employed priors, examining their impact on model behavior and performance. Additionally, we delve into the practical considerations associated with training and inference in BNNs. Furthermore, we explore advanced topics within the realm of BNN research, acknowledging the existence of ongoing debates and controversies. By offering insights into cutting-edge developments, this primer not only equips researchers and practitioners with a solid foundation in BNNs, but also illuminates the potential applications of this dynamic field. As a valuable resource, it fosters an understanding of BNNs and their promising prospects, facilitating further advancements in the pursuit of knowledge and innovation.",
       "authors": [
-        "Chenguang Dai",
-        "Buyu Lin",
-        "Xin Xing",
-        "Jun S. Liu"
+        "Julyan Arbel",
+        "Konstantinos Pitas",
+        "Mariia Vladimirova",
+        "Vincent Fortuin"
       ],
-      "year": 2022,
-      "venue": "JASA",
-      "kind": "journal",
-      "citations": 73,
-      "doi": "https://doi.org/10.1080/01621459.2022.2060113",
-      "url": "https://doi.org/10.1080/01621459.2022.2060113",
-      "relevance": 10,
-      "why": [
-        "DP"
-      ],
-      "projects": [
-        "privacy"
-      ],
-      "total": 27,
-      "priority": "🔴",
-      "bibkey": "dai2022false",
-      "status": "🔴 To read",
-      "notes": ""
-    },
-    "doi:10.1214/20-sts787": {
-      "title": "On Estimation and Inference in Latent Structure Random Graphs",
-      "abstract": "We define a latent structure random graph as a random dot product graph (RDPG) in which the latent position distribution incorporates both probabilistic and geometric constraints, delineated by a family of underlying distributions on some fixed Euclidean space, and a structural support submanifold from which are drawn the latent positions for the graph. For a one-dimensional latent structure model with known structural support, we extend existing results on the consistency of spectral estimates in RDPGs to demonstrate that the parameters of the underlying distribution can be efficiently estimated. We describe how to estimate or learn the structural support in cases where it is unknown, with a focus on graphs with latent positions along the Hardy–Weinberg curve. Finally, we use the latent structural model formulation to address a hitherto-open question in neuroscience on the bilateral homology of the Drosophila left and right hemisphere connectome.",
-      "authors": [
-        "Avanti Athreya",
-        "Minh Tang",
-        "Youngser Park",
-        "Carey E. Priebe"
-      ],
-      "year": 2020,
+      "year": 2026,
       "venue": "Statistical Science",
       "kind": "journal",
-      "citations": 10,
-      "doi": "https://doi.org/10.1214/20-sts787",
-      "url": "https://doi.org/10.1214/20-sts787",
-      "relevance": 10,
+      "citations": 14,
+      "doi": "https://doi.org/10.1214/24-sts969",
+      "url": "https://doi.org/10.1214/24-sts969",
+      "relevance": 8,
       "why": [
-        "DP"
+        "adversarial attack"
       ],
       "projects": [
-        "privacy"
+        "adversarial-ml"
       ],
-      "total": 21,
-      "priority": "🔴",
-      "bibkey": "athreya2020estimation",
+      "total": 19,
+      "priority": "🟠",
+      "bibkey": "arbel2026primer",
       "status": "🔴 To read",
       "notes": ""
     }
