@@ -489,14 +489,16 @@
       "year": 2026,
       "kind": "conference",
       "citations": 0,
-      "relevance": 20,
+      "relevance": 41,
       "why": [
+        "DP: DP",
         "Posterior Sampling: posterior sampling"
       ],
       "projects": [
-        "posterior-sampling"
+        "posterior-sampling",
+        "privacy"
       ],
-      "total": 30,
+      "total": 51,
       "priority": "🔴",
       "bibkey": "linfeng2026cl",
       "status": "🔴 To read",
@@ -1807,14 +1809,14 @@
       "citations": 66,
       "doi": "https://doi.org/10.1214/21-aos2058",
       "url": "https://doi.org/10.1214/21-aos2058",
-      "relevance": 28,
+      "relevance": 18,
       "why": [
-        "DP: differential privacy, privacy-preserving"
+        "DP: privacy-preserving"
       ],
       "projects": [
         "privacy"
       ],
-      "total": 44,
+      "total": 34,
       "priority": "🔴",
       "bibkey": "cai2021cost",
       "status": "🔴 To read",
@@ -2560,7 +2562,7 @@
       "url": "https://doi.org/10.1214/19-sts742",
       "relevance": 32,
       "why": [
-        "DP: differential privacy",
+        "DP: DP",
         "Synthetic Data: synthetic data, data synthesis"
       ],
       "projects": [
@@ -2732,6 +2734,881 @@
       "total": 21,
       "priority": "🔴",
       "bibkey": "agarwal2020data",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.52202/079017-2657": {
+      "title": "ClavaDDPM: Multi-relational Data Synthesis with Cluster-guided Diffusion Models",
+      "authors": [
+        "Pang, Wei",
+        "Shafieinejad, Masoumeh",
+        "Liu, Lucy",
+        "Hazlewood, Stephanie",
+        "He, Xi"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2024/file/983876577ec81db17ecfae1521df9208-Paper-Conference.pdf",
+      "doi": "10.52202/079017-2657",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/983876577ec81db17ecfae1521df9208-Abstract-Conference.html",
+      "venue": "NeurIPS",
+      "year": 2024,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 38,
+      "why": [
+        "DP: DP",
+        "Synthetic Data: data synthesis"
+      ],
+      "projects": [
+        "privacy",
+        "synthetic-data"
+      ],
+      "total": 48,
+      "priority": "🔴",
+      "bibkey": "wei2024clavaddpm",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.52202/079017-0840": {
+      "title": "Achieving Tractable Minimax Optimal Regret in Average Reward MDPs",
+      "authors": [
+        "Boone, Victor",
+        "Zhang, Zihan"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2024/file/2f0bb736ccc8551ef5bcc9165c2a4d9e-Paper-Conference.pdf",
+      "doi": "10.52202/079017-0840",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/2f0bb736ccc8551ef5bcc9165c2a4d9e-Abstract-Conference.html",
+      "venue": "NeurIPS",
+      "year": 2024,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 24,
+      "why": [
+        "DP: DP"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 34,
+      "priority": "🔴",
+      "bibkey": "victor2024achieving",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.52202/085713-0922": {
+      "title": "Private Training Large-scale Models with Efficient DP-SGD",
+      "authors": [
+        "Wang, Liangyu",
+        "Wang, Junxiao",
+        "Ren, Jie",
+        "Xiang, Zihang",
+        "Keyes, David",
+        "Wang, Di"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/27aa3a0e6d63db269977bb2df5607cb8-Paper-Conference.pdf",
+      "doi": "10.52202/085713-0922",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/27aa3a0e6d63db269977bb2df5607cb8-Abstract-Conference.html",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "DP: DP"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "liangyu2025private",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.52202/085713-1291": {
+      "title": "Non-rectangular Robust MDPs with Normed Uncertainty Sets",
+      "authors": [
+        "Kumar, Navdeep",
+        "Gupta, Adarsh",
+        "ELFATIHI, Maxence Mohamed",
+        "Ramponi, Giorgia",
+        "Levy, Kfir Y.",
+        "Mannor, Shie"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/372cb7805eaccb2b7eed641271a30eec-Paper-Conference.pdf",
+      "doi": "10.52202/085713-1291",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/372cb7805eaccb2b7eed641271a30eec-Abstract-Conference.html",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "DP: DP"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "navdeep2025non",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.52202/085713-1851": {
+      "title": "Tru-POMDP: Task Planning Under Uncertainty via Tree of Hypotheses and Open-Ended POMDPs",
+      "authors": [
+        "Tang, Wenjing",
+        "He, Xinyu",
+        "Huang, Yongxi",
+        "Xiao, Yunxiao",
+        "Lu, Cewu",
+        "Cai, Panpan"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/4fb6b4482e4e24a33a3de5b01a011eb0-Paper-Conference.pdf",
+      "doi": "10.52202/085713-1851",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/4fb6b4482e4e24a33a3de5b01a011eb0-Abstract-Conference.html",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "DP: DP"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "wenjing2025tru",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.52202/085713-1857": {
+      "title": "Coupled Data and Measurement Space Dynamics for Enhanced Diffusion Posterior Sampling",
+      "authors": [
+        "Mohajer Hamidi, Shayan",
+        "Liang, Ben",
+        "YANG, EN-HUI"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/503acf8f49c96341cd5ae8458942a55c-Paper-Conference.pdf",
+      "doi": "10.52202/085713-1857",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/503acf8f49c96341cd5ae8458942a55c-Abstract-Conference.html",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Posterior Sampling: posterior sampling"
+      ],
+      "projects": [
+        "posterior-sampling"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "shayan2025coupled",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.52202/085713-1879": {
+      "title": "Adaptive Sigmoid Clipping for Balancing the Direction–Magnitude Mismatch Trade-off in Differentially Private Learning",
+      "authors": [
+        "Moradi Kalarde, Faeze",
+        "Bereyhi, Ali",
+        "Liang, Ben",
+        "Dong, Min"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/511f4fcf65f8dc3dbb30b4b851449590-Paper-Conference.pdf",
+      "doi": "10.52202/085713-1879",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/511f4fcf65f8dc3dbb30b4b851449590-Abstract-Conference.html",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "DP: private learning"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "faeze2025adaptive",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.iclr.cc/paper_files/paper/2025/hash/ed524bb14de1b52c8522b977ded241d3-abstract-conference.html": {
+      "title": "Variational Diffusion Posterior Sampling with Midpoint Guidance",
+      "authors": [
+        "MOUFAD, Badr",
+        "Janati el idrissi, Yazid",
+        "Bedin, Lisa",
+        "Oliviero Durmus, Alain",
+        "douc, randal",
+        "Moulines, Eric",
+        "Olsson, Jimmy"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.iclr.cc/paper_files/paper/2025/file/ed524bb14de1b52c8522b977ded241d3-Paper-Conference.pdf",
+      "doi": "",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/ed524bb14de1b52c8522b977ded241d3-Abstract-Conference.html",
+      "venue": "ICLR",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 41,
+      "why": [
+        "DP: DP",
+        "Posterior Sampling: posterior sampling"
+      ],
+      "projects": [
+        "posterior-sampling",
+        "privacy"
+      ],
+      "total": 51,
+      "priority": "🔴",
+      "bibkey": "badr2025variational",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.iclr.cc/paper_files/paper/2026/hash/5cc19d8570ebe171ffad101fef1e4dde-abstract-conference.html": {
+      "title": "P$^2$-DPO: Grounding Hallucination in Perceptual Processing via Calibration Direct Preference Optimization",
+      "authors": [
+        "Zhang, RuiPeng",
+        "Li, Zhihao",
+        "Yuan, Haozhang",
+        "Chen, C.L.Philip",
+        "Zhang, Tong"
+      ],
+      "abstract": "",
+      "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/5cc19d8570ebe171ffad101fef1e4dde-Paper-Conference.pdf",
+      "doi": "",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/5cc19d8570ebe171ffad101fef1e4dde-Abstract-Conference.html",
+      "venue": "ICLR",
+      "year": 2026,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "DP: DP"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "ruipeng2026p",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v267/schuchardt25a.html": {
+      "title": "Privacy Amplification by Structured Subsampling for Deep Differentially Private Time Series Forecasting",
+      "authors": [
+        "Jan Schuchardt",
+        "Mina Dalirrooyfard",
+        "Jed Guzelkabaagac",
+        "Anderson Schneider",
+        "Yuriy Nevmyvaka",
+        "Stephan Günnemann"
+      ],
+      "abstract": "Privacy Amplification by Structured Subsampling for Deep Differentially Private Time Series ForecastingJan Schuchardt, Mina Dalirrooyfard, Jed Guze...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/schuchardt25a/schuchardt25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v267/schuchardt25a.html",
+      "venue": "ICML",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "DP: privacy amplification"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "schuchardt2025privacy",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v267/tan25g.html": {
+      "title": "Synthesizing Privacy-Preserving Text Data via Finetuning *without* Finetuning Billion-Scale LLMs",
+      "authors": [
+        "Bowen Tan",
+        "Zheng Xu",
+        "Eric Xing",
+        "Zhiting Hu",
+        "Shanshan Wu"
+      ],
+      "abstract": "Synthesizing Privacy-Preserving Text Data via Finetuning *without* Finetuning Billion-Scale LLMsBowen Tan, Zheng Xu, Eric Xing, Zhiting Hu,&nb...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/tan25g/tan25g.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v267/tan25g.html",
+      "venue": "ICML",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "DP: privacy-preserving"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "tan2025synthesizing",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v267/venkatraman25a.html": {
+      "title": "Outsourced Diffusion Sampling: Efficient Posterior Inference in Latent Spaces of Generative Models",
+      "authors": [
+        "Siddarth Venkatraman",
+        "Mohsin Hasan",
+        "Minsu Kim",
+        "Luca Scimeca",
+        "Marcin Sendera",
+        "Yoshua Bengio",
+        "Glen Berseth",
+        "Nikolay Malkin"
+      ],
+      "abstract": "Outsourced Diffusion Sampling: Efficient Posterior Inference in Latent Spaces of Generative ModelsSiddarth Venkatraman, Mohsin Hasan, Minsu Kim,&nb...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/venkatraman25a/venkatraman25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v267/venkatraman25a.html",
+      "venue": "ICML",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Posterior Sampling: posterior inference"
+      ],
+      "projects": [
+        "posterior-sampling"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "venkatraman2025outsourced",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v267/wang25ds.html": {
+      "title": "Efficient and Privacy-Preserving Soft Prompt Transfer for LLMs",
+      "authors": [
+        "Xun Wang",
+        "Jing Xu",
+        "Franziska Boenisch",
+        "Michael Backes",
+        "Christopher A. Choquette-Choo",
+        "Adam Dziedzic"
+      ],
+      "abstract": "Efficient and Privacy-Preserving Soft Prompt Transfer for LLMsXun Wang, Jing Xu, Franziska Boenisch, Michael Backes, Christopher A. Choqu...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/wang25ds/wang25ds.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v267/wang25ds.html",
+      "venue": "ICML",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "DP: privacy-preserving"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "wang2025efficient",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v267/wang25fe.html": {
+      "title": "Adapting to Linear Separable Subsets with Large-Margin in Differentially Private Learning",
+      "authors": [
+        "Erchi Wang",
+        "Yuqing Zhu",
+        "Yu-Xiang Wang"
+      ],
+      "abstract": "Adapting to Linear Separable Subsets with Large-Margin in Differentially Private LearningErchi Wang, Yuqing Zhu, Yu-Xiang Wang This pape...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/wang25fe/wang25fe.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v267/wang25fe.html",
+      "venue": "ICML",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "DP: private learning"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "wang2025adapting",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v258/kalagarla25a.html": {
+      "title": "A Safe Bayesian Learning Algorithm for Constrained MDPs with Bounded Constraint Violation",
+      "authors": [
+        "Krishna C Kalagarla",
+        "Rahul Jain",
+        "Pierluigi Nuzzo"
+      ],
+      "abstract": "A Safe Bayesian Learning Algorithm for Constrained MDPs with Bounded Constraint ViolationKrishna C Kalagarla, Rahul Jain, Pierluigi Nuzzo ...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v258/main/assets/kalagarla25a/kalagarla25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v258/kalagarla25a.html",
+      "venue": "AISTATS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 21,
+      "why": [
+        "DP: DP"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 31,
+      "priority": "🔴",
+      "bibkey": "kalagarla2025safe",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v238/li24e.html": {
+      "title": "Prior-dependent analysis of posterior sampling reinforcement learning with function approximation",
+      "authors": [
+        "Yingru Li",
+        "Zhiquan Luo"
+      ],
+      "abstract": "Prior-dependent analysis of posterior sampling reinforcement learning with function approximationYingru Li, Zhiquan LuoThis work advances randomized exp...",
+      "pdf": "https://proceedings.mlr.press/v238/li24e/li24e.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v238/li24e.html",
+      "venue": "AISTATS",
+      "year": 2024,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Posterior Sampling: posterior sampling"
+      ],
+      "projects": [
+        "posterior-sampling"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "li2024prior",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v238/tang24b.html": {
+      "title": "Solving General Noisy Inverse Problem via Posterior Sampling: A Policy Gradient Viewpoint",
+      "authors": [
+        "Haoyue Tang",
+        "Tian Xie",
+        "Aosong Feng",
+        "Hanyu Wang",
+        "Chenyang Zhang",
+        "Yang Bai"
+      ],
+      "abstract": "Solving General Noisy Inverse Problem via Posterior Sampling: A Policy Gradient ViewpointHaoyue Tang, Tian Xie, Aosong Feng, Hanyu Wang, ...",
+      "pdf": "https://proceedings.mlr.press/v238/tang24b/tang24b.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v238/tang24b.html",
+      "venue": "AISTATS",
+      "year": 2024,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "Posterior Sampling: posterior sampling"
+      ],
+      "projects": [
+        "posterior-sampling"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "tang2024solving",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v238/chakraborty24a.html": {
+      "title": "PrIsing: Privacy-Preserving Peer Effect Estimation via Ising Model",
+      "authors": [
+        "Abhinav Chakraborty",
+        "Anirban Chatterjee",
+        "Abhinandan Dalal"
+      ],
+      "abstract": "PrIsing: Privacy-Preserving Peer Effect Estimation via Ising ModelAbhinav Chakraborty, Anirban Chatterjee, Abhinandan DalalThe Ising model, origina...",
+      "pdf": "https://proceedings.mlr.press/v238/chakraborty24a/chakraborty24a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v238/chakraborty24a.html",
+      "venue": "AISTATS",
+      "year": 2024,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "DP: privacy-preserving"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "chakraborty2024prising",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v238/ahmed24a.html": {
+      "title": "Privacy-Preserving Decentralized Actor-Critic for Cooperative Multi-Agent Reinforcement Learning",
+      "authors": [
+        "Maheed H. Ahmed",
+        "Mahsa Ghasemi"
+      ],
+      "abstract": "Privacy-Preserving Decentralized Actor-Critic for Cooperative Multi-Agent Reinforcement LearningMaheed H. Ahmed, Mahsa GhasemiMulti-agent reinforcement ...",
+      "pdf": "https://proceedings.mlr.press/v238/ahmed24a/ahmed24a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v238/ahmed24a.html",
+      "venue": "AISTATS",
+      "year": 2024,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "DP: privacy-preserving"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "ahmed2024privacy",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v238/krichene24a.html": {
+      "title": "Private Learning with Public Features",
+      "authors": [
+        "Walid Krichene",
+        "Nicolas E Mayoraz",
+        "Steffen Rendle",
+        "Shuang Song",
+        "Abhradeep Thakurta",
+        "Li Zhang"
+      ],
+      "abstract": "Private Learning with Public FeaturesWalid Krichene, Nicolas E Mayoraz, Steffen Rendle, Shuang Song, Abhradeep Thakurta, Li ZhangWe ...",
+      "pdf": "https://proceedings.mlr.press/v238/krichene24a/krichene24a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v238/krichene24a.html",
+      "venue": "AISTATS",
+      "year": 2024,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 20,
+      "why": [
+        "DP: private learning"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 30,
+      "priority": "🔴",
+      "bibkey": "krichene2024private",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v258/raisa25a.html": {
+      "title": "A Bias-Variance Decomposition for Ensembles over Multiple Synthetic Datasets",
+      "authors": [
+        "Ossi Räisä",
+        "Antti Honkela"
+      ],
+      "abstract": "A Bias-Variance Decomposition for Ensembles over Multiple Synthetic DatasetsOssi Räisä, Antti HonkelaRecent studies have highlighted the benefits of gen...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v258/main/assets/raisa25a/raisa25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v258/raisa25a.html",
+      "venue": "AISTATS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 18,
+      "why": [
+        "Synthetic Data: synthetic data, synthetic dataset"
+      ],
+      "projects": [
+        "synthetic-data"
+      ],
+      "total": 28,
+      "priority": "🔴",
+      "bibkey": "ris2025bias",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v258/lee25b.html": {
+      "title": "A Generalized Theory of Mixup for Structure-Preserving Synthetic Data",
+      "authors": [
+        "Chungpa Lee",
+        "Jongho Im",
+        "Joseph H.T. Kim"
+      ],
+      "abstract": "A Generalized Theory of Mixup for Structure-Preserving Synthetic DataChungpa Lee, Jongho Im, Joseph H.T. KimMixup is a widely adopted data augmenta...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v258/main/assets/lee25b/lee25b.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v258/lee25b.html",
+      "venue": "AISTATS",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 18,
+      "why": [
+        "Synthetic Data: synthetic data"
+      ],
+      "projects": [
+        "synthetic-data"
+      ],
+      "total": 28,
+      "priority": "🔴",
+      "bibkey": "lee2025generalized",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v286/tonekaboni25a.html": {
+      "title": "HDP-Flow: Generalizable Bayesian Nonparametric Model for Time Series State Discovery",
+      "authors": [
+        "Sana Tonekaboni",
+        "Tina Behrouzi",
+        "Addison Weatherhead",
+        "Emily Fox",
+        "David Blei",
+        "Anna Goldenberg"
+      ],
+      "abstract": "HDP-Flow: Generalizable Bayesian Nonparametric Model for Time Series State DiscoverySana Tonekaboni, Tina Behrouzi, Addison Weatherhead, Emily...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v286/main/assets/tonekaboni25a/tonekaboni25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v286/tonekaboni25a.html",
+      "venue": "UAI",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 21,
+      "why": [
+        "DP: DP"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 31,
+      "priority": "🔴",
+      "bibkey": "tonekaboni2025hdp",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://proceedings.mlr.press/v291/peng25a.html": {
+      "title": "Differentially Private Synthetic Graphs Preserving Triangle-Motif Cuts",
+      "authors": [
+        "Pan Peng",
+        "Hangyu Xu"
+      ],
+      "abstract": "Differentially Private Synthetic Graphs Preserving Triangle-Motif CutsPan Peng, Hangyu XuWe study the problem of releasing a differentially private (DP)...",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v291/main/assets/peng25a/peng25a.pdf",
+      "doi": "",
+      "url": "https://proceedings.mlr.press/v291/peng25a.html",
+      "venue": "COLT",
+      "year": 2025,
+      "kind": "conference",
+      "citations": 0,
+      "relevance": 10,
+      "why": [
+        "DP: DP"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 20,
+      "priority": "🔴",
+      "bibkey": "peng2025differentially",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "url:https://openalex.org/w3027501728": {
+      "title": "Expected Policy Gradients for Reinforcement Learning",
+      "abstract": "We propose expected policy gradients (EPG), which unify stochastic policy gradients (SPG) and deterministic policy gradients (DPG) for reinforcement learning. Inspired by expected sarsa, EPG integrates (or sums) across actions when estimating the gradient, instead of relying only on the action in the sampled trajectory. For continuous action spaces, we first derive a practical result for Gaussian policies and quadratic critics and then extend it to a universal analytical method, covering a broad class of actors and critics, including Gaussian, exponential families, and policies with bounded support. For Gaussian policies, we introduce an exploration method that uses covariance proportional to the matrix exponential of the scaled Hessian of the critic with respect to the actions. For discrete action spaces, we derive a variant of EPG based on softmax policies. We also establish a new general policy gradient theorem, of which the stochastic and deterministic policy gradient theorems are special cases. Furthermore, we prove that EPG reduces the variance of the gradient estimates without requiring deterministic policies and with little computational overhead. Finally, we provide an extensive experimental evaluation of EPG and show that it outperforms existing approaches on multiple challenging control domains.",
+      "authors": [
+        "Kamil Ciosek",
+        "Shimon Whiteson"
+      ],
+      "year": 2020,
+      "venue": "JMLR",
+      "kind": "journal",
+      "citations": 14,
+      "doi": "",
+      "url": "https://openalex.org/W3027501728",
+      "relevance": 10,
+      "why": [
+        "DP: DP"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 21,
+      "priority": "🔴",
+      "bibkey": "ciosek2020expected",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/23-aos2297": {
+      "title": "Optimal change-point detection and localization",
+      "abstract": "Given a times series Y in Rn, with a piecewise constant mean and independent components, the twin problems of change-point detection and change-point localization, respectively amount to detecting the existence of times where the mean varies and estimating the positions of those change-points. In this work, we tightly characterize optimal rates for both problems and uncover the phase transition phenomenon from a global testing problem to a local estimation problem. Introducing a suitable definition of the energy of a change-point, we first establish in the single change-point setting that the optimal detection threshold is 2loglog(n). When the energy is just above the detection threshold, then the problem of localizing the change-point becomes purely parametric: it only depends on the difference in means and not on the position of the change-point anymore. Interestingly, for most change-point positions, including all those away from the endpoints of the time series, it is possible to detect and localize them at a much smaller energy level. In the multiple change-point setting, we establish the energy detection threshold and show similarly that the optimal localization error of a specific change-point becomes purely parametric. Along the way, tight minimax rates for Hausdorff and l 1 estimation losses of the vector of all change-points positions are also established. Two procedures achieving these optimal rates are introduced. The first one is a least-squares estimator with a new multiscale penalty that favours well spread change-points. The second one is a two-step multiscale post-processing procedure whose computational complexity can be as low as O(nlog(n)). Notably, these two procedures accommodate with the presence of possibly many low-energy and therefore undetectable change-points and are still able to detect and localize high-energy change-points even with the presence of those nuisance parameters.",
+      "authors": [
+        "Nicolas Verzélen",
+        "Magalie Fromont",
+        "Matthieu Lerasle",
+        "Patricia Reynaud-Bouret"
+      ],
+      "year": 2023,
+      "venue": "Annals of Statistics",
+      "kind": "journal",
+      "citations": 41,
+      "doi": "https://doi.org/10.1214/23-aos2297",
+      "url": "https://doi.org/10.1214/23-aos2297",
+      "relevance": 14,
+      "why": [
+        "DP: DP"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 28,
+      "priority": "🔴",
+      "bibkey": "verzlen2023optimal",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/18-aos1797": {
+      "title": "Optimal rates for community estimation in the weighted stochastic block model",
+      "abstract": "Community identification in a network is an important problem in fields such as social science, neuroscience and genetics. Over the past decade, stochastic block models (SBMs) have emerged as a popular statistical framework for this problem. However, SBMs have an important limitation in that they are suited only for networks with unweighted edges; in various scientific applications, disregarding the edge weights may result in a loss of valuable information. We study a weighted generalization of the SBM, in which observations are collected in the form of a weighted adjacency matrix and the weight of each edge is generated independently from an unknown probability density determined by the community membership of its endpoints. We characterize the optimal rate of misclustering error of the weighted SBM in terms of the Renyi divergence of order 1/2 between the weight distributions of within-community and between-community edges, substantially generalizing existing results for unweighted SBMs. Furthermore, we present a computationally tractable algorithm based on discretization that achieves the optimal error rate. Our method is adaptive in the sense that the algorithm, without assuming knowledge of the weight densities, performs as well as the best algorithm that knows the weight densities.",
+      "authors": [
+        "Min Xu",
+        "Varun Jog",
+        "Po‐Ling Loh"
+      ],
+      "year": 2020,
+      "venue": "Annals of Statistics",
+      "kind": "journal",
+      "citations": 55,
+      "doi": "https://doi.org/10.1214/18-aos1797",
+      "url": "https://doi.org/10.1214/18-aos1797",
+      "relevance": 13,
+      "why": [
+        "DP: DP"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 28,
+      "priority": "🔴",
+      "bibkey": "xu2020optimal",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/19-aos1906": {
+      "title": "Which bridge estimator is the best for variable selection?",
+      "abstract": "We study the problem of variable selection for linear models under the high-dimensional asymptotic setting, where the number of observations $n$ grows at the same rate as the number of predictors $p$. We consider two-stage variable selection techniques (TVS) in which the first stage uses bridge estimators to obtain an estimate of the regression coefficients, and the second stage simply thresholds this estimate to select the “important” predictors. The asymptotic false discovery proportion ($\\operatorname{AFDP}$) and true positive proportion (ATPP) of these TVS are evaluated. We prove that for a fixed ATPP, in order to obtain a smaller $\\operatorname{AFDP}$, one should pick a bridge estimator with smaller asymptotic mean square error in the first stage of TVS. Based on such principled discovery, we present a sharp comparison of different TVS, via an in-depth investigation of the estimation properties of bridge estimators. Rather than “orderwise” error bounds with loose constants, our analysis focuses on precise error characterization. Various interesting signal-to-noise ratio and sparsity settings are studied. Our results offer new and thorough insights into high-dimensional variable selection. For instance, we prove that a TVS with Ridge in its first stage outperforms TVS with other bridge estimators in large noise settings; two-stage LASSO becomes inferior when the signal is rare and weak. As a by-product, we show that two-stage methods outperform some standard variable selection techniques, such as $\\operatorname{LASSO}$ and Sure Independence Screening, under certain conditions.",
+      "authors": [
+        "Shuaiwen Wang",
+        "Haolei Weng",
+        "Arian Maleki"
+      ],
+      "year": 2020,
+      "venue": "Annals of Statistics",
+      "kind": "journal",
+      "citations": 33,
+      "doi": "https://doi.org/10.1214/19-aos1906",
+      "url": "https://doi.org/10.1214/19-aos1906",
+      "relevance": 10,
+      "why": [
+        "DP: DP"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 23,
+      "priority": "🔴",
+      "bibkey": "wang2020which",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1080/01621459.2022.2060113": {
+      "title": "False Discovery Rate Control via Data Splitting",
+      "abstract": "Selecting relevant features associated with a given response variable is an important problem in many scientific fields. Quantifying quality and uncertainty of a selection result via false discovery rate (FDR) control has been of recent interest. This article introduces a data-splitting method (referred to as “DS”) to asymptotically control the FDR while maintaining a high power. For each feature, DS constructs a test statistic by estimating two independent regression coefficients via data splitting. FDR control is achieved by taking advantage of the statistic’s property that, for any null feature, its sampling distribution is symmetric about zero; whereas for a relevant feature, its sampling distribution has a positive mean. Furthermore, a Multiple Data Splitting (MDS) method is proposed to stabilize the selection result and boost the power. Surprisingly, with the FDR under control, MDS not only helps overcome the power loss caused by data splitting, but also results in a lower variance of the false discovery proportion (FDP) compared with all other methods in consideration. Extensive simulation studies and a real-data application show that the proposed methods are robust to the unknown distribution of features, easy to implement and computationally efficient, and are often the most powerful ones among competitors especially when the signals are weak and correlations or partial correlations among features are high. Supplementary materials for this article are available online.",
+      "authors": [
+        "Chenguang Dai",
+        "Buyu Lin",
+        "Xin Xing",
+        "Jun S. Liu"
+      ],
+      "year": 2022,
+      "venue": "JASA",
+      "kind": "journal",
+      "citations": 73,
+      "doi": "https://doi.org/10.1080/01621459.2022.2060113",
+      "url": "https://doi.org/10.1080/01621459.2022.2060113",
+      "relevance": 10,
+      "why": [
+        "DP: DP"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 27,
+      "priority": "🔴",
+      "bibkey": "dai2022false",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/20-sts787": {
+      "title": "On Estimation and Inference in Latent Structure Random Graphs",
+      "abstract": "We define a latent structure random graph as a random dot product graph (RDPG) in which the latent position distribution incorporates both probabilistic and geometric constraints, delineated by a family of underlying distributions on some fixed Euclidean space, and a structural support submanifold from which are drawn the latent positions for the graph. For a one-dimensional latent structure model with known structural support, we extend existing results on the consistency of spectral estimates in RDPGs to demonstrate that the parameters of the underlying distribution can be efficiently estimated. We describe how to estimate or learn the structural support in cases where it is unknown, with a focus on graphs with latent positions along the Hardy–Weinberg curve. Finally, we use the latent structural model formulation to address a hitherto-open question in neuroscience on the bilateral homology of the Drosophila left and right hemisphere connectome.",
+      "authors": [
+        "Avanti Athreya",
+        "Minh Tang",
+        "Youngser Park",
+        "Carey E. Priebe"
+      ],
+      "year": 2020,
+      "venue": "Statistical Science",
+      "kind": "journal",
+      "citations": 10,
+      "doi": "https://doi.org/10.1214/20-sts787",
+      "url": "https://doi.org/10.1214/20-sts787",
+      "relevance": 10,
+      "why": [
+        "DP: DP"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 21,
+      "priority": "🔴",
+      "bibkey": "athreya2020estimation",
       "status": "🔴 To read",
       "notes": ""
     }
