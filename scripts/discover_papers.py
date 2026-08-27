@@ -228,10 +228,11 @@ def relevance(p,c):
         if not hits: continue
         score+=max(t["weight"]*(2 if k.lower() in title else 1) for k in hits)
         score+=min(4,sum(k.lower() in full for k in t.get("support",[])))
-        why.append(t["name"]+": "+", ".join(hits[:2])); projects.append(t["project"])
+        why.extend(hits[:2]); projects.append(t["project"])
     for k,b in c["theory_bonus"].items():
         if k.lower() in full: score+=b
-    return score,why,sorted(set(projects))
+    why = list(dict.fromkeys(why))
+    return score, why, sorted(set(projects))
 
 def priority(total,c):
     t=c["priority_thresholds"]
