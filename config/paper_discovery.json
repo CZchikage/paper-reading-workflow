@@ -137,8 +137,8 @@
       "project": "privacy",
       "weight": 10,
       "core": [
-        "differential privacy",
-        "renyi differential privacy",
+        "DP",
+        "renyi DP",
         "private learning",
         "privacy amplification",
         "privacy-preserving"
