@@ -47,26 +47,57 @@ def save_registry(reg):
     payload={"version":1,"papers":reg}
     Path(REGISTRY).write_text(json.dumps(payload,indent=2,ensure_ascii=False),encoding="utf-8")
 
-def parse_existing_queue(path="reading_queue.md"):
+def parse_existing_tracker(path):
     """
-    Preserve human-edited Status and Notes from the Markdown queue.
-    Key by the paper URL, because it is directly recoverable from the table.
+    Read status/notes from a generated tracker table.
+
+    Current table columns:
+      0 Status
+      1 Relevance
+      2 Citations
+      3 Paper
+      4 Venue
+      5 Year
+      6 Project
+      7 BibTeX
+      8 Why
+      9 Notes
     """
     state={}
     p=Path(path)
     if not p.exists():
         return state
+
     for line in p.read_text(encoding="utf-8").splitlines():
-        if not line.startswith("|"): continue
+        if not line.startswith("|"):
+            continue
+
         cells=[x.strip() for x in line.strip("|").split("|")]
-        if len(cells)<11: continue
-        m=re.search(r"\((https?://[^)]+)\)",cells[4])
-        if not m: continue
-        status=cells[1]
+        if len(cells)<10:
+            continue
+
+        status=cells[0]
         if status not in {STATUS_TO_READ,STATUS_REVIEW_READY,STATUS_DONE}:
             continue
-        state[m.group(1).lower()]={"status":status,"notes":cells[-1]}
+
+        m=re.search(r"\((https?://[^)]+)\)",cells[3])
+        if not m:
+            continue
+
+        state[m.group(1).lower()]={
+            "status":status,
+            "notes":cells[9],
+        }
+
     return state
+
+
+def parse_existing_queue(path="reading_queue.md"):
+    return parse_existing_tracker(path)
+
+
+def parse_existing_history(path="reading_history.md"):
+    return parse_existing_tracker(path)
 
 def sync_registry_from_queue(reg, queue_state):
     """Human edits in reading_queue.md win over the registry."""
@@ -370,13 +401,15 @@ def cleanup_registry(reg, c):
     return cleaned, removed
 
 
-def active_sorted(reg,c):
-    """
-    The queue is a persistent tracker, not a weekly report.
-    Show all tracked papers, with workflow status first and venue grouping later.
-    """
+def active_sorted(reg,c,statuses=None):
+    """Return registry papers sorted for human-facing tracker views."""
     rank={STATUS_TO_READ:0,STATUS_REVIEW_READY:1,STATUS_DONE:2}
     arr=[paper_from_registry(pid,rec) for pid,rec in reg.items()]
+
+    if statuses is not None:
+        statuses=set(statuses)
+        arr=[p for p in arr if p.get("status",STATUS_TO_READ) in statuses]
+
     arr.sort(key=lambda p:(
         rank.get(p.get("status",STATUS_TO_READ),9),
         -int(p.get("relevance",0)),
@@ -386,41 +419,76 @@ def active_sorted(reg,c):
     ))
     return arr
 
-def render_queue(reg,c,notes):
-    papers=active_sorted(reg,c)
+def _render_grouped_table(papers,c,heading):
     confpapers=[p for p in papers if p.get("kind")=="conference"]
     journals=[p for p in papers if p.get("kind")=="journal"]
 
     lines=[
-      "# Paper Reading Queue","",
-      "_Stateful tracker. Previously seen papers are never re-added as duplicates._","",
-      "**Status:** 🔴 To read · 🟡 Review ready · 🟢 Done","",
-      "Workflow: discovery → 🔴 To read → deep-reading note generated → 🟡 Review ready → you review it → 🟢 Done","",
-      "## Conference papers","",
+      f"# {heading}","",
       "| Status | Relevance | Citations | Paper | Venue | Year | Project | BibTeX | Why | Notes |",
       "|---|---:|---:|---|---|---:|---|---|---|---|"
     ]
-    for conf in c["conferences"]:
-        arr=[p for p in confpapers if p.get("venue")==conf["name"]]
-        if arr:
-            lines.append(f"| **{conf['name']}** | | | | | | | | | |")
-            lines.extend(row(p) for p in arr)
 
-    lines += [
-      "","## Top journal papers — citation ≥ 10","",
-      "| Status | Relevance | Citations | Paper | Venue | Year | Project | BibTeX | Why | Notes |",
-      "|---|---:|---:|---|---|---:|---|---|---|---|"
+    if confpapers:
+        lines += ["","## Conference papers",""]
+        for conf in c["conferences"]:
+            arr=[p for p in confpapers if p.get("venue")==conf["name"]]
+            if arr:
+                lines.append(f"| **{conf['name']}** | | | | | | | | | |")
+                lines.extend(row(p) for p in arr)
+
+    if journals:
+        lines += ["","## Top journal papers — citation ≥ 10",""]
+        for j in c["journals"]:
+            arr=[p for p in journals if p.get("venue")==j["name"]]
+            if arr:
+                lines.append(f"| **{j['name']}** | | | | | | | | | |")
+                lines.extend(row(p) for p in arr)
+
+    return lines
+
+
+def render_queue(reg,c,notes):
+    """
+    Active queue only:
+      🔴 To read
+      🟡 Review ready
+
+    Done papers are intentionally excluded and rendered to reading_history.md.
+    """
+    papers=active_sorted(reg,c,{STATUS_TO_READ,STATUS_REVIEW_READY})
+
+    lines=[
+      "# Paper Reading Queue","",
+      "_Active reading tracker. Done papers are moved to `reading_history.md`._","",
+      "**Status:** 🔴 To read · 🟡 Review ready","",
+      "Workflow: discovery → 🔴 To read → reading note generated → 🟡 Review ready → you review it → 🟢 Done (history)",""
     ]
-    for j in c["journals"]:
-        arr=[p for p in journals if p.get("venue")==j["name"]]
-        if arr:
-            lines.append(f"| **{j['name']}** | | | | | | | | | |")
-            lines.extend(row(p) for p in arr)
+
+    grouped=_render_grouped_table(papers,c,"Active Papers")
+    # Skip duplicate top-level title from helper.
+    lines.extend(grouped[2:])
 
     if notes:
         lines += ["","## Fetch notes",""]+[f"- {x}" for x in notes]
 
     Path("reading_queue.md").write_text("\n".join(lines)+"\n",encoding="utf-8")
+
+
+def render_history(reg,c):
+    """Archive view containing only 🟢 Done papers."""
+    papers=active_sorted(reg,c,{STATUS_DONE})
+
+    lines=[
+      "# Paper Reading History","",
+      "_Completed papers. These remain permanently in `data/paper_registry.json` and are never rediscovered as new papers._","",
+      "**Status:** 🟢 Done",""
+    ]
+
+    grouped=_render_grouped_table(papers,c,"Completed Papers")
+    lines.extend(grouped[2:])
+
+    Path("reading_history.md").write_text("\n".join(lines)+"\n",encoding="utf-8")
 
 def render_bib(reg):
     papers=[paper_from_registry(pid,rec) for pid,rec in reg.items()]
@@ -434,8 +502,9 @@ def main():
     c=cfg()
     reg=load_registry()
 
-    # If the user manually changed statuses/notes in reading_queue.md, keep those edits.
+    # Preserve tracker edits from both active queue and completed history.
     reg=sync_registry_from_queue(reg,parse_existing_queue())
+    reg=sync_registry_from_queue(reg,parse_existing_history())
 
     # Clean stale false positives from older topic rules.
     reg, removed_stale = cleanup_registry(reg, c)
@@ -499,6 +568,7 @@ def main():
 
     save_registry(reg)
     render_queue(reg,c,notes)
+    render_history(reg,c)
     render_bib(reg)
 
 if __name__=="__main__":
