@@ -1,25 +1,28 @@
 ---
 name: paper-tracker
-description: Maintain persistent paper reading states, deduplicate discovered papers, and connect paper discovery with paper-deep-reading notes.
+description: Maintain persistent paper reading states, deduplicate papers, and connect discovery with reading notes.
 ---
 
 # Paper Tracker
 
-Use exactly these statuses:
+All tracker-related instructions and text must be in English.
+
+Valid statuses are exactly:
 - 🔴 To read
 - 🟡 Review ready
 - 🟢 Done
 
-`data/paper_registry.json` is the source of truth for deduplication/history.
-`reading_queue.md` is the human-facing view.
+`data/paper_registry.json` is the source of truth.
+`reading_queue.md` is the human-facing tracker.
 
-After `paper-deep-reading` successfully generates a note:
+After FAST or DEEP reading creates/updates a note:
 - set status to `🟡 Review ready`
 - add the note link
-- update registry and queue together.
+- update both registry and queue
 
-After the user reviews/approves the note:
+Only after the user explicitly confirms they reviewed/finished/approved the paper:
 - set status to `🟢 Done`
-- keep the note link.
 
-Never re-add a registry paper as a new paper.
+Never mark Done merely because the AI note exists.
+
+Never re-add a paper already present in the registry.
