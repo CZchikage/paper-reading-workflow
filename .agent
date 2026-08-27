@@ -1,39 +1,50 @@
 # Paper Reading Agent Workflow
 
-## Discovery
-The repository uses `reading_queue.md` as the human-facing tracker and
-`data/paper_registry.json` as the permanent deduplication/state database.
+All workflow instructions, generated notes, and tracker-related text must be in English.
 
-Valid statuses are exactly:
+## Reading mode
+FAST is the default.
+
+DEEP overrides FAST whenever the user explicitly requests deep reading, theorem-by-theorem analysis, proof reconstruction, exhaustive analysis, reproducibility analysis, appendix inspection, or a full critical review.
+
+If FAST and DEEP are both mentioned, use DEEP.
+
+Use:
+- `skills/paper-deep-reading/SKILL.md`
+- `skills/paper-tracker/SKILL.md`
+
+## Tracker statuses
+Use exactly:
 - 🔴 To read
 - 🟡 Review ready
 - 🟢 Done
 
-Never create another status label.
+## Reading workflow
+When asked to read a paper in `reading_queue.md`:
+1. Identify the exact paper and registry record.
+2. Determine FAST or DEEP.
+3. Use `paper-deep-reading`.
+4. Save the note under the appropriate `notes/<project>/` folder.
+5. After the note exists:
+   - update `reading_queue.md`
+   - update `data/paper_registry.json`
+   - set status to `🟡 Review ready`
+   - add the note link
+6. Commit only files touched by this task.
+7. Do not push automatically unless the user explicitly authorizes pushing in the current session.
+8. If committed locally, tell the user to run `git push`.
 
-## Deep reading lifecycle
-When the user asks to deep-read a paper that exists in `reading_queue.md`:
+## Marking Done
+Only when the user explicitly confirms they reviewed/finished/approved the paper:
+- change status to `🟢 Done` in both queue and registry
+- preserve the note link
+- commit only relevant files
+- do not push automatically unless explicitly authorized
 
-1. Identify the exact paper row and its stable registry record.
-2. Leave/set its status to `🔴 To read` while preparing the reading task.
-3. Use the existing `paper-deep-reading` skill to create/update the structured note under `notes/`.
-4. Add the generated note link to the paper's `Notes` cell.
-5. Change the paper status in BOTH:
-   - `reading_queue.md`
-   - `data/paper_registry.json`
-   to `🟡 Review ready`.
-6. Commit and push only the files touched by this reading task.
+## Discovery
+Weekly discovery must:
+- never duplicate registered papers
+- preserve status and notes
+- add only genuinely unseen papers as `🔴 To read`
+- refresh metadata without resetting state
 
-When the user says they have reviewed/finished/approved that paper:
-1. Change status in BOTH tracker and registry to `🟢 Done`.
-2. Preserve the note link.
-3. Commit and push.
-
-A `🟢 Done` paper remains in the tracker/history and must never be rediscovered as a new item.
-
-## Weekly discovery
-When the automated discovery script runs:
-- previously registered papers are never duplicated;
-- status and notes are preserved;
-- only genuinely unseen papers start as `🔴 To read`;
-- metadata/ranking may refresh without resetting workflow state.
