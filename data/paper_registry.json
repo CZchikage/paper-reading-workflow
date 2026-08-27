@@ -29,8 +29,8 @@
       "total": 33,
       "priority": "🔴",
       "bibkey": "omri2025gaussian",
-      "status": "🔴 To read",
-      "notes": ""
+      "status": "🟡 Review ready",
+      "notes": "[结构化阅读笔记](notes/privacy/%E3%80%90NeurIPS%E2%80%982025%E3%80%91gaussian-mixing-mechanism.md)"
     },
     "doi:10.52202/079017-2869": {
       "title": "Prior-itizing Privacy: A Bayesian Approach to Setting the Privacy Budget in Differential Privacy",
