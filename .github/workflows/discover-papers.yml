@@ -21,12 +21,12 @@ jobs:
         run: python scripts/discover_papers.py
       - name: Commit queue and BibTeX
         run: |
-          if git diff --quiet -- reading_queue.md bib/discovered.bib data/paper_registry.json; then
+          if git diff --quiet -- reading_queue.md reading_history.md bib/discovered.bib data/paper_registry.json; then
             echo "No changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add reading_queue.md bib/discovered.bib data/paper_registry.json
+          git add reading_queue.md reading_history.md bib/discovered.bib data/paper_registry.json
           git commit -m "Refresh verified paper queue"
           git push
