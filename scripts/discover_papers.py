@@ -333,6 +333,43 @@ def merge_into_registry(reg, papers):
             reg[pid]=rec
     return reg
 
+def registry_entry_is_protected(rec):
+    status = rec.get("status", STATUS_TO_READ)
+    notes = (rec.get("notes") or "").strip()
+    if status in {STATUS_REVIEW_READY, STATUS_DONE}:
+        return True
+    if notes and ("notes/" in notes or ".md" in notes):
+        return True
+    return False
+
+
+def registry_entry_is_currently_relevant(rec, c):
+    p = {"title": rec.get("title", ""), "abstract": rec.get("abstract", "")}
+    rel, _, _ = relevance(p, c)
+    return rel >= c["min_relevance"]
+
+
+def cleanup_registry(reg, c):
+    """Remove stale To-read false positives, preserve reading history."""
+    cleaned = {}
+    removed = []
+    for pid, rec in reg.items():
+        if registry_entry_is_protected(rec):
+            cleaned[pid] = rec
+            continue
+        if rec.get("status", STATUS_TO_READ) != STATUS_TO_READ:
+            cleaned[pid] = rec
+            continue
+        if registry_entry_is_currently_relevant(rec, c):
+            cleaned[pid] = rec
+            continue
+        removed.append((rec.get("title", ""), rec.get("venue", ""), rec.get("year", "")))
+    print(f"Registry cleanup: removed {len(removed)} stale To-read entries.")
+    for title, venue, year in removed[:50]:
+        print(f"  REMOVED: {title} ({venue} {year})")
+    return cleaned, removed
+
+
 def active_sorted(reg,c):
     """
     The queue is a persistent tracker, not a weekly report.
@@ -399,6 +436,9 @@ def main():
 
     # If the user manually changed statuses/notes in reading_queue.md, keep those edits.
     reg=sync_registry_from_queue(reg,parse_existing_queue())
+
+    # Clean stale false positives from older topic rules.
+    reg, removed_stale = cleanup_registry(reg, c)
 
     discovered=[]
     notes=[]
