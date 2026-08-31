@@ -30,8 +30,8 @@
       "total": 33,
       "priority": "🔴",
       "bibkey": "omri2025gaussian",
-      "status": "🟡 Review ready",
-      "notes": "[结构化阅读笔记](notes/privacy/%E3%80%90NeurIPS%E2%80%982025%E3%80%91gaussian-mixing-mechanism.md)"
+      "status": "🔴 To read",
+      "notes": ""
     },
     "doi:10.52202/079017-2869": {
       "title": "Prior-itizing Privacy: A Bayesian Approach to Setting the Privacy Budget in Differential Privacy",
@@ -1808,7 +1808,7 @@
       "year": 2021,
       "venue": "Annals of Statistics",
       "kind": "journal",
-      "citations": 66,
+      "citations": 68,
       "doi": "https://doi.org/10.1214/21-aos2058",
       "url": "https://doi.org/10.1214/21-aos2058",
       "relevance": 28,
@@ -1893,7 +1893,7 @@
       "year": 2020,
       "venue": "Annals of Statistics",
       "kind": "journal",
-      "citations": 72,
+      "citations": 71,
       "doi": "https://doi.org/10.1214/19-aos1827",
       "url": "https://doi.org/10.1214/19-aos1827",
       "relevance": 14,
@@ -2299,7 +2299,7 @@
       "year": 2021,
       "venue": "JRSSB",
       "kind": "journal",
-      "citations": 39,
+      "citations": 40,
       "doi": "https://doi.org/10.1111/rssb.12487",
       "url": "https://doi.org/10.1111/rssb.12487",
       "relevance": 8,
@@ -2309,7 +2309,7 @@
       "projects": [
         "missing-data"
       ],
-      "total": 21,
+      "total": 22,
       "priority": "🔴",
       "bibkey": "zhou2021semiparametric",
       "status": "🔴 To read",
@@ -2488,7 +2488,7 @@
       "year": 2020,
       "venue": "JASA",
       "kind": "journal",
-      "citations": 62,
+      "citations": 63,
       "doi": "https://doi.org/10.1080/01621459.2019.1699421",
       "url": "https://doi.org/10.1080/01621459.2019.1699421",
       "relevance": 8,
@@ -2619,7 +2619,7 @@
       "year": 2024,
       "venue": "Statistical Science",
       "kind": "journal",
-      "citations": 33,
+      "citations": 34,
       "doi": "https://doi.org/10.1214/24-sts927",
       "url": "https://doi.org/10.1214/24-sts927",
       "relevance": 19,
@@ -3790,7 +3790,7 @@
       "year": 2021,
       "venue": "Biometrika",
       "kind": "journal",
-      "citations": 29,
+      "citations": 30,
       "doi": "https://doi.org/10.1093/biomet/asab026",
       "url": "https://doi.org/10.1093/biomet/asab026",
       "relevance": 16,
@@ -3800,7 +3800,7 @@
       "projects": [
         "optimal-transport"
       ],
-      "total": 28,
+      "total": 29,
       "priority": "🔴",
       "bibkey": "blanchet2021confidence",
       "status": "🔴 To read",
@@ -3816,7 +3816,7 @@
       "year": 2023,
       "venue": "JRSSB",
       "kind": "journal",
-      "citations": 20,
+      "citations": 21,
       "doi": "https://doi.org/10.1093/jrsssb/qkad051",
       "url": "https://doi.org/10.1093/jrsssb/qkad051",
       "relevance": 17,
@@ -3965,6 +3965,33 @@
       "total": 19,
       "priority": "🟠",
       "bibkey": "arbel2026primer",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/19-sts716": {
+      "title": "Fano’s Inequality for Random Variables",
+      "abstract": "We extend Fano’s inequality, which controls the average probability of events in terms of the average of some $f$-divergences, to work with arbitrary events (not necessarily forming a partition) and even with arbitrary $[0,1]$-valued random variables, possibly in continuously infinite number. We provide two applications of these extensions, in which the consideration of random variables is particularly handy: we offer new and elegant proofs for existing lower bounds, on Bayesian posterior concentration (minimax or distribution-dependent) rates and on the regret in nonstochastic sequential learning.",
+      "authors": [
+        "Sébastien Gerchinovitz",
+        "Pierre Ménard",
+        "Gilles Stoltz"
+      ],
+      "year": 2020,
+      "venue": "Statistical Science",
+      "kind": "journal",
+      "citations": 10,
+      "doi": "https://doi.org/10.1214/19-sts716",
+      "url": "https://doi.org/10.1214/19-sts716",
+      "relevance": 18,
+      "why": [
+        "bayesian posterior"
+      ],
+      "projects": [
+        "posterior-sampling"
+      ],
+      "total": 29,
+      "priority": "🔴",
+      "bibkey": "gerchinovitz2020fano",
       "status": "🔴 To read",
       "notes": ""
     }
