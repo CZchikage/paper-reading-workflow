@@ -109,7 +109,7 @@ Workflow: discovery → 🔴 To read → reading note generated → 🟡 Review 
 ## Top journal papers — citation ≥ 10
 
 | **JMLR** | | | | | | | | | |
-| 🔴 To read | 9 | 68 | [Joint Causal Inference from Multiple Contexts](https://openalex.org/W3039905535) | JMLR | 2020 | synthetic-data | `mooij2020joint` | synthetic data |  |
+| 🔴 To read | 9 | 67 | [Joint Causal Inference from Multiple Contexts](https://openalex.org/W3039905535) | JMLR | 2020 | synthetic-data | `mooij2020joint` | synthetic data |  |
 | 🔴 To read | 9 | 32 | [High-dimensional Linear Discriminant Analysis Classifier for Spiked Covariance Model](https://openalex.org/W3039874824) | JMLR | 2020 | synthetic-data | `sifaou2020high` | synthetic data |  |
 | 🔴 To read | 9 | 20 | [Change Point Estimation in a Dynamic Stochastic Block Model](https://openalex.org/W3038711245) | JMLR | 2020 | synthetic-data | `bhattacharjee2020change` | synthetic data |  |
 | 🔴 To read | 9 | 10 | [Learning Sparse Classifiers: Continuous and Mixed Integer Optimization Perspectives](https://doi.org/10.48550/arxiv.2001.06471) | JMLR | 2020 | synthetic-data | `dedieu2020learning` | synthetic data |  |
@@ -119,7 +119,7 @@ Workflow: discovery → 🔴 To read → reading note generated → 🟡 Review 
 | 🔴 To read | 24 | 34 | [Minimax estimation of smooth densities in Wasserstein distance](https://doi.org/10.1214/21-aos2161) | Annals of Statistics | 2022 | optimal-transport | `nilesweed2022minimax` | wasserstein |  |
 | 🔴 To read | 20 | 48 | [Multivariate ranks and quantiles using optimal transport: Consistency, rates and nonparametric testing](https://doi.org/10.1214/21-aos2136) | Annals of Statistics | 2022 | optimal-transport | `ghosal2022multivariate` | optimal transport |  |
 | 🔴 To read | 20 | 32 | [Plugin estimation of smooth optimal transport maps](https://doi.org/10.1214/24-aos2379) | Annals of Statistics | 2024 | optimal-transport | `manole2024plugin` | optimal transport; wasserstein |  |
-| 🔴 To read | 16 | 58 | [Bridging convex and nonconvex optimization in robust PCA: Noise, outliers and missing data](https://doi.org/10.1214/21-aos2066) | Annals of Statistics | 2021 | missing-data | `chen2021bridging` | missing data |  |
+| 🔴 To read | 16 | 59 | [Bridging convex and nonconvex optimization in robust PCA: Noise, outliers and missing data](https://doi.org/10.1214/21-aos2066) | Annals of Statistics | 2021 | missing-data | `chen2021bridging` | missing data |  |
 | 🔴 To read | 16 | 39 | [Subspace estimation from unbalanced and incomplete data matrices: ℓ2,∞ statistical guarantees](https://doi.org/10.1214/20-aos1986) | Annals of Statistics | 2021 | missing-data | `cai2021subspace` | missing data |  |
 | 🔴 To read | 14 | 71 | [$\alpha $-variational inference with statistical guarantees](https://doi.org/10.1214/19-aos1827) | Annals of Statistics | 2020 | posterior-sampling | `yang2020alpha` | bayesian posterior |  |
 | 🔴 To read | 10 | 67 | [An optimal statistical and computational framework for generalized tensor estimation](https://doi.org/10.1214/21-aos2061) | Annals of Statistics | 2022 | — | `han2022optimal` |  |  |
@@ -135,7 +135,7 @@ Workflow: discovery → 🔴 To read → reading note generated → 🟡 Review 
 | 🔴 To read | 8 | 31 | [Joint latent space models for network data with high-dimensional node variables](https://doi.org/10.1093/biomet/asab063) | Biometrika | 2021 | missing-data | `zhang2021joint` | imputation |  |
 | 🔴 To read | 8 | 18 | [Demystifying a class of multiply robust estimators](https://doi.org/10.1093/biomet/asaa026) | Biometrika | 2020 | missing-data | `li2020demystifying` | missingness |  |
 | **JRSSB** | | | | | | | | | |
-| 🔴 To read | 20 | 41 | [High-Dimensional Principal Component Analysis with Heterogeneous Missingness](https://doi.org/10.1111/rssb.12550) | JRSSB | 2022 | missing-data | `zhu2022high` | missingness |  |
+| 🔴 To read | 20 | 42 | [High-Dimensional Principal Component Analysis with Heterogeneous Missingness](https://doi.org/10.1111/rssb.12550) | JRSSB | 2022 | missing-data | `zhu2022high` | missingness |  |
 | 🔴 To read | 20 | 19 | [High-dimensional Changepoint Estimation with Heterogeneous Missingness](https://doi.org/10.1111/rssb.12540) | JRSSB | 2022 | missing-data | `follain2022high` | missingness |  |
 | 🔴 To read | 17 | 22 | [Autoregressive optimal transport models](https://doi.org/10.1093/jrsssb/qkad051) | JRSSB | 2023 | optimal-transport | `zhu2023autoregressive` | optimal transport; wasserstein |  |
 | 🔴 To read | 16 | 21 | [Inferential Wasserstein Generative Adversarial Networks](https://doi.org/10.1111/rssb.12476) | JRSSB | 2021 | optimal-transport | `chen2021inferential` | wasserstein |  |
@@ -163,6 +163,6 @@ Workflow: discovery → 🔴 To read → reading note generated → 🟡 Review 
 | 🔴 To read | 18 | 10 | [Fano’s Inequality for Random Variables](https://doi.org/10.1214/19-sts716) | Statistical Science | 2020 | posterior-sampling | `gerchinovitz2020fano` | bayesian posterior |  |
 | 🔴 To read | 11 | 14 | [Principal Fairness for Human and Algorithmic Decision-Making](https://doi.org/10.1214/22-sts872) | Statistical Science | 2023 | trustworthy-ml | `imai2023principal` | fairness |  |
 | 🔴 To read | 11 | 10 | [Bayesian Analysis of Rank Data with Covariates and Heterogeneous Rankers](https://doi.org/10.1214/20-sts818) | Statistical Science | 2022 | posterior-sampling | `li2022bayesian` | posterior sample |  |
-| 🔴 To read | 10 | 60 | [Challenges in Markov Chain Monte Carlo for Bayesian Neural Networks](https://doi.org/10.1214/21-sts840) | Statistical Science | 2022 | posterior-sampling | `papamarkou2022challenges` | posterior predictive |  |
+| 🔴 To read | 10 | 62 | [Challenges in Markov Chain Monte Carlo for Bayesian Neural Networks](https://doi.org/10.1214/21-sts840) | Statistical Science | 2022 | posterior-sampling | `papamarkou2022challenges` | posterior predictive |  |
 | 🔴 To read | 9 | 24 | [Data Denoising and Post-Denoising Corrections in Single Cell RNA Sequencing](https://doi.org/10.1214/19-sts7560) | Statistical Science | 2020 | missing-data | `agarwal2020data` | imputation |  |
 | 🔴 To read | 8 | 15 | [A Primer on Bayesian Neural Networks: Review and Debates](https://doi.org/10.1214/24-sts969) | Statistical Science | 2026 | adversarial-ml | `arbel2026primer` | adversarial attack |  |
