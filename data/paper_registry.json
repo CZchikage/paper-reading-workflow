@@ -2510,7 +2510,7 @@
       "year": 2022,
       "venue": "JASA",
       "kind": "journal",
-      "citations": 42,
+      "citations": 44,
       "doi": "https://doi.org/10.1080/01621459.2022.2123814",
       "url": "https://doi.org/10.1080/01621459.2022.2123814",
       "relevance": 8,
@@ -3898,7 +3898,7 @@
       "year": 2021,
       "venue": "JASA",
       "kind": "journal",
-      "citations": 77,
+      "citations": 81,
       "doi": "https://doi.org/10.1080/01621459.2021.1956937",
       "url": "https://doi.org/10.1080/01621459.2021.1956937",
       "relevance": 16,
@@ -3908,7 +3908,7 @@
       "projects": [
         "optimal-transport"
       ],
-      "total": 33,
+      "total": 34,
       "priority": "🔴",
       "bibkey": "chen2021wasserstein",
       "status": "🔴 To read",

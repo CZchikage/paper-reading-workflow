@@ -148,13 +148,13 @@ Workflow: discovery → 🔴 To read → reading note generated → 🟡 Review 
 | 🔴 To read | 8 | 17 | [The Debiased Spatial Whittle Likelihood](https://doi.org/10.1111/rssb.12539) | JRSSB | 2022 | missing-data | `guillaumin2022debiased` | missing data |  |
 | 🔴 To read | 6 | 19 | [Fast and fair simultaneous confidence bands for functional parameters](https://doi.org/10.1093/jrsssb/qkad026) | JRSSB | 2023 | trustworthy-ml | `liebl2023fast` | fairness |  |
 | **JASA** | | | | | | | | | |
-| 🔴 To read | 16 | 77 | [Wasserstein Regression](https://doi.org/10.1080/01621459.2021.1956937) | JASA | 2021 | optimal-transport | `chen2021wasserstein` | wasserstein |  |
+| 🔴 To read | 16 | 81 | [Wasserstein Regression](https://doi.org/10.1080/01621459.2021.1956937) | JASA | 2021 | optimal-transport | `chen2021wasserstein` | wasserstein |  |
 | 🔴 To read | 16 | 64 | [Integrating Multisource Block-Wise Missing Data in Model Selection](https://doi.org/10.1080/01621459.2020.1751176) | JASA | 2020 | missing-data | `xue2020integrating` | missing data; imputation |  |
 | 🔴 To read | 16 | 49 | [Matrix Completion, Counterfactuals, and Factor Analysis of Missing Data](https://doi.org/10.1080/01621459.2021.1967163) | JASA | 2021 | missing-data | `bai2021matrix` | missing data; imputation |  |
 | 🔴 To read | 9 | 52 | [Bias-Adjusted Spectral Clustering in Multi-Layer Stochastic Block Models](https://doi.org/10.1080/01621459.2022.2054817) | JASA | 2022 | synthetic-data | `lei2022bias` | synthetic data |  |
 | 🔴 To read | 8 | 63 | [Global and Simultaneous Hypothesis Testing for High-Dimensional Logistic Regression Models](https://doi.org/10.1080/01621459.2019.1699421) | JASA | 2020 | — | `ma2020global` |  |  |
 | 🔴 To read | 8 | 58 | [A Semiparametric Instrumental Variable Approach to Optimal Treatment Regimes Under Endogeneity](https://doi.org/10.1080/01621459.2020.1783272) | JASA | 2020 | adversarial-ml | `cui2020semiparametric` | robust classification |  |
-| 🔴 To read | 8 | 42 | [To Adjust or not to Adjust? Estimating the Average Treatment Effect in Randomized Experiments with Missing Covariates](https://doi.org/10.1080/01621459.2022.2123814) | JASA | 2022 | missing-data | `zhao2022adjust` | missingness |  |
+| 🔴 To read | 8 | 44 | [To Adjust or not to Adjust? Estimating the Average Treatment Effect in Randomized Experiments with Missing Covariates](https://doi.org/10.1080/01621459.2022.2123814) | JASA | 2022 | missing-data | `zhao2022adjust` | missingness |  |
 | 🔴 To read | 8 | 35 | [Randomization Tests for Weak Null Hypotheses in Randomized Experiments](https://doi.org/10.1080/01621459.2020.1750415) | JASA | 2020 | missing-data | `wu2020randomization` | imputation |  |
 | **Statistical Science** | | | | | | | | | |
 | 🔴 To read | 32 | 54 | [Comparative Study of Differentially Private Data Synthesis Methods](https://doi.org/10.1214/19-sts742) | Statistical Science | 2020 | privacy, synthetic-data | `bowen2020comparative` | differential privacy; synthetic data; data synthesis |  |
