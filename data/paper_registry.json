@@ -1726,7 +1726,7 @@
       "authors": [
         "Monika Bhattacharjee",
         "Moulinath Banerjee",
-        "George Michailidis"
+        "George C. Michailidis"
       ],
       "year": 2020,
       "venue": "JMLR",
@@ -1808,7 +1808,7 @@
       "year": 2021,
       "venue": "Annals of Statistics",
       "kind": "journal",
-      "citations": 68,
+      "citations": 70,
       "doi": "https://doi.org/10.1214/21-aos2058",
       "url": "https://doi.org/10.1214/21-aos2058",
       "relevance": 28,
@@ -1819,7 +1819,7 @@
       "projects": [
         "privacy"
       ],
-      "total": 44,
+      "total": 45,
       "priority": "🔴",
       "bibkey": "cai2021cost",
       "status": "🔴 To read",
@@ -1914,7 +1914,7 @@
       "abstract": "This paper describes a flexible framework for generalized low-rank tensor estimation problems that includes many important instances arising from applications in computational imaging, genomics, and network analysis. The proposed estimator consists of finding a low-rank tensor fit to the data under generalized parametric models. To overcome the difficulty of nonconvexity in these problems, we introduce a unified approach of projected gradient descent that adapts to the underlying low-rank structure. Under mild conditions on the loss function, we establish both an upper bound on statistical error and the linear rate of computational convergence through a general deterministic analysis. Then we further consider a suite of generalized tensor estimation problems, including sub-Gaussian tensor PCA, tensor regression, and Poisson and binomial tensor PCA. We prove that the proposed algorithm achieves the minimax optimal rate of convergence in estimation error. Finally, we demonstrate the superiority of the proposed framework via extensive experiments on both simulated and real data.",
       "authors": [
         "Rungang Han",
-        "Rebecca Willett",
+        "Rebecca M. Willett",
         "Anru R. Zhang"
       ],
       "year": 2022,
@@ -1987,7 +1987,7 @@
       "year": 2021,
       "venue": "Annals of Statistics",
       "kind": "journal",
-      "citations": 80,
+      "citations": 201,
       "doi": "https://doi.org/10.1214/20-aos2004",
       "url": "https://doi.org/10.1214/20-aos2004",
       "relevance": 8,
@@ -2078,7 +2078,7 @@
       "abstract": "Stochastic gradient Markov chain Monte Carlo (MCMC) algorithms have received much attention in Bayesian computing for big data problems, but they are only applicable to a small class of problems for which the parameter space has a fixed dimension and the log-posterior density is differentiable with respect to the parameters. This paper proposes an extended stochastic gradient MCMC algorithm which, by introducing appropriate latent variables, can be applied to more general large-scale Bayesian computing problems, such as those involving dimension jumping and missing data. Numerical studies show that the proposed algorithm is highly scalable and much more efficient than traditional MCMC algorithms. The proposed algorithms have much alleviated the pain of Bayesian methods in big data computing.",
       "authors": [
         "Qifan Song",
-        "Yan Sun",
+        "Yan Li Sun",
         "Mao Ye",
         "Faming Liang"
       ],
@@ -2193,7 +2193,7 @@
       "year": 2022,
       "venue": "JRSSB",
       "kind": "journal",
-      "citations": 19,
+      "citations": 20,
       "doi": "https://doi.org/10.1111/rssb.12540",
       "url": "https://doi.org/10.1111/rssb.12540",
       "relevance": 20,
@@ -2203,7 +2203,7 @@
       "projects": [
         "missing-data"
       ],
-      "total": 31,
+      "total": 32,
       "priority": "🔴",
       "bibkey": "follain2022high",
       "status": "🔴 To read",
@@ -2319,7 +2319,7 @@
       "title": "Efficient Evaluation of Prediction Rules in Semi-Supervised Settings under Stratified Sampling",
       "abstract": "In many contemporary applications, large amounts of unlabeled data are readily available while labeled examples are limited. There has been substantial interest in semi-supervised learning (SSL) which aims to leverage unlabeled data to improve estimation or prediction. However, current SSL literature focuses primarily on settings where labeled data is selected uniformly at random from the population of interest. Stratified sampling, while posing additional analytical challenges, is highly applicable to many real world problems. Moreover, no SSL methods currently exist for estimating the prediction performance of a fitted model when the labeled data is not selected uniformly at random. In this paper, we propose a two-step SSL procedure for evaluating a prediction rule derived from a working binary regression model based on the Brier score and overall misclassification rate under stratified sampling. In step I, we impute the missing labels via weighted regression with nonlinear basis functions to account for stratified sampling and to improve efficiency. In step II, we augment the initial imputations to ensure the consistency of the resulting estimators regardless of the specification of the prediction model or the imputation model. The final estimator is then obtained with the augmented imputations. We provide asymptotic theory and numerical studies illustrating that our proposals outperform their supervised counterparts in terms of efficiency gain. Our methods are motivated by electronic health record (EHR) research and validated with a real data analysis of an EHR-based study of diabetic neuropathy.",
       "authors": [
-        "Jessica Gronsbell",
+        "Jessica L. Gronsbell",
         "Molei Liu",
         "Lü Tian",
         "Tianxi Cai"
@@ -2434,7 +2434,7 @@
       "year": 2021,
       "venue": "JASA",
       "kind": "journal",
-      "citations": 49,
+      "citations": 122,
       "doi": "https://doi.org/10.1080/01621459.2021.1967163",
       "url": "https://doi.org/10.1080/01621459.2021.1967163",
       "relevance": 16,
@@ -2445,7 +2445,7 @@
       "projects": [
         "missing-data"
       ],
-      "total": 30,
+      "total": 34,
       "priority": "🔴",
       "bibkey": "bai2021matrix",
       "status": "🔴 To read",
@@ -2586,12 +2586,12 @@
       "abstract": "Multiple imputation (MI) is a method for repairing and analyzing data with missing values. MI replaces missing values with a sample of random values drawn from an imputation model. The most popular form of MI, which we call posterior draw multiple imputation (PDMI), draws the parameters of the imputation model from a Bayesian posterior distribution. An alternative, which we call maximum likelihood multiple imputation (MLMI), estimates the parameters of the imputation model using maximum likelihood (or equivalent). Compared to PDMI, MLMI is faster and yields slightly more efficient point estimates. A past barrier to using MLMI was the difficulty of estimating the standard errors of MLMI point estimates. We derive, implement and evaluate three consistent standard error formulas: (1) one combines variances within and between the imputed datasets, (2) one uses the score function and (3) one uses the bootstrap with two imputations of each bootstrapped sample. Formula (1) modifies for MLMI a formula that has long been used under PDMI, while formulas (2) and (3) can be used without modification under either PDMI or MLMI. We have implemented MLMI and the standard error estimators in the mlmi and bootImpute packages for R.",
       "authors": [
         "Paul T. von Hippel",
-        "Jonathan W. Bartlett"
+        "Jonathan William Bartlett"
       ],
       "year": 2021,
       "venue": "Statistical Science",
       "kind": "journal",
-      "citations": 16,
+      "citations": 17,
       "doi": "https://doi.org/10.1214/20-sts793",
       "url": "https://doi.org/10.1214/20-sts793",
       "relevance": 27,
@@ -2619,7 +2619,7 @@
       "year": 2024,
       "venue": "Statistical Science",
       "kind": "journal",
-      "citations": 35,
+      "citations": 37,
       "doi": "https://doi.org/10.1214/24-sts927",
       "url": "https://doi.org/10.1214/24-sts927",
       "relevance": 19,
@@ -2672,7 +2672,7 @@
       "year": 2022,
       "venue": "Statistical Science",
       "kind": "journal",
-      "citations": 10,
+      "citations": 12,
       "doi": "https://doi.org/10.1214/20-sts818",
       "url": "https://doi.org/10.1214/20-sts818",
       "relevance": 11,
@@ -2693,7 +2693,7 @@
       "abstract": "Markov chain Monte Carlo (MCMC) methods have not been broadly adopted in Bayesian neural networks (BNNs). This paper initially reviews the main challenges in sampling from the parameter posterior of a neural network via MCMC. Such challenges culminate to lack of convergence to the parameter posterior. Nevertheless, this paper shows that a nonconverged Markov chain, generated via MCMC sampling from the parameter space of a neural network, can yield via Bayesian marginalization a valuable posterior predictive distribution of the output of the neural network. Classification examples based on multilayer perceptrons showcase highly accurate posterior predictive distributions. The postulate of limited scope for MCMC developments in BNNs is partially valid; an asymptotically exact parameter posterior seems less plausible, yet an accurate posterior predictive distribution is a tenable research avenue.",
       "authors": [
         "Theodore Papamarkou",
-        "Jacob Hinkle",
+        "Jacob D Hinkle",
         "M. Todd Young",
         "David E. Womble"
       ],
@@ -2727,7 +2727,7 @@
       "year": 2020,
       "venue": "Statistical Science",
       "kind": "journal",
-      "citations": 24,
+      "citations": 25,
       "doi": "https://doi.org/10.1214/19-sts7560",
       "url": "https://doi.org/10.1214/19-sts7560",
       "relevance": 9,
@@ -3734,7 +3734,7 @@
       "year": 2022,
       "venue": "Annals of Statistics",
       "kind": "journal",
-      "citations": 48,
+      "citations": 49,
       "doi": "https://doi.org/10.1214/21-aos2136",
       "url": "https://doi.org/10.1214/21-aos2136",
       "relevance": 20,
@@ -3952,7 +3952,7 @@
       "year": 2026,
       "venue": "Statistical Science",
       "kind": "journal",
-      "citations": 15,
+      "citations": 17,
       "doi": "https://doi.org/10.1214/24-sts969",
       "url": "https://doi.org/10.1214/24-sts969",
       "relevance": 8,
@@ -3992,6 +3992,220 @@
       "total": 29,
       "priority": "🔴",
       "bibkey": "gerchinovitz2020fano",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.48550/arxiv.2006.05973": {
+      "title": "Optimal Bounds between $f$-Divergences and Integral Probability Metrics",
+      "abstract": "The families of $f$-divergences (e.g. the Kullback-Leibler divergence) and Integral Probability Metrics (e.g. total variation distance or maximum mean discrepancies) are widely used to quantify the similarity between probability distributions. In this work, we systematically study the relationship between these two families from the perspective of convex duality. Starting from a tight variational representation of the $f$-divergence, we derive a generalization of the moment-generating function, which we show exactly characterizes the best lower bound of the $f$-divergence as a function of a given IPM. Using this characterization, we obtain new bounds while also recovering in a unified manner well-known results, such as Hoeffding's lemma, Pinsker's inequality and its extension to subgaussian functions, and the Hammersley-Chapman-Robbins bound. This characterization also allows us to prove new results on topological properties of the divergence which may be of independent interest.",
+      "authors": [
+        "Rohit Agrawal",
+        "Thibaut Horel"
+      ],
+      "year": 2020,
+      "venue": "JMLR",
+      "kind": "journal",
+      "citations": 13,
+      "doi": "https://doi.org/10.48550/arxiv.2006.05973",
+      "url": "https://doi.org/10.48550/arxiv.2006.05973",
+      "relevance": 8,
+      "why": [],
+      "projects": [],
+      "total": 19,
+      "priority": "🟠",
+      "bibkey": "agrawal2020optimal",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/20-aos1997": {
+      "title": "Minimax estimation of smooth optimal transport maps",
+      "abstract": "Brenier’s theorem is a cornerstone of optimal transport that guarantees the existence of an optimal transport map T between two probability distributions P and Q over Rd under certain regularity conditions. The main goal of this work is to establish the minimax estimation rates for such a transport map from data sampled from P and Q under additional smoothness assumptions on T. To achieve this goal, we develop an estimator based on the minimization of an empirical version of the semidual optimal transport problem, restricted to truncated wavelet expansions. This estimator is shown to achieve near minimax optimality using new stability arguments for the semidual and a complementary minimax lower bound. Furthermore, we provide numerical experiments on synthetic data supporting our theoretical findings and highlighting the practical benefits of smoothness regularization. These are the first minimax estimation rates for transport maps in general dimension.",
+      "authors": [
+        "Jan-Christian Hütter",
+        "Philippe Rigollet"
+      ],
+      "year": 2021,
+      "venue": "Annals of Statistics",
+      "kind": "journal",
+      "citations": 52,
+      "doi": "https://doi.org/10.1214/20-aos1997",
+      "url": "https://doi.org/10.1214/20-aos1997",
+      "relevance": 33,
+      "why": [
+        "synthetic data",
+        "optimal transport",
+        "transport map"
+      ],
+      "projects": [
+        "optimal-transport",
+        "synthetic-data"
+      ],
+      "total": 48,
+      "priority": "🔴",
+      "bibkey": "htter2021minimax",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/19-aos1873": {
+      "title": "Optimal estimation of Gaussian mixtures via denoised method of moments",
+      "abstract": "The method of moments (Philos. Trans. R. Soc. Lond. Ser. A 185 (1894) 71–110) is one of the most widely used methods in statistics for parameter estimation, by means of solving the system of equations that match the population and estimated moments. However, in practice and especially for the important case of mixture models, one frequently needs to contend with the difficulties of non-existence or nonuniqueness of statistically meaningful solutions, as well as the high computational cost of solving large polynomial systems. Moreover, theoretical analyses of the method of moments are mainly confined to asymptotic normality style of results established under strong assumptions. This paper considers estimating a $k$-component Gaussian location mixture with a common (possibly unknown) variance parameter. To overcome the aforementioned theoretic and algorithmic hurdles, a crucial step is to denoise the moment estimates by projecting to the truncated moment space (via semidefinite programming) before solving the method of moments equations. Not only does this regularization ensure existence and uniqueness of solutions, it also yields fast solvers by means of Gauss quadrature. Furthermore, by proving new moment comparison theorems in the Wasserstein distance via polynomial interpolation and majorization techniques, we establish the statistical guarantees and adaptive optimality of the proposed procedure, as well as oracle inequality in misspecified models. These results can also be viewed as provable algorithms for generalized method of moments (Econometrica 50 (1982) 1029–1054) which involves nonconvex optimization and lacks theoretical guarantees.",
+      "authors": [
+        "Yihong Wu",
+        "Pengkun Yang"
+      ],
+      "year": 2020,
+      "venue": "Annals of Statistics",
+      "kind": "journal",
+      "citations": 49,
+      "doi": "https://doi.org/10.1214/19-aos1873",
+      "url": "https://doi.org/10.1214/19-aos1873",
+      "relevance": 8,
+      "why": [
+        "wasserstein"
+      ],
+      "projects": [
+        "optimal-transport"
+      ],
+      "total": 22,
+      "priority": "🔴",
+      "bibkey": "wu2020optimal",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1214/20-aos1945": {
+      "title": "Analysis of a two-layer neural network via displacement convexity",
+      "abstract": "Fitting a function by using linear combinations of a large number $N$ of “simple” components is one of the most fruitful ideas in statistical learning. This idea lies at the core of a variety of methods, from two-layer neural networks to kernel regression, to boosting. In general, the resulting risk minimization problem is nonconvex and is solved by gradient descent or its variants. Unfortunately, little is known about global convergence properties of these approaches. Here, we consider the problem of learning a concave function $f$ on a compact convex domain $\\Omega \\subset {\\mathbb{R}}^{d}$, using linear combinations of “bump-like” components (neurons). The parameters to be fitted are the centers of $N$ bumps, and the resulting empirical risk minimization problem is highly nonconvex. We prove that, in the limit in which the number of neurons diverges, the evolution of gradient descent converges to a Wasserstein gradient flow in the space of probability distributions over $\\Omega $. Further, when the bump width $\\delta $ tends to $0$, this gradient flow has a limit which is a viscous porous medium equation. Remarkably, the cost function optimized by this gradient flow exhibits a special property known as displacement convexity, which implies exponential convergence rates for $N\\to \\infty $, $\\delta \\to 0$. Surprisingly, this asymptotic theory appears to capture well the behavior for moderate values of $\\delta $, $N$. Explaining this phenomenon, and understanding the dependence on $\\delta $, $N$ in a quantitative manner remains an outstanding challenge.",
+      "authors": [
+        "Adel Javanmard",
+        "Marco Mondelli",
+        "Andrea Montanari"
+      ],
+      "year": 2020,
+      "venue": "Annals of Statistics",
+      "kind": "journal",
+      "citations": 44,
+      "doi": "https://doi.org/10.1214/20-aos1945",
+      "url": "https://doi.org/10.1214/20-aos1945",
+      "relevance": 8,
+      "why": [
+        "wasserstein"
+      ],
+      "projects": [
+        "optimal-transport"
+      ],
+      "total": 22,
+      "priority": "🔴",
+      "bibkey": "javanmard2020analysis",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1111/rssb.12454": {
+      "title": "Gaussian Differential Privacy",
+      "abstract": "Abstract In the past decade, differential privacy has seen remarkable success as a rigorous and practical formalization of data privacy. This privacy definition and its divergence based relaxations, however, have several acknowledged weaknesses, either in handling composition of private algorithms or in analysing important primitives like privacy amplification by subsampling. Inspired by the hypothesis testing formulation of privacy, this paper proposes a new relaxation of differential privacy, which we term ‘f-differential privacy’ (f-DP). This notion of privacy has a number of appealing properties and, in particular, avoids difficulties associated with divergence based relaxations. First, f-DP faithfully preserves the hypothesis testing interpretation of differential privacy, thereby making the privacy guarantees easily interpretable. In addition, f-DP allows for lossless reasoning about composition in an algebraic fashion. Moreover, we provide a powerful technique to import existing results proven for the original differential privacy definition to f-DP and, as an application of this technique, obtain a simple and easy-to-interpret theorem of privacy amplification by subsampling for f-DP. In addition to the above findings, we introduce a canonical single-parameter family of privacy notions within the f-DP class that is referred to as ‘Gaussian differential privacy’ (GDP), defined based on hypothesis testing of two shifted Gaussian distributions. GDP is the focal privacy definition among the family of f-DP guarantees due to a central limit theorem for differential privacy that we prove. More precisely, the privacy guarantees of any hypothesis testing based definition of privacy (including the original differential privacy definition) converges to GDP in the limit under composition. We also prove a Berry–Esseen style version of the central limit theorem, which gives a computationally inexpensive tool for tractably analysing the exact composition of private algorithms. Taken together, this collection of attractive properties render f-DP a mathematically coherent, analytically tractable and versatile framework for private data analysis. Finally, we demonstrate the use of the tools we develop by giving an improved analysis of the privacy guarantees of noisy stochastic gradient descent.",
+      "authors": [
+        "Jinshuo Dong",
+        "Aaron Roth",
+        "Weijie Su"
+      ],
+      "year": 2022,
+      "venue": "JRSSB",
+      "kind": "journal",
+      "citations": 288,
+      "doi": "https://doi.org/10.1111/rssb.12454",
+      "url": "https://doi.org/10.1111/rssb.12454",
+      "relevance": 20,
+      "why": [
+        "differential privacy",
+        "privacy amplification"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 38,
+      "priority": "🔴",
+      "bibkey": "dong2022gaussian",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1111/rssb.12414": {
+      "title": "Prior Sample Size Extensions for Assessing Prior Impact and Prior-Likelihood Discordance",
+      "abstract": "Abstract This paper outlines a framework for quantifying the prior’s contribution to posterior inference in the presence of prior-likelihood discordance, a broader concept than the usual notion of prior-likelihood conflict. We achieve this dual purpose by extending the classic notion of prior sample size, M, in three directions: (I) estimating M beyond conjugate families; (II) formulating M as a relative notion that is as a function of the likelihood sample size k, M(k), which also leads naturally to a graphical diagnosis; and (III) permitting negative M, as a measure of prior-likelihood conflict, that is, harmful discordance. Our asymptotic regime permits the prior sample size to grow with the likelihood data size, hence making asymptotic arguments meaningful for investigating the impact of the prior relative to that of likelihood. It leads to a simple asymptotic formula for quantifying the impact of a proper prior that only involves computing a centrality and a spread measure of the prior and the posterior. We use simulated and real data to illustrate the potential of the proposed framework, including quantifying how weak is a ‘weakly informative’ prior adopted in a study of lupus nephritis. Whereas we take a pragmatic perspective in assessing the impact of a prior on a given inference problem under a specific evaluative metric, we also touch upon conceptual and theoretical issues such as using improper priors and permitting priors with asymptotically non-vanishing influence.",
+      "authors": [
+        "Matthew L. Reimherr",
+        "Xiao‐Li Meng",
+        "Dan L. Nicolae"
+      ],
+      "year": 2021,
+      "venue": "JRSSB",
+      "kind": "journal",
+      "citations": 19,
+      "doi": "https://doi.org/10.1111/rssb.12414",
+      "url": "https://doi.org/10.1111/rssb.12414",
+      "relevance": 10,
+      "why": [
+        "posterior inference"
+      ],
+      "projects": [
+        "posterior-sampling"
+      ],
+      "total": 21,
+      "priority": "🔴",
+      "bibkey": "reimherr2021prior",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1080/01621459.2021.1874961": {
+      "title": "Graphical Models for Processing Missing Data",
+      "abstract": "This article reviews recent advances in missing data research using graphical models to represent multivariate dependencies. We first examine the limitations of traditional frameworks from three different perspectives: transparency, estimability, and testability. We then show how procedures based on graphical models can overcome these limitations and provide meaningful performance guarantees even when data are missing not at random (MNAR). In particular, we identify conditions that guarantee consistent estimation in broad categories of missing data problems, and derive procedures for implementing this estimation. Finally, we derive testable implications for missing data models in both missing at random and MNAR categories.",
+      "authors": [
+        "Karthika Mohan",
+        "Judea Pearl"
+      ],
+      "year": 2021,
+      "venue": "JASA",
+      "kind": "journal",
+      "citations": 167,
+      "doi": "https://doi.org/10.1080/01621459.2021.1874961",
+      "url": "https://doi.org/10.1080/01621459.2021.1874961",
+      "relevance": 16,
+      "why": [
+        "missing data",
+        "missing not at random"
+      ],
+      "projects": [
+        "missing-data"
+      ],
+      "total": 34,
+      "priority": "🔴",
+      "bibkey": "mohan2021graphical",
+      "status": "🔴 To read",
+      "notes": ""
+    },
+    "doi:10.1080/01621459.2021.1928513": {
+      "title": "On Robustness of Principal Component Regression",
+      "abstract": "Principal component regression (PCR) is a simple, but powerful and ubiquitously utilized method. Its effectiveness is well established when the covariates exhibit low-rank structure. However, its ability to handle settings with noisy, missing, and mixed-valued, that is, discrete and continuous, covariates is not understood and remains an important open challenge. As the main contribution of this work, we establish the robustness of PCR, without any change, in this respect and provide meaningful finite-sample analysis. To do so, we establish that PCR is equivalent to performing linear regression after preprocessing the covariate matrix via hard singular value thresholding (HSVT). As a result, in the context of counterfactual analysis using observational data, we show PCR is equivalent to the recently proposed robust variant of the synthetic control method, known as robust synthetic control (RSC). As an immediate consequence, we obtain finite-sample analysis of the RSC estimator that was previously absent. As an important contribution to the synthetic controls literature, we establish that an (approximate) linear synthetic control exists in the setting of a generalized factor model, or latent variable model; traditionally in the literature, the existence of a synthetic control needs to be assumed to exist as an axiom. We further discuss a surprising implication of the robustness property of PCR with respect to noise, that is, PCR can learn a good predictive model even if the covariates are tactfully transformed to preserve differential privacy. Finally, this work advances the state-of-the-art analysis for HSVT by establishing stronger guarantees with respect to the l2,∞-norm rather than the Frobenius norm as is commonly done in the matrix estimation literature, which may be of interest in its own right.",
+      "authors": [
+        "Anish Agarwal",
+        "Devavrat Shah",
+        "Dennis Shen",
+        "Dogyoon Song"
+      ],
+      "year": 2021,
+      "venue": "JASA",
+      "kind": "journal",
+      "citations": 46,
+      "doi": "https://doi.org/10.1080/01621459.2021.1928513",
+      "url": "https://doi.org/10.1080/01621459.2021.1928513",
+      "relevance": 10,
+      "why": [
+        "differential privacy"
+      ],
+      "projects": [
+        "privacy"
+      ],
+      "total": 24,
+      "priority": "🔴",
+      "bibkey": "agarwal2021robustness",
       "status": "🔴 To read",
       "notes": ""
     }
