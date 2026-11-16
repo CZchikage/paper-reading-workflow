@@ -193,7 +193,10 @@ Workflow: discovery → 🔴 To read → reading note generated → 🟡 Review 
 
 ## Fetch notes
 
-- NeurIPS 2025: URLError: <urlopen error timed out>
-- NeurIPS 2024: URLError: <urlopen error timed out>
-- ICLR 2026: URLError: <urlopen error timed out>
-- ICLR 2025: URLError: <urlopen error timed out>
+- JMLR: HTTPError: HTTP Error 429: Too Many Requests
+- TMLR: HTTPError: HTTP Error 429: Too Many Requests
+- Annals of Statistics: HTTPError: HTTP Error 429: Too Many Requests
+- Biometrika: HTTPError: HTTP Error 429: Too Many Requests
+- JRSSB: HTTPError: HTTP Error 429: Too Many Requests
+- JASA: HTTPError: HTTP Error 429: Too Many Requests
+- Statistical Science: HTTPError: HTTP Error 429: Too Many Requests
