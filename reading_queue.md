@@ -109,31 +109,43 @@ Workflow: discovery → 🔴 To read → reading note generated → 🟡 Review 
 ## Top journal papers — citation ≥ 10
 
 | **JMLR** | | | | | | | | | |
-| 🔴 To read | 17 | 18 | [Wasserstein barycenters can be computed in polynomial time in fixed dimension](https://doi.org/10.48550/arxiv.2006.08012) | JMLR | 2020 | optimal-transport | `altschuler2020wasserstein` | wasserstein |  |
-| 🔴 To read | 10 | 23 | [Is SGD a Bayesian sampler? Well, almost](https://doi.org/10.48550/arxiv.2006.15191) | JMLR | 2020 | posterior-sampling | `mingard2020is` | bayesian posterior |  |
+| 🔴 To read | 17 | 71 | [Wasserstein barycenters can be computed in polynomial time in fixed dimension](https://doi.org/10.48550/arxiv.2006.08012) | JMLR | 2020 | optimal-transport | `altschuler2020wasserstein` | wasserstein |  |
+| 🔴 To read | 14 | 64 | [Locally Private k -Means Clustering](https://doi.org/10.1137/1.9781611975994.33) | JMLR | 2020 | privacy | `stemmer2020locally` | differential privacy |  |
+| 🔴 To read | 10 | 82 | [Is SGD a Bayesian sampler? Well, almost](https://doi.org/10.48550/arxiv.2006.15191) | JMLR | 2020 | posterior-sampling | `mingard2020is` | bayesian posterior |  |
 | 🔴 To read | 9 | 67 | [Joint Causal Inference from Multiple Contexts](https://openalex.org/W3039905535) | JMLR | 2020 | synthetic-data | `mooij2020joint` | synthetic data |  |
-| 🔴 To read | 9 | 31 | [High-dimensional Linear Discriminant Analysis Classifier for Spiked Covariance Model](https://openalex.org/W3039874824) | JMLR | 2020 | synthetic-data | `sifaou2020high` | synthetic data |  |
-| 🔴 To read | 9 | 23 | [Learning Sparse Classifiers: Continuous and Mixed Integer Optimization Perspectives](https://doi.org/10.48550/arxiv.2001.06471) | JMLR | 2020 | synthetic-data | `dedieu2020learning` | synthetic data |  |
+| 🔴 To read | 9 | 65 | [Learning Sparse Classifiers: Continuous and Mixed Integer Optimization Perspectives](https://doi.org/10.48550/arxiv.2001.06471) | JMLR | 2020 | synthetic-data | `dedieu2020learning` | synthetic data |  |
+| 🔴 To read | 9 | 48 | [High-dimensional Linear Discriminant Analysis Classifier for Spiked Covariance Model](https://openalex.org/W3039874824) | JMLR | 2020 | synthetic-data | `sifaou2020high` | synthetic data |  |
+| 🔴 To read | 9 | 29 | [Learning Strategies in Decentralized Matching Markets under Uncertain Preferences](https://doi.org/10.48550/arxiv.2011.00159) | JMLR | 2020 | trustworthy-ml | `dai2020learning` | fairness |  |
 | 🔴 To read | 9 | 20 | [Change Point Estimation in a Dynamic Stochastic Block Model](https://openalex.org/W3038711245) | JMLR | 2020 | synthetic-data | `bhattacharjee2020change` | synthetic data |  |
-| 🔴 To read | 9 | 11 | [Learning Strategies in Decentralized Matching Markets under Uncertain Preferences](https://doi.org/10.48550/arxiv.2011.00159) | JMLR | 2020 | trustworthy-ml | `dai2020learning` | fairness |  |
-| 🔴 To read | 8 | 37 | [Random Smoothing Might be Unable to Certify $\ell_\infty$ Robustness for High-Dimensional Images](https://doi.org/10.48550/arxiv.2002.03517) | JMLR | 2020 | adversarial-ml | `blum2020random` | adversarial robustness |  |
-| 🔴 To read | 8 | 15 | [Optimal Bounds between $f$-Divergences and Integral Probability Metrics](https://doi.org/10.48550/arxiv.2006.05973) | JMLR | 2020 | — | `agrawal2020optimal` |  |  |
+| 🔴 To read | 8 | 75 | [Random Smoothing Might be Unable to Certify $\ell_\infty$ Robustness for High-Dimensional Images](https://doi.org/10.48550/arxiv.2002.03517) | JMLR | 2020 | adversarial-ml | `blum2020random` | adversarial robustness |  |
+| 🔴 To read | 8 | 54 | [Optimal Bounds between $f$-Divergences and Integral Probability Metrics](https://doi.org/10.48550/arxiv.2006.05973) | JMLR | 2020 | — | `agrawal2020optimal` |  |  |
 | 🔴 To read | 6 | 15 | [One-Shot Federated Learning: Theoretical Limits and Algorithms to Achieve Them](https://openalex.org/W3207236107) | JMLR | 2021 | — | `salehkaleybar2021one` |  |  |
+| **TMLR** | | | | | | | | | |
+| 🔴 To read | 18 | 1122 | [LLaVA-Video: Video Instruction Tuning With Synthetic Data](https://doi.org/10.48550/arxiv.2410.02713) | TMLR | 2025 | synthetic-data | `zhang2025llava` | synthetic data; synthetic dataset |  |
+| 🔴 To read | 18 | 474 | [Synthetic Data from Diffusion Models Improves ImageNet Classification](https://doi.org/10.48550/arxiv.2304.08466) | TMLR | 2023 | synthetic-data | `azizi2023synthetic` | synthetic data |  |
+| 🔴 To read | 17 | 775 | [Improving and generalizing flow-based generative models with minibatch optimal transport](https://doi.org/10.48550/arxiv.2302.00482) | TMLR | 2024 | optimal-transport | `tong2024improving` | optimal transport |  |
+| 🔴 To read | 16 | 362 | [Diffusion-based Time Series Imputation and Forecasting with Structured State Space Models](https://doi.org/10.48550/arxiv.2208.09399) | TMLR | 2023 | missing-data | `alcaraz2023diffusion` | missingness; imputation |  |
+| 🔴 To read | 16 | 274 | [On the Adversarial Robustness of Vision Transformers](https://doi.org/10.48550/arxiv.2103.15670) | TMLR | 2022 | adversarial-ml | `shao2022adversarial` | adversarial robustness; certified robustness |  |
+| 🔴 To read | 10 | 428 | [Large Language Models(LLMs) on Tabular Data: Prediction, Generation, and Understanding -- A Survey](https://doi.org/10.48550/arxiv.2402.17944) | TMLR | 2024 | synthetic-data | `fang2024large` | data synthesis |  |
+| 🔴 To read | 9 | 1964 | [Chronos: Learning the Language of Time Series](https://doi.org/10.48550/arxiv.2403.07815) | TMLR | 2024 | synthetic-data | `ansari2024chronos` | synthetic data; synthetic dataset |  |
+| 🔴 To read | 9 | 211 | [SQL-PaLM: Improved Large Language Model Adaptation for Text-to-SQL (extended)](https://doi.org/10.48550/arxiv.2306.00739) | TMLR | 2024 | synthetic-data | `sun2024sql` | synthetic data |  |
+| 🔴 To read | 9 | 183 | [Better Theory for SGD in the Nonconvex World](https://doi.org/10.48550/arxiv.2002.03329) | TMLR | 2023 | synthetic-data | `khaled2023better` | synthetic data |  |
+| 🔴 To read | 5 | 1972 | [StarCoder: may the source be with you!](https://doi.org/10.48550/arxiv.2305.06161) | TMLR | 2023 | trustworthy-ml | `raymond2023starcoder` | responsible ai |  |
 | **Annals of Statistics** | | | | | | | | | |
-| 🔴 To read | 33 | 89 | [Minimax estimation of smooth optimal transport maps](https://doi.org/10.1214/20-aos1997) | Annals of Statistics | 2021 | optimal-transport, synthetic-data | `htter2021minimax` | synthetic data; optimal transport; transport map |  |
-| 🔴 To read | 28 | 163 | [The cost of privacy: Optimal rates of convergence for parameter estimation with differential privacy](https://doi.org/10.1214/21-aos2058) | Annals of Statistics | 2021 | privacy | `cai2021cost` | differential privacy; privacy-preserving |  |
-| 🔴 To read | 24 | 34 | [Minimax estimation of smooth densities in Wasserstein distance](https://doi.org/10.1214/21-aos2161) | Annals of Statistics | 2022 | optimal-transport | `nilesweed2022minimax` | wasserstein |  |
-| 🔴 To read | 20 | 112 | [Plugin estimation of smooth optimal transport maps](https://doi.org/10.1214/24-aos2379) | Annals of Statistics | 2024 | optimal-transport | `manole2024plugin` | optimal transport; wasserstein |  |
-| 🔴 To read | 20 | 99 | [Multivariate ranks and quantiles using optimal transport: Consistency, rates and nonparametric testing](https://doi.org/10.1214/21-aos2136) | Annals of Statistics | 2022 | optimal-transport | `ghosal2022multivariate` | optimal transport |  |
+| 🔴 To read | 33 | 205 | [Minimax estimation of smooth optimal transport maps](https://doi.org/10.1214/20-aos1997) | Annals of Statistics | 2021 | optimal-transport, synthetic-data | `htter2021minimax` | synthetic data; optimal transport; transport map |  |
+| 🔴 To read | 28 | 285 | [The cost of privacy: Optimal rates of convergence for parameter estimation with differential privacy](https://doi.org/10.1214/21-aos2058) | Annals of Statistics | 2021 | privacy | `cai2021cost` | differential privacy; privacy-preserving |  |
+| 🔴 To read | 24 | 100 | [Minimax estimation of smooth densities in Wasserstein distance](https://doi.org/10.1214/21-aos2161) | Annals of Statistics | 2022 | optimal-transport | `weed2022minimax` | wasserstein |  |
+| 🔴 To read | 20 | 183 | [Plugin estimation of smooth optimal transport maps](https://doi.org/10.1214/24-aos2379) | Annals of Statistics | 2024 | optimal-transport | `manole2024plugin` | optimal transport; wasserstein |  |
+| 🔴 To read | 20 | 155 | [Multivariate ranks and quantiles using optimal transport: Consistency, rates and nonparametric testing](https://doi.org/10.1214/21-aos2136) | Annals of Statistics | 2022 | optimal-transport | `ghosal2022multivariate` | optimal transport |  |
 | 🔴 To read | 19 | 61 | [On the sample complexity of entropic optimal transport](https://doi.org/10.1214/24-aos2455) | Annals of Statistics | 2025 | optimal-transport | `rigollet2025sample` | optimal transport; transport map |  |
-| 🔴 To read | 16 | 65 | [Bridging convex and nonconvex optimization in robust PCA: Noise, outliers and missing data](https://doi.org/10.1214/21-aos2066) | Annals of Statistics | 2021 | missing-data | `chen2021bridging` | missing data |  |
+| 🔴 To read | 16 | 92 | [Bridging convex and nonconvex optimization in robust PCA: Noise, outliers and missing data](https://doi.org/10.1214/21-aos2066) | Annals of Statistics | 2021 | missing-data | `chen2021bridging` | missing data |  |
 | 🔴 To read | 16 | 39 | [Subspace estimation from unbalanced and incomplete data matrices: ℓ2,∞ statistical guarantees](https://doi.org/10.1214/20-aos1986) | Annals of Statistics | 2021 | missing-data | `cai2021subspace` | missing data |  |
-| 🔴 To read | 14 | 98 | [$\alpha $-variational inference with statistical guarantees](https://doi.org/10.1214/19-aos1827) | Annals of Statistics | 2020 | posterior-sampling | `yang2020alpha` | bayesian posterior |  |
-| 🔴 To read | 12 | 97 | [The distribution of the Lasso: Uniform control over sparse balls and adaptive parameter tuning](https://doi.org/10.1214/20-aos2038) | Annals of Statistics | 2021 | optimal-transport | `miolane2021distribution` | wasserstein |  |
-| 🔴 To read | 10 | 76 | [An optimal statistical and computational framework for generalized tensor estimation](https://doi.org/10.1214/21-aos2061) | Annals of Statistics | 2022 | — | `han2022optimal` |  |  |
+| 🔴 To read | 14 | 159 | [$\alpha $-variational inference with statistical guarantees](https://doi.org/10.1214/19-aos1827) | Annals of Statistics | 2020 | posterior-sampling | `yang2020alpha` | bayesian posterior |  |
+| 🔴 To read | 12 | 145 | [The distribution of the Lasso: Uniform control over sparse balls and adaptive parameter tuning](https://doi.org/10.1214/20-aos2038) | Annals of Statistics | 2021 | optimal-transport | `miolane2021distribution` | wasserstein |  |
+| 🔴 To read | 10 | 148 | [An optimal statistical and computational framework for generalized tensor estimation](https://doi.org/10.1214/21-aos2061) | Annals of Statistics | 2022 | — | `han2022optimal` |  |  |
 | 🔴 To read | 10 | 35 | [Adaptive test of independence based on HSIC measures](https://doi.org/10.1214/21-aos2129) | Annals of Statistics | 2022 | — | `albert2022adaptive` |  |  |
 | 🔴 To read | 10 | 33 | [Exact minimax risk for linear least squares, and the lower tail of sample covariance matrices](https://doi.org/10.1214/22-aos2181) | Annals of Statistics | 2022 | — | `mourtada2022exact` |  |  |
-| 🔴 To read | 8 | 331 | [Learning models with uniform performance via distributionally robust optimization](https://doi.org/10.1214/20-aos2004) | Annals of Statistics | 2021 | — | `duchi2021learning` |  |  |
+| 🔴 To read | 8 | 599 | [Learning models with uniform performance via distributionally robust optimization](https://doi.org/10.1214/20-aos2004) | Annals of Statistics | 2021 | — | `duchi2021learning` |  |  |
 | 🔴 To read | 8 | 61 | [Optimal rates of entropy estimation over Lipschitz balls](https://doi.org/10.1214/19-aos1927) | Annals of Statistics | 2020 | — | `han2020optimal` |  |  |
 | 🔴 To read | 8 | 55 | [Classification accuracy as a proxy for two-sample testing](https://doi.org/10.1214/20-aos1962) | Annals of Statistics | 2021 | — | `kim2021classification` |  |  |
 | 🔴 To read | 8 | 53 | [Optimal estimation of Gaussian mixtures via denoised method of moments](https://doi.org/10.1214/19-aos1873) | Annals of Statistics | 2020 | optimal-transport | `wu2020optimal` | wasserstein |  |
@@ -141,25 +153,30 @@ Workflow: discovery → 🔴 To read → reading note generated → 🟡 Review 
 | 🔴 To read | 8 | 40 | [Optimal adaptivity of signed-polygon statistics for network testing](https://doi.org/10.1214/21-aos2089) | Annals of Statistics | 2021 | — | `jin2021optimal` |  |  |
 | 🔴 To read | 6 | 61 | [Deep nonparametric regression on approximate manifolds: Nonasymptotic error bounds with polynomial prefactors](https://doi.org/10.1214/23-aos2266) | Annals of Statistics | 2023 | — | `jiao2023deep` |  |  |
 | **Biometrika** | | | | | | | | | |
-| 🔴 To read | 16 | 44 | [Distribution-on-distribution regression via optimal transport maps](https://doi.org/10.1093/biomet/asac005) | Biometrika | 2022 | optimal-transport | `ghodrati2022distribution` | optimal transport; transport map |  |
-| 🔴 To read | 16 | 44 | [Confidence regions in Wasserstein distributionally robust estimation](https://doi.org/10.1093/biomet/asab026) | Biometrika | 2021 | optimal-transport | `blanchet2021confidence` | wasserstein |  |
+| 🔴 To read | 16 | 81 | [Confidence regions in Wasserstein distributionally robust estimation](https://doi.org/10.1093/biomet/asab026) | Biometrika | 2021 | optimal-transport | `blanchet2021confidence` | wasserstein |  |
+| 🔴 To read | 16 | 79 | [Distribution-on-distribution regression via optimal transport maps](https://doi.org/10.1093/biomet/asac005) | Biometrika | 2022 | optimal-transport | `ghodrati2022distribution` | optimal transport; transport map |  |
 | 🔴 To read | 12 | 32 | [Semiparametrically efficient semi-supervised statistical inference](https://doi.org/10.1093/biomet/asag050) | Biometrika | 2026 | missing-data | `xu2026semiparametrically` | missing data |  |
 | 🔴 To read | 12 | 14 | [High-dimensional log-error-in-variable regression with applications to microbial compositional data analysis](https://doi.org/10.1093/biomet/asab020) | Biometrika | 2021 | missing-data | `shi2021high` | imputation |  |
+| 🔴 To read | 10 | 168 | [On the marginal likelihood and cross-validation](https://doi.org/10.1093/biomet/asz077) | Biometrika | 2020 | posterior-sampling | `fong2020marginal` | posterior predictive |  |
+| 🔴 To read | 10 | 125 | [Discontinuous Hamiltonian Monte Carlo for discrete parameters and discontinuous likelihoods](https://doi.org/10.1093/biomet/asz083) | Biometrika | 2020 | posterior-sampling | `nishimura2020discontinuous` | posterior inference |  |
 | 🔴 To read | 9 | 20 | [Extended stochastic gradient Markov chain Monte Carlo for large-scale Bayesian variable selection](https://doi.org/10.1093/biomet/asaa029) | Biometrika | 2020 | missing-data | `song2020extended` | missing data |  |
-| 🔴 To read | 8 | 37 | [Joint latent space models for network data with high-dimensional node variables](https://doi.org/10.1093/biomet/asab063) | Biometrika | 2021 | missing-data | `zhang2021joint` | imputation |  |
+| 🔴 To read | 8 | 61 | [Joint latent space models for network data with high-dimensional node variables](https://doi.org/10.1093/biomet/asab063) | Biometrika | 2021 | missing-data | `zhang2021joint` | imputation |  |
+| 🔴 To read | 8 | 40 | [Risk bounds for quantile trend filtering](https://doi.org/10.1093/biomet/asab045) | Biometrika | 2021 | — | `padilla2021risk` |  |  |
 | 🔴 To read | 8 | 17 | [Demystifying a class of multiply robust estimators](https://doi.org/10.1093/biomet/asaa026) | Biometrika | 2020 | missing-data | `li2020demystifying` | missingness |  |
 | **JRSSB** | | | | | | | | | |
-| 🔴 To read | 20 | 554 | [Gaussian Differential Privacy](https://doi.org/10.1111/rssb.12454) | JRSSB | 2022 | privacy | `dong2022gaussian` | differential privacy; privacy amplification |  |
-| 🔴 To read | 20 | 69 | [High-Dimensional Principal Component Analysis with Heterogeneous Missingness](https://doi.org/10.1111/rssb.12550) | JRSSB | 2022 | missing-data | `zhu2022high` | missingness |  |
+| 🔴 To read | 20 | 876 | [Gaussian Differential Privacy](https://doi.org/10.1111/rssb.12454) | JRSSB | 2022 | privacy | `dong2022gaussian` | differential privacy; privacy amplification |  |
+| 🔴 To read | 20 | 84 | [High-Dimensional Principal Component Analysis with Heterogeneous Missingness](https://doi.org/10.1111/rssb.12550) | JRSSB | 2022 | missing-data | `zhu2022high` | missingness |  |
 | 🔴 To read | 20 | 19 | [High-dimensional Changepoint Estimation with Heterogeneous Missingness](https://doi.org/10.1111/rssb.12540) | JRSSB | 2022 | missing-data | `follain2022high` | missingness |  |
-| 🔴 To read | 17 | 34 | [Autoregressive optimal transport models](https://doi.org/10.1093/jrsssb/qkad051) | JRSSB | 2023 | optimal-transport | `zhu2023autoregressive` | optimal transport; wasserstein |  |
+| 🔴 To read | 17 | 62 | [Autoregressive optimal transport models](https://doi.org/10.1093/jrsssb/qkad051) | JRSSB | 2023 | optimal-transport | `zhu2023autoregressive` | optimal transport; wasserstein |  |
 | 🔴 To read | 16 | 24 | [Inferential Wasserstein Generative Adversarial Networks](https://doi.org/10.1111/rssb.12476) | JRSSB | 2021 | optimal-transport | `chen2021inferential` | wasserstein |  |
-| 🔴 To read | 10 | 34 | [Exchangeable Random Measures for Sparse and Modular Graphs with Overlapping Communities](https://doi.org/10.1111/rssb.12363) | JRSSB | 2020 | posterior-sampling | `todeschini2020exchangeable` | posterior inference |  |
-| 🔴 To read | 10 | 30 | [From denoising diffusions to denoising Markov models](https://doi.org/10.1093/jrsssb/qkae005) | JRSSB | 2024 | synthetic-data | `benton2024denoising` | synthetic data |  |
+| 🔴 To read | 10 | 79 | [From denoising diffusions to denoising Markov models](https://doi.org/10.1093/jrsssb/qkae005) | JRSSB | 2024 | synthetic-data | `benton2024denoising` | synthetic data |  |
+| 🔴 To read | 10 | 63 | [Exchangeable Random Measures for Sparse and Modular Graphs with Overlapping Communities](https://doi.org/10.1111/rssb.12363) | JRSSB | 2020 | posterior-sampling | `todeschini2020exchangeable` | posterior inference |  |
+| 🔴 To read | 10 | 48 | [Holdout predictive checks for Bayesian model criticism](https://doi.org/10.1093/jrsssb/qkad105) | JRSSB | 2023 | posterior-sampling | `moran2023holdout` | posterior predictive; posterior inference |  |
 | 🔴 To read | 10 | 19 | [Prior Sample Size Extensions for Assessing Prior Impact and Prior-Likelihood Discordance](https://doi.org/10.1111/rssb.12414) | JRSSB | 2021 | posterior-sampling | `reimherr2021prior` | posterior inference |  |
-| 🔴 To read | 9 | 79 | [Conformalized survival analysis](https://doi.org/10.1093/jrsssb/qkac004) | JRSSB | 2023 | synthetic-data | `cands2023conformalized` | synthetic data |  |
-| 🔴 To read | 9 | 52 | [Doubly robust calibration of prediction sets under covariate shift](https://doi.org/10.1093/jrsssb/qkae009) | JRSSB | 2024 | missing-data | `yang2024doubly` | missing data |  |
-| 🔴 To read | 9 | 44 | [Long-term causal inference under persistent confounding via data combination](https://doi.org/10.1093/jrsssb/qkae095) | JRSSB | 2024 | synthetic-data | `imbens2024long` | synthetic data |  |
+| 🔴 To read | 9 | 154 | [Conformalized survival analysis](https://doi.org/10.1093/jrsssb/qkac004) | JRSSB | 2023 | synthetic-data | `cands2023conformalized` | synthetic data |  |
+| 🔴 To read | 9 | 100 | [Doubly robust calibration of prediction sets under covariate shift](https://doi.org/10.1093/jrsssb/qkae009) | JRSSB | 2024 | missing-data | `yang2024doubly` | missing data |  |
+| 🔴 To read | 9 | 85 | [Long-term causal inference under persistent confounding via data combination](https://doi.org/10.1093/jrsssb/qkae095) | JRSSB | 2024 | synthetic-data | `imbens2024long` | synthetic data |  |
+| 🔴 To read | 9 | 53 | [Robust detection of watermarks for large language models under human edits](https://doi.org/10.1093/jrsssb/qkaf056) | JRSSB | 2025 | synthetic-data | `li2025robust` | synthetic data |  |
 | 🔴 To read | 8 | 82 | [On the role of surrogates in the efficient estimation of treatment effects with limited outcome data](https://doi.org/10.1093/jrsssb/qkae099) | JRSSB | 2024 | missing-data | `kallus2024role` | missingness |  |
 | 🔴 To read | 8 | 61 | [Gibbs Flow for Approximate Transport with Applications to Bayesian Computation](https://doi.org/10.1111/rssb.12404) | JRSSB | 2021 | optimal-transport | `heng2021gibbs` | transport map |  |
 | 🔴 To read | 8 | 37 | [Semiparametric Estimation for Causal Mediation Analysis with Multiple Causally Ordered Mediators](https://doi.org/10.1111/rssb.12487) | JRSSB | 2021 | missing-data | `zhou2021semiparametric` | imputation |  |
@@ -167,36 +184,28 @@ Workflow: discovery → 🔴 To read → reading note generated → 🟡 Review 
 | 🔴 To read | 8 | 17 | [The Debiased Spatial Whittle Likelihood](https://doi.org/10.1111/rssb.12539) | JRSSB | 2022 | missing-data | `guillaumin2022debiased` | missing data |  |
 | 🔴 To read | 6 | 19 | [Fast and fair simultaneous confidence bands for functional parameters](https://doi.org/10.1093/jrsssb/qkad026) | JRSSB | 2023 | trustworthy-ml | `liebl2023fast` | fairness |  |
 | **JASA** | | | | | | | | | |
-| 🔴 To read | 16 | 204 | [Graphical Models for Processing Missing Data](https://doi.org/10.1080/01621459.2021.1874961) | JASA | 2021 | missing-data | `mohan2021graphical` | missing data; missing not at random |  |
-| 🔴 To read | 16 | 147 | [Matrix Completion, Counterfactuals, and Factor Analysis of Missing Data](https://doi.org/10.1080/01621459.2021.1967163) | JASA | 2021 | missing-data | `bai2021matrix` | missing data; imputation |  |
-| 🔴 To read | 16 | 107 | [Wasserstein Regression](https://doi.org/10.1080/01621459.2021.1956937) | JASA | 2021 | optimal-transport | `chen2021wasserstein` | wasserstein |  |
-| 🔴 To read | 16 | 61 | [Integrating Multisource Block-Wise Missing Data in Model Selection](https://doi.org/10.1080/01621459.2020.1751176) | JASA | 2020 | missing-data | `xue2020integrating` | missing data; imputation |  |
-| 🔴 To read | 10 | 71 | [On Robustness of Principal Component Regression](https://doi.org/10.1080/01621459.2021.1928513) | JASA | 2021 | privacy | `agarwal2021robustness` | differential privacy |  |
-| 🔴 To read | 10 | 52 | [Federated Adaptive Causal Estimation (FACE) of Target Treatment Effects](https://doi.org/10.1080/01621459.2025.2453249) | JASA | 2025 | privacy | `han2025federated` | privacy-preserving |  |
-| 🔴 To read | 9 | 61 | [Bias-Adjusted Spectral Clustering in Multi-Layer Stochastic Block Models](https://doi.org/10.1080/01621459.2022.2054817) | JASA | 2022 | synthetic-data | `lei2022bias` | synthetic data |  |
+| 🔴 To read | 20 | 87 | [Privacy-Preserving Parametric Inference: A Case for Robust Statistics](https://doi.org/10.1080/01621459.2019.1700130) | JASA | 2020 | privacy | `avellamedina2020privacy` | differential privacy; privacy-preserving |  |
+| 🔴 To read | 16 | 299 | [Graphical Models for Processing Missing Data](https://doi.org/10.1080/01621459.2021.1874961) | JASA | 2021 | missing-data | `mohan2021graphical` | missing data; missing not at random |  |
+| 🔴 To read | 16 | 208 | [Matrix Completion, Counterfactuals, and Factor Analysis of Missing Data](https://doi.org/10.1080/01621459.2021.1967163) | JASA | 2021 | missing-data | `bai2021matrix` | missing data; imputation |  |
+| 🔴 To read | 16 | 168 | [Wasserstein Regression](https://doi.org/10.1080/01621459.2021.1956937) | JASA | 2021 | optimal-transport | `chen2021wasserstein` | wasserstein |  |
+| 🔴 To read | 16 | 80 | [Integrating Multisource Block-Wise Missing Data in Model Selection](https://doi.org/10.1080/01621459.2020.1751176) | JASA | 2020 | missing-data | `xue2020integrating` | missing data; imputation |  |
+| 🔴 To read | 10 | 97 | [On Robustness of Principal Component Regression](https://doi.org/10.1080/01621459.2021.1928513) | JASA | 2021 | privacy | `agarwal2021robustness` | differential privacy |  |
+| 🔴 To read | 10 | 92 | [Federated Adaptive Causal Estimation (FACE) of Target Treatment Effects](https://doi.org/10.1080/01621459.2025.2453249) | JASA | 2025 | privacy | `han2025federated` | privacy-preserving |  |
+| 🔴 To read | 9 | 105 | [Bias-Adjusted Spectral Clustering in Multi-Layer Stochastic Block Models](https://doi.org/10.1080/01621459.2022.2054817) | JASA | 2022 | synthetic-data | `lei2022bias` | synthetic data |  |
+| 🔴 To read | 8 | 111 | [Randomization Tests for Weak Null Hypotheses in Randomized Experiments](https://doi.org/10.1080/01621459.2020.1750415) | JASA | 2020 | missing-data | `wu2020randomization` | imputation |  |
+| 🔴 To read | 8 | 94 | [A Semiparametric Instrumental Variable Approach to Optimal Treatment Regimes Under Endogeneity](https://doi.org/10.1080/01621459.2020.1783272) | JASA | 2020 | adversarial-ml | `cui2020semiparametric` | robust classification |  |
 | 🔴 To read | 8 | 66 | [Global and Simultaneous Hypothesis Testing for High-Dimensional Logistic Regression Models](https://doi.org/10.1080/01621459.2019.1699421) | JASA | 2020 | — | `ma2020global` |  |  |
-| 🔴 To read | 8 | 61 | [Randomization Tests for Weak Null Hypotheses in Randomized Experiments](https://doi.org/10.1080/01621459.2020.1750415) | JASA | 2020 | missing-data | `wu2020randomization` | imputation |  |
-| 🔴 To read | 8 | 59 | [A Semiparametric Instrumental Variable Approach to Optimal Treatment Regimes Under Endogeneity](https://doi.org/10.1080/01621459.2020.1783272) | JASA | 2020 | adversarial-ml | `cui2020semiparametric` | robust classification |  |
 | 🔴 To read | 8 | 44 | [To Adjust or not to Adjust? Estimating the Average Treatment Effect in Randomized Experiments with Missing Covariates](https://doi.org/10.1080/01621459.2022.2123814) | JASA | 2022 | missing-data | `zhao2022adjust` | missingness |  |
 | **Statistical Science** | | | | | | | | | |
-| 🔴 To read | 32 | 64 | [Comparative Study of Differentially Private Data Synthesis Methods](https://doi.org/10.1214/19-sts742) | Statistical Science | 2020 | privacy, synthetic-data | `bowen2020comparative` | differential privacy; synthetic data; data synthesis |  |
-| 🔴 To read | 27 | 27 | [Maximum Likelihood Multiple Imputation: Faster Imputations and Consistent Standard Errors Without Posterior Draws](https://doi.org/10.1214/20-sts793) | Statistical Science | 2021 | missing-data, posterior-sampling | `hippel2021maximum` | bayesian posterior; imputation |  |
-| 🔴 To read | 19 | 64 | [30 Years of Synthetic Data](https://doi.org/10.1214/24-sts927) | Statistical Science | 2024 | synthetic-data | `drechsler202430` | synthetic data |  |
-| 🔴 To read | 18 | 30 | [Fano’s Inequality for Random Variables](https://doi.org/10.1214/19-sts716) | Statistical Science | 2020 | posterior-sampling | `gerchinovitz2020fano` | bayesian posterior |  |
-| 🔴 To read | 11 | 31 | [Principal Fairness for Human and Algorithmic Decision-Making](https://doi.org/10.1214/22-sts872) | Statistical Science | 2023 | trustworthy-ml | `imai2023principal` | fairness |  |
-| 🔴 To read | 11 | 19 | [Bayesian Analysis of Rank Data with Covariates and Heterogeneous Rankers](https://doi.org/10.1214/20-sts818) | Statistical Science | 2022 | posterior-sampling | `li2022bayesian` | posterior sample |  |
-| 🔴 To read | 10 | 82 | [Challenges in Markov Chain Monte Carlo for Bayesian Neural Networks](https://doi.org/10.1214/21-sts840) | Statistical Science | 2022 | posterior-sampling | `papamarkou2022challenges` | posterior predictive |  |
-| 🔴 To read | 10 | 18 | [Variational Inference for Cutting Feedback in Misspecified Models](https://doi.org/10.1214/23-sts886) | Statistical Science | 2023 | posterior-sampling | `yu2023variational` | posterior inference |  |
-| 🔴 To read | 9 | 44 | [On Weighted Orthogonal Learners for Heterogeneous Treatment Effects](https://doi.org/10.1214/25-sts991) | Statistical Science | 2026 | synthetic-data | `morzywoek2026weighted` | synthetic data |  |
+| 🔴 To read | 32 | 86 | [Comparative Study of Differentially Private Data Synthesis Methods](https://doi.org/10.1214/19-sts742) | Statistical Science | 2020 | privacy, synthetic-data | `bowen2020comparative` | differential privacy; synthetic data; data synthesis |  |
+| 🔴 To read | 27 | 78 | [Maximum Likelihood Multiple Imputation: Faster Imputations and Consistent Standard Errors Without Posterior Draws](https://doi.org/10.1214/20-sts793) | Statistical Science | 2021 | missing-data, posterior-sampling | `hippel2021maximum` | bayesian posterior; imputation |  |
+| 🔴 To read | 19 | 79 | [30 Years of Synthetic Data](https://doi.org/10.1214/24-sts927) | Statistical Science | 2024 | synthetic-data | `drechsler202430` | synthetic data |  |
+| 🔴 To read | 18 | 43 | [Fano’s Inequality for Random Variables](https://doi.org/10.1214/19-sts716) | Statistical Science | 2020 | posterior-sampling | `gerchinovitz2020fano` | bayesian posterior |  |
+| 🔴 To read | 11 | 50 | [Principal Fairness for Human and Algorithmic Decision-Making](https://doi.org/10.1214/22-sts872) | Statistical Science | 2023 | trustworthy-ml | `imai2023principal` | fairness |  |
+| 🔴 To read | 11 | 36 | [Bayesian Analysis of Rank Data with Covariates and Heterogeneous Rankers](https://doi.org/10.1214/20-sts818) | Statistical Science | 2022 | posterior-sampling | `li2022bayesian` | posterior sample |  |
+| 🔴 To read | 10 | 120 | [Challenges in Markov Chain Monte Carlo for Bayesian Neural Networks](https://doi.org/10.1214/21-sts840) | Statistical Science | 2022 | posterior-sampling | `papamarkou2022challenges` | posterior predictive |  |
+| 🔴 To read | 10 | 29 | [Variational Inference for Cutting Feedback in Misspecified Models](https://doi.org/10.1214/23-sts886) | Statistical Science | 2023 | posterior-sampling | `yu2023variational` | posterior inference |  |
+| 🔴 To read | 10 | 23 | [Bayesian Nonparametric Inference for “Species-Sampling” Problems](https://doi.org/10.1214/24-sts961) | Statistical Science | 2026 | posterior-sampling | `balocchi2026bayesian` | posterior inference |  |
+| 🔴 To read | 9 | 48 | [On Weighted Orthogonal Learners for Heterogeneous Treatment Effects](https://doi.org/10.1214/25-sts991) | Statistical Science | 2026 | synthetic-data | `morzywoek2026weighted` | synthetic data |  |
 | 🔴 To read | 9 | 19 | [Data Denoising and Post-Denoising Corrections in Single Cell RNA Sequencing](https://doi.org/10.1214/19-sts7560) | Statistical Science | 2020 | missing-data | `agarwal2020data` | imputation |  |
 | 🔴 To read | 8 | 19 | [A Primer on Bayesian Neural Networks: Review and Debates](https://doi.org/10.1214/24-sts969) | Statistical Science | 2026 | adversarial-ml | `arbel2026primer` | adversarial attack |  |
-
-## Fetch notes
-
-- JMLR: HTTPError: HTTP Error 429: Too Many Requests
-- TMLR: HTTPError: HTTP Error 429: Too Many Requests
-- Annals of Statistics: HTTPError: HTTP Error 429: Too Many Requests
-- Biometrika: HTTPError: HTTP Error 429: Too Many Requests
-- JRSSB: HTTPError: HTTP Error 429: Too Many Requests
-- JASA: HTTPError: HTTP Error 429: Too Many Requests
-- Statistical Science: HTTPError: HTTP Error 429: Too Many Requests
